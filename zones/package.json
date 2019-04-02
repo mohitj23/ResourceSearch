@@ -1,0 +1,17 @@
+{
+  "name": "com.uic.cs581.resource_search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^6.9.0"
+  },
+  "devDependencies": {
+    "h3-js": "^3.4.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -18,7 +18,7 @@ function getH3IndexFromH3Geo() {
     const hexagons = h3.polyfill(manhattan_polygon, 9, true);
 
     // put zones's h3Index to a Map
-    hexagons.map(hex => hexagonsMap[hex] = {});
+    hexagons.map(hex => hexagonsMap[hex] = 1);
 
     // console.log(JSON.stringify(hexagonsMap));
 

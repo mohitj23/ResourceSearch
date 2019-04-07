@@ -13,4 +13,6 @@ public class Cab {
     private String futurePath;
     private long nextAvailableTime;
     private long totalSearchTime;
+    private String currentZone;
+    private String targetZone;
 }

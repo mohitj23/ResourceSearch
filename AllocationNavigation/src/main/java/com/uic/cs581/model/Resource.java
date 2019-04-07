@@ -12,4 +12,9 @@ public class Resource {
     private String dropOffLat;
     private String dropOffLong;
     private int cabId;
+    private long expirationTimeLeftInMillis;
+    private long pickupTimeInMillis;
+    private long dropOffTimeInMillis;
+    private long requestTimeInMillis;
+
 }

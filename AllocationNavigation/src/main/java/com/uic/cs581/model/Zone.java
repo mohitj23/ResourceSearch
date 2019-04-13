@@ -1,11 +1,18 @@
 package com.uic.cs581.model;
 
-import lombok.Builder;
+import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
-@Builder
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Zone {
-    private String h3Index;
-    private List<List<String>> neighbours;
+    String h3Index;
+    Double lat;
+    Double long1;
+    public List<List<String>> kRingNeighbors;
 }

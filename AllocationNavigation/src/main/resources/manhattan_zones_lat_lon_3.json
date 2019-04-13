@@ -1,0 +1,5376 @@
+{
+  "89f05ab410bffff": {
+    "lat": -73.96568922865387,
+    "long": 40.79237169758088,
+    "h3Index": "89f05ab410bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab410bffff"
+      ],
+      [
+        "89f05ab4157ffff",
+        "89f05ab4147ffff",
+        "89f05ab4173ffff",
+        "89f05ab410fffff",
+        "89f05ab4103ffff",
+        "89f05ab411bffff"
+      ],
+      [
+        "89f05ab41cfffff",
+        "89f05ab4143ffff",
+        "89f05ab414fffff",
+        "89f05ab417bffff",
+        "89f05ab4163ffff",
+        "89f05ab4177ffff",
+        "89f05ab413bffff",
+        "89f05ab4107ffff",
+        "89f05ab4117ffff",
+        "89f05ab4113ffff",
+        "89f05ab41c7ffff"
+      ]
+    ]
+  },
+  "89f05ab4157ffff": {
+    "lat": -73.96723666831743,
+    "long": 40.8026452329973,
+    "h3Index": "89f05ab4157ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4157ffff"
+      ],
+      [
+        "89f05ab4143ffff",
+        "89f05ab4147ffff",
+        "89f05ab410bffff",
+        "89f05ab411bffff",
+        "89f05ab41cfffff"
+      ],
+      [
+        "89f05ab414fffff",
+        "89f05ab417bffff",
+        "89f05ab4173ffff",
+        "89f05ab410fffff",
+        "89f05ab4103ffff",
+        "89f05ab4113ffff",
+        "89f05ab41c7ffff"
+      ]
+    ]
+  },
+  "89f05ab4147ffff": {
+    "lat": -73.96404624323326,
+    "long": 40.801828625471316,
+    "h3Index": "89f05ab4147ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4147ffff"
+      ],
+      [
+        "89f05ab4143ffff",
+        "89f05ab414fffff",
+        "89f05ab417bffff",
+        "89f05ab4173ffff",
+        "89f05ab410bffff",
+        "89f05ab4157ffff"
+      ],
+      [
+        "89f05ab43b3ffff",
+        "89f05ab43b7ffff",
+        "89f05ab416bffff",
+        "89f05ab4163ffff",
+        "89f05ab4177ffff",
+        "89f05ab410fffff",
+        "89f05ab4103ffff",
+        "89f05ab411bffff",
+        "89f05ab41cfffff"
+      ]
+    ]
+  },
+  "89f05ab4173ffff": {
+    "lat": -73.96249875824537,
+    "long": 40.791557263457186,
+    "h3Index": "89f05ab4173ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4173ffff"
+      ],
+      [
+        "89f05ab4147ffff",
+        "89f05ab417bffff",
+        "89f05ab4163ffff",
+        "89f05ab4177ffff",
+        "89f05ab410fffff",
+        "89f05ab410bffff"
+      ],
+      [
+        "89f05ab4157ffff",
+        "89f05ab4143ffff",
+        "89f05ab414fffff",
+        "89f05ab43b7ffff",
+        "89f05ab416bffff",
+        "89f05ab416fffff",
+        "89f05ab4167ffff",
+        "89f05ab412bffff",
+        "89f05ab413bffff",
+        "89f05ab4107ffff",
+        "89f05ab4103ffff",
+        "89f05ab411bffff"
+      ]
+    ]
+  },
+  "89f05ab410fffff": {
+    "lat": -73.96414127729378,
+    "long": 40.78209994217162,
+    "h3Index": "89f05ab410fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab410fffff"
+      ],
+      [
+        "89f05ab410bffff",
+        "89f05ab4173ffff",
+        "89f05ab4177ffff",
+        "89f05ab413bffff",
+        "89f05ab4107ffff",
+        "89f05ab4103ffff"
+      ],
+      [
+        "89f05ab411bffff",
+        "89f05ab4157ffff",
+        "89f05ab4147ffff",
+        "89f05ab417bffff",
+        "89f05ab4163ffff",
+        "89f05ab4167ffff",
+        "89f05ab412bffff",
+        "89f05ab4123ffff",
+        "89f05ab4133ffff",
+        "89f05ab41abffff",
+        "89f05ab4117ffff",
+        "89f05ab4113ffff"
+      ]
+    ]
+  },
+  "89f05ab4103ffff": {
+    "lat": -73.9673318597572,
+    "long": 40.78291253618511,
+    "h3Index": "89f05ab4103ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4103ffff"
+      ],
+      [
+        "89f05ab411bffff",
+        "89f05ab410bffff",
+        "89f05ab410fffff",
+        "89f05ab4107ffff",
+        "89f05ab4117ffff",
+        "89f05ab4113ffff"
+      ],
+      [
+        "89f05ab41c7ffff",
+        "89f05ab41cfffff",
+        "89f05ab4157ffff",
+        "89f05ab4147ffff",
+        "89f05ab4173ffff",
+        "89f05ab4177ffff",
+        "89f05ab413bffff",
+        "89f05ab4133ffff",
+        "89f05ab41abffff",
+        "89f05ab41bbffff",
+        "89f05ab418fffff",
+        "89f05ab418bffff"
+      ]
+    ]
+  },
+  "89f05ab411bffff": {
+    "lat": -73.96887976588931,
+    "long": 40.79318646522266,
+    "h3Index": "89f05ab411bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab411bffff"
+      ],
+      [
+        "89f05ab41cfffff",
+        "89f05ab4157ffff",
+        "89f05ab410bffff",
+        "89f05ab4103ffff",
+        "89f05ab4113ffff",
+        "89f05ab41c7ffff"
+      ],
+      [
+        "89f05ab4143ffff",
+        "89f05ab4147ffff",
+        "89f05ab4173ffff",
+        "89f05ab410fffff",
+        "89f05ab4107ffff",
+        "89f05ab4117ffff",
+        "89f05ab418fffff",
+        "89f05ab418bffff",
+        "89f05ab41d7ffff"
+      ]
+    ]
+  },
+  "89f05ab41cfffff": {
+    "lat": -73.97042716020005,
+    "long": 40.80346217495632,
+    "h3Index": "89f05ab41cfffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab41cfffff"
+      ],
+      [
+        "89f05ab4157ffff",
+        "89f05ab411bffff",
+        "89f05ab41c7ffff"
+      ],
+      [
+        "89f05ab4143ffff",
+        "89f05ab4147ffff",
+        "89f05ab410bffff",
+        "89f05ab4103ffff",
+        "89f05ab4113ffff",
+        "89f05ab418bffff",
+        "89f05ab41d7ffff"
+      ]
+    ]
+  },
+  "89f05ab4143ffff": {
+    "lat": -73.96559321652005,
+    "long": 40.812101766606396,
+    "h3Index": "89f05ab4143ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4143ffff"
+      ],
+      [
+        "89f05ab414fffff",
+        "89f05ab4147ffff",
+        "89f05ab4157ffff"
+      ],
+      [
+        "89f05ab43b3ffff",
+        "89f05ab43b7ffff",
+        "89f05ab417bffff",
+        "89f05ab4173ffff",
+        "89f05ab410bffff",
+        "89f05ab411bffff",
+        "89f05ab41cfffff"
+      ]
+    ]
+  },
+  "89f05ab414fffff": {
+    "lat": -73.96240290367459,
+    "long": 40.8112833201324,
+    "h3Index": "89f05ab414fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab414fffff"
+      ],
+      [
+        "89f05ab43b3ffff",
+        "89f05ab43b7ffff",
+        "89f05ab417bffff",
+        "89f05ab4147ffff",
+        "89f05ab4143ffff"
+      ],
+      [
+        "89f05ab43a3ffff",
+        "89f05ab43a7ffff",
+        "89f05ab416bffff",
+        "89f05ab4163ffff",
+        "89f05ab4173ffff",
+        "89f05ab410bffff",
+        "89f05ab4157ffff"
+      ]
+    ]
+  },
+  "89f05ab417bffff": {
+    "lat": -73.96085588496716,
+    "long": 40.801012352173224,
+    "h3Index": "89f05ab417bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab417bffff"
+      ],
+      [
+        "89f05ab414fffff",
+        "89f05ab43b7ffff",
+        "89f05ab416bffff",
+        "89f05ab4163ffff",
+        "89f05ab4173ffff",
+        "89f05ab4147ffff"
+      ],
+      [
+        "89f05ab4143ffff",
+        "89f05ab43b3ffff",
+        "89f05ab43a3ffff",
+        "89f05ab43a7ffff",
+        "89f05ab4ed3ffff",
+        "89f05ab416fffff",
+        "89f05ab4167ffff",
+        "89f05ab4177ffff",
+        "89f05ab410fffff",
+        "89f05ab410bffff",
+        "89f05ab4157ffff"
+      ]
+    ]
+  },
+  "89f05ab4163ffff": {
+    "lat": -73.95930835468342,
+    "long": 40.79074316264715,
+    "h3Index": "89f05ab4163ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4163ffff"
+      ],
+      [
+        "89f05ab417bffff",
+        "89f05ab416bffff",
+        "89f05ab416fffff",
+        "89f05ab4167ffff",
+        "89f05ab4177ffff",
+        "89f05ab4173ffff"
+      ],
+      [
+        "89f05ab4147ffff",
+        "89f05ab414fffff",
+        "89f05ab43b7ffff",
+        "89f05ab43a7ffff",
+        "89f05ab4ed3ffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4e9bffff",
+        "89f05ab4e93ffff",
+        "89f05ab412bffff",
+        "89f05ab413bffff",
+        "89f05ab410fffff",
+        "89f05ab410bffff"
+      ]
+    ]
+  },
+  "89f05ab4177ffff": {
+    "lat": -73.96095076168575,
+    "long": 40.78128768076183,
+    "h3Index": "89f05ab4177ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4177ffff"
+      ],
+      [
+        "89f05ab4173ffff",
+        "89f05ab4163ffff",
+        "89f05ab4167ffff",
+        "89f05ab412bffff",
+        "89f05ab413bffff",
+        "89f05ab410fffff"
+      ],
+      [
+        "89f05ab410bffff",
+        "89f05ab4147ffff",
+        "89f05ab417bffff",
+        "89f05ab416bffff",
+        "89f05ab416fffff",
+        "89f05ab4e9bffff",
+        "89f05ab4e93ffff",
+        "89f05ab412fffff",
+        "89f05ab4123ffff",
+        "89f05ab4133ffff",
+        "89f05ab4107ffff",
+        "89f05ab4103ffff"
+      ]
+    ]
+  },
+  "89f05ab413bffff": {
+    "lat": -73.96259281436656,
+    "long": 40.77182996696711,
+    "h3Index": "89f05ab413bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab413bffff"
+      ],
+      [
+        "89f05ab410fffff",
+        "89f05ab4177ffff",
+        "89f05ab412bffff",
+        "89f05ab4123ffff",
+        "89f05ab4133ffff",
+        "89f05ab4107ffff"
+      ],
+      [
+        "89f05ab4103ffff",
+        "89f05ab410bffff",
+        "89f05ab4173ffff",
+        "89f05ab4163ffff",
+        "89f05ab4167ffff",
+        "89f05ab4e93ffff",
+        "89f05ab412fffff",
+        "89f05ab41afffff",
+        "89f05ab41abffff",
+        "89f05ab4117ffff"
+      ]
+    ]
+  },
+  "89f05ab4107ffff": {
+    "lat": -73.96578344193321,
+    "long": 40.77264038804125,
+    "h3Index": "89f05ab4107ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4107ffff"
+      ],
+      [
+        "89f05ab4103ffff",
+        "89f05ab410fffff",
+        "89f05ab413bffff",
+        "89f05ab4133ffff",
+        "89f05ab41abffff",
+        "89f05ab4117ffff"
+      ],
+      [
+        "89f05ab4113ffff",
+        "89f05ab411bffff",
+        "89f05ab410bffff",
+        "89f05ab4173ffff",
+        "89f05ab4177ffff",
+        "89f05ab412bffff",
+        "89f05ab4123ffff",
+        "89f05ab41afffff",
+        "89f05ab41a3ffff",
+        "89f05ab41bbffff",
+        "89f05ab418fffff"
+      ]
+    ]
+  },
+  "89f05ab4117ffff": {
+    "lat": -73.96897413636401,
+    "long": 40.77345114100838,
+    "h3Index": "89f05ab4117ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4117ffff"
+      ],
+      [
+        "89f05ab4113ffff",
+        "89f05ab4103ffff",
+        "89f05ab4107ffff",
+        "89f05ab41abffff",
+        "89f05ab41bbffff",
+        "89f05ab418fffff"
+      ],
+      [
+        "89f05ab418bffff",
+        "89f05ab41c7ffff",
+        "89f05ab411bffff",
+        "89f05ab410bffff",
+        "89f05ab410fffff",
+        "89f05ab413bffff",
+        "89f05ab4133ffff",
+        "89f05ab41afffff",
+        "89f05ab41a3ffff",
+        "89f05ab41b3ffff",
+        "89f05ab4187ffff",
+        "89f05ab4183ffff"
+      ]
+    ]
+  },
+  "89f05ab4113ffff": {
+    "lat": -73.97052250905641,
+    "long": 40.783725463006164,
+    "h3Index": "89f05ab4113ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4113ffff"
+      ],
+      [
+        "89f05ab41c7ffff",
+        "89f05ab411bffff",
+        "89f05ab4103ffff",
+        "89f05ab4117ffff",
+        "89f05ab418fffff",
+        "89f05ab418bffff"
+      ],
+      [
+        "89f05ab41d7ffff",
+        "89f05ab41cfffff",
+        "89f05ab4157ffff",
+        "89f05ab410bffff",
+        "89f05ab410fffff",
+        "89f05ab4107ffff",
+        "89f05ab41abffff",
+        "89f05ab41bbffff",
+        "89f05ab4187ffff",
+        "89f05ab4183ffff",
+        "89f05ab419bffff"
+      ]
+    ]
+  },
+  "89f05ab41c7ffff": {
+    "lat": -73.97207036993206,
+    "long": 40.79400156658715,
+    "h3Index": "89f05ab41c7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab41c7ffff"
+      ],
+      [
+        "89f05ab41cfffff",
+        "89f05ab411bffff",
+        "89f05ab4113ffff",
+        "89f05ab418bffff",
+        "89f05ab41d7ffff"
+      ],
+      [
+        "89f05ab4157ffff",
+        "89f05ab410bffff",
+        "89f05ab4103ffff",
+        "89f05ab4117ffff",
+        "89f05ab418fffff",
+        "89f05ab4183ffff",
+        "89f05ab419bffff",
+        "89f05ab456fffff"
+      ]
+    ]
+  },
+  "89f05ab43b3ffff": {
+    "lat": -73.9607592101569,
+    "long": 40.82073578184005,
+    "h3Index": "89f05ab43b3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab43b3ffff"
+      ],
+      [
+        "89f05ab43a3ffff",
+        "89f05ab43b7ffff",
+        "89f05ab414fffff"
+      ],
+      [
+        "89f05ab43afffff",
+        "89f05ab43a7ffff",
+        "89f05ab416bffff",
+        "89f05ab417bffff",
+        "89f05ab4147ffff",
+        "89f05ab4143ffff"
+      ]
+    ]
+  },
+  "89f05ab43b7ffff": {
+    "lat": -73.95921265763822,
+    "long": 40.810465208595424,
+    "h3Index": "89f05ab43b7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab43b7ffff"
+      ],
+      [
+        "89f05ab43b3ffff",
+        "89f05ab43a3ffff",
+        "89f05ab43a7ffff",
+        "89f05ab416bffff",
+        "89f05ab417bffff",
+        "89f05ab414fffff"
+      ],
+      [
+        "89f05ab43afffff",
+        "89f05ab4edbffff",
+        "89f05ab4ed3ffff",
+        "89f05ab416fffff",
+        "89f05ab4163ffff",
+        "89f05ab4173ffff",
+        "89f05ab4147ffff",
+        "89f05ab4143ffff"
+      ]
+    ]
+  },
+  "89f05ab416bffff": {
+    "lat": -73.9576655935387,
+    "long": 40.8001964128983,
+    "h3Index": "89f05ab416bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab416bffff"
+      ],
+      [
+        "89f05ab43b7ffff",
+        "89f05ab43a7ffff",
+        "89f05ab4ed3ffff",
+        "89f05ab416fffff",
+        "89f05ab4163ffff",
+        "89f05ab417bffff"
+      ],
+      [
+        "89f05ab414fffff",
+        "89f05ab43b3ffff",
+        "89f05ab43a3ffff",
+        "89f05ab43afffff",
+        "89f05ab4edbffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4e9bffff",
+        "89f05ab4167ffff",
+        "89f05ab4177ffff",
+        "89f05ab4173ffff",
+        "89f05ab4147ffff"
+      ]
+    ]
+  },
+  "89f05ab416fffff": {
+    "lat": -73.95611801798762,
+    "long": 40.78992939494666,
+    "h3Index": "89f05ab416fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab416fffff"
+      ],
+      [
+        "89f05ab416bffff",
+        "89f05ab4ed3ffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4e9bffff",
+        "89f05ab4167ffff",
+        "89f05ab4163ffff"
+      ],
+      [
+        "89f05ab417bffff",
+        "89f05ab43b7ffff",
+        "89f05ab43a7ffff",
+        "89f05ab4edbffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4e8bffff",
+        "89f05ab4e83ffff",
+        "89f05ab4e93ffff",
+        "89f05ab412bffff",
+        "89f05ab4177ffff",
+        "89f05ab4173ffff"
+      ]
+    ]
+  },
+  "89f05ab4167ffff": {
+    "lat": -73.95776031295271,
+    "long": 40.78047575175194,
+    "h3Index": "89f05ab4167ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4167ffff"
+      ],
+      [
+        "89f05ab4163ffff",
+        "89f05ab416fffff",
+        "89f05ab4e9bffff",
+        "89f05ab4e93ffff",
+        "89f05ab412bffff",
+        "89f05ab4177ffff"
+      ],
+      [
+        "89f05ab4173ffff",
+        "89f05ab417bffff",
+        "89f05ab416bffff",
+        "89f05ab4ed3ffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4e8bffff",
+        "89f05ab4e83ffff",
+        "89f05ab412fffff",
+        "89f05ab4123ffff",
+        "89f05ab413bffff",
+        "89f05ab410fffff"
+      ]
+    ]
+  },
+  "89f05ab412bffff": {
+    "lat": -73.95940225368379,
+    "long": 40.771019877582724,
+    "h3Index": "89f05ab412bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab412bffff"
+      ],
+      [
+        "89f05ab4177ffff",
+        "89f05ab4167ffff",
+        "89f05ab4e93ffff",
+        "89f05ab412fffff",
+        "89f05ab4123ffff",
+        "89f05ab413bffff"
+      ],
+      [
+        "89f05ab410fffff",
+        "89f05ab4173ffff",
+        "89f05ab4163ffff",
+        "89f05ab416fffff",
+        "89f05ab4e9bffff",
+        "89f05ab4e83ffff",
+        "89f05ab4133ffff",
+        "89f05ab4107ffff"
+      ]
+    ]
+  },
+  "89f05ab4123ffff": {
+    "lat": -73.96104384000176,
+    "long": 40.76156177216446,
+    "h3Index": "89f05ab4123ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4123ffff"
+      ],
+      [
+        "89f05ab413bffff",
+        "89f05ab412bffff",
+        "89f05ab412fffff",
+        "89f05ab4133ffff"
+      ],
+      [
+        "89f05ab4107ffff",
+        "89f05ab410fffff",
+        "89f05ab4177ffff",
+        "89f05ab4167ffff",
+        "89f05ab4e93ffff",
+        "89f05ab41afffff",
+        "89f05ab41abffff"
+      ]
+    ]
+  },
+  "89f05ab4133ffff": {
+    "lat": -73.96423451254677,
+    "long": 40.762370020988314,
+    "h3Index": "89f05ab4133ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4133ffff"
+      ],
+      [
+        "89f05ab4107ffff",
+        "89f05ab413bffff",
+        "89f05ab4123ffff",
+        "89f05ab41afffff",
+        "89f05ab41abffff"
+      ],
+      [
+        "89f05ab4117ffff",
+        "89f05ab4103ffff",
+        "89f05ab410fffff",
+        "89f05ab4177ffff",
+        "89f05ab412bffff",
+        "89f05ab412fffff",
+        "89f05ab41a3ffff",
+        "89f05ab41bbffff"
+      ]
+    ]
+  },
+  "89f05ab41abffff": {
+    "lat": -73.96742525198438,
+    "long": 40.76317860079104,
+    "h3Index": "89f05ab41abffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab41abffff"
+      ],
+      [
+        "89f05ab4117ffff",
+        "89f05ab4107ffff",
+        "89f05ab4133ffff",
+        "89f05ab41afffff",
+        "89f05ab41a3ffff",
+        "89f05ab41bbffff"
+      ],
+      [
+        "89f05ab418fffff",
+        "89f05ab4113ffff",
+        "89f05ab4103ffff",
+        "89f05ab410fffff",
+        "89f05ab413bffff",
+        "89f05ab4123ffff",
+        "89f05ab41b7ffff",
+        "89f05ab41b3ffff",
+        "89f05ab4187ffff"
+      ]
+    ]
+  },
+  "89f05ab41bbffff": {
+    "lat": -73.97061605829497,
+    "long": 40.763987511775646,
+    "h3Index": "89f05ab41bbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab41bbffff"
+      ],
+      [
+        "89f05ab418fffff",
+        "89f05ab4117ffff",
+        "89f05ab41abffff",
+        "89f05ab41a3ffff",
+        "89f05ab41b3ffff",
+        "89f05ab4187ffff"
+      ],
+      [
+        "89f05ab4183ffff",
+        "89f05ab418bffff",
+        "89f05ab4113ffff",
+        "89f05ab4103ffff",
+        "89f05ab4107ffff",
+        "89f05ab4133ffff",
+        "89f05ab41afffff",
+        "89f05ab41b7ffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a4bffff",
+        "89f05ab4197ffff"
+      ]
+    ]
+  },
+  "89f05ab418fffff": {
+    "lat": -73.97216489763939,
+    "long": 40.774262226072175,
+    "h3Index": "89f05ab418fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab418fffff"
+      ],
+      [
+        "89f05ab418bffff",
+        "89f05ab4113ffff",
+        "89f05ab4117ffff",
+        "89f05ab41bbffff",
+        "89f05ab4187ffff",
+        "89f05ab4183ffff"
+      ],
+      [
+        "89f05ab419bffff",
+        "89f05ab41d7ffff",
+        "89f05ab41c7ffff",
+        "89f05ab411bffff",
+        "89f05ab4103ffff",
+        "89f05ab4107ffff",
+        "89f05ab41abffff",
+        "89f05ab41a3ffff",
+        "89f05ab41b3ffff",
+        "89f05ab6a4bffff",
+        "89f05ab4197ffff",
+        "89f05ab4193ffff"
+      ]
+    ]
+  },
+  "89f05ab418bffff": {
+    "lat": -73.97371322517175,
+    "long": 40.7845387228391,
+    "h3Index": "89f05ab418bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab418bffff"
+      ],
+      [
+        "89f05ab41d7ffff",
+        "89f05ab41c7ffff",
+        "89f05ab4113ffff",
+        "89f05ab418fffff",
+        "89f05ab4183ffff",
+        "89f05ab419bffff"
+      ],
+      [
+        "89f05ab456fffff",
+        "89f05ab41cfffff",
+        "89f05ab411bffff",
+        "89f05ab4103ffff",
+        "89f05ab4117ffff",
+        "89f05ab41bbffff",
+        "89f05ab4187ffff",
+        "89f05ab4197ffff",
+        "89f05ab4193ffff",
+        "89f05ab4567ffff"
+      ]
+    ]
+  },
+  "89f05ab41d7ffff": {
+    "lat": -73.97526104076248,
+    "long": 40.79481700187899,
+    "h3Index": "89f05ab41d7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab41d7ffff"
+      ],
+      [
+        "89f05ab41c7ffff",
+        "89f05ab418bffff",
+        "89f05ab419bffff",
+        "89f05ab456fffff"
+      ],
+      [
+        "89f05ab41cfffff",
+        "89f05ab411bffff",
+        "89f05ab4113ffff",
+        "89f05ab418fffff",
+        "89f05ab4183ffff",
+        "89f05ab4193ffff",
+        "89f05ab4567ffff"
+      ]
+    ]
+  },
+  "89f05ab43a3ffff": {
+    "lat": -73.9575690764377,
+    "long": 40.81991583299991,
+    "h3Index": "89f05ab43a3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab43a3ffff"
+      ],
+      [
+        "89f05ab43afffff",
+        "89f05ab43a7ffff",
+        "89f05ab43b7ffff",
+        "89f05ab43b3ffff"
+      ],
+      [
+        "89f05ab4333ffff",
+        "89f05ab4337ffff",
+        "89f05ab4edbffff",
+        "89f05ab4ed3ffff",
+        "89f05ab416bffff",
+        "89f05ab417bffff",
+        "89f05ab414fffff"
+      ]
+    ]
+  },
+  "89f05ab43a7ffff": {
+    "lat": -73.95602247843068,
+    "long": 40.80964743179059,
+    "h3Index": "89f05ab43a7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab43a7ffff"
+      ],
+      [
+        "89f05ab43a3ffff",
+        "89f05ab43afffff",
+        "89f05ab4edbffff",
+        "89f05ab4ed3ffff",
+        "89f05ab416bffff",
+        "89f05ab43b7ffff"
+      ],
+      [
+        "89f05ab43b3ffff",
+        "89f05ab4333ffff",
+        "89f05ab4337ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ed7ffff",
+        "89f05ab416fffff",
+        "89f05ab4163ffff",
+        "89f05ab417bffff",
+        "89f05ab414fffff"
+      ]
+    ]
+  },
+  "89f05ab4ed3ffff": {
+    "lat": -73.95447536896756,
+    "long": 40.799380807441864,
+    "h3Index": "89f05ab4ed3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4ed3ffff"
+      ],
+      [
+        "89f05ab43a7ffff",
+        "89f05ab4edbffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ed7ffff",
+        "89f05ab416fffff",
+        "89f05ab416bffff"
+      ],
+      [
+        "89f05ab43b7ffff",
+        "89f05ab43a3ffff",
+        "89f05ab43afffff",
+        "89f05ab4337ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4ecfffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4e8bffff",
+        "89f05ab4e9bffff",
+        "89f05ab4167ffff",
+        "89f05ab4163ffff",
+        "89f05ab417bffff"
+      ]
+    ]
+  },
+  "89f05ab4ed7ffff": {
+    "lat": -73.95292774817763,
+    "long": 40.78911596015151,
+    "h3Index": "89f05ab4ed7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4ed7ffff"
+      ],
+      [
+        "89f05ab4ed3ffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4e8bffff",
+        "89f05ab4e9bffff",
+        "89f05ab416fffff"
+      ],
+      [
+        "89f05ab416bffff",
+        "89f05ab43a7ffff",
+        "89f05ab4edbffff",
+        "89f05ab4ecbffff",
+        "89f05ab4ecfffff",
+        "89f05ab4e1bffff",
+        "89f05ab4e13ffff",
+        "89f05ab4e8fffff",
+        "89f05ab4e83ffff",
+        "89f05ab4e93ffff",
+        "89f05ab4167ffff",
+        "89f05ab4163ffff"
+      ]
+    ]
+  },
+  "89f05ab4e9bffff": {
+    "lat": -73.95456993111428,
+    "long": 40.77966415493811,
+    "h3Index": "89f05ab4e9bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e9bffff"
+      ],
+      [
+        "89f05ab416fffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4e8bffff",
+        "89f05ab4e83ffff",
+        "89f05ab4e93ffff",
+        "89f05ab4167ffff"
+      ],
+      [
+        "89f05ab4163ffff",
+        "89f05ab416bffff",
+        "89f05ab4ed3ffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4e13ffff",
+        "89f05ab4e8fffff",
+        "89f05ab412fffff",
+        "89f05ab412bffff",
+        "89f05ab4177ffff"
+      ]
+    ]
+  },
+  "89f05ab4e93ffff": {
+    "lat": -73.95621175990438,
+    "long": 40.770210119684606,
+    "h3Index": "89f05ab4e93ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e93ffff"
+      ],
+      [
+        "89f05ab4167ffff",
+        "89f05ab4e9bffff",
+        "89f05ab4e83ffff",
+        "89f05ab412fffff",
+        "89f05ab412bffff"
+      ],
+      [
+        "89f05ab4177ffff",
+        "89f05ab4163ffff",
+        "89f05ab416fffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4e8bffff",
+        "89f05ab4e8fffff",
+        "89f05ab4123ffff",
+        "89f05ab413bffff"
+      ]
+    ]
+  },
+  "89f05ab412fffff": {
+    "lat": -73.95785323436888,
+    "long": 40.76075385411648,
+    "h3Index": "89f05ab412fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab412fffff"
+      ],
+      [
+        "89f05ab412bffff",
+        "89f05ab4e93ffff",
+        "89f05ab4123ffff"
+      ],
+      [
+        "89f05ab413bffff",
+        "89f05ab4177ffff",
+        "89f05ab4167ffff",
+        "89f05ab4e9bffff",
+        "89f05ab4e83ffff",
+        "89f05ab4133ffff"
+      ]
+    ]
+  },
+  "89f05ab41afffff": {
+    "lat": -73.96587585604712,
+    "long": 40.75290784255094,
+    "h3Index": "89f05ab41afffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab41afffff"
+      ],
+      [
+        "89f05ab41abffff",
+        "89f05ab4133ffff",
+        "89f05ab41a3ffff"
+      ],
+      [
+        "89f05ab41bbffff",
+        "89f05ab4117ffff",
+        "89f05ab4107ffff",
+        "89f05ab413bffff",
+        "89f05ab4123ffff",
+        "89f05ab41b7ffff",
+        "89f05ab41b3ffff"
+      ]
+    ]
+  },
+  "89f05ab41a3ffff": {
+    "lat": -73.96906670726808,
+    "long": 40.75371458014642,
+    "h3Index": "89f05ab41a3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab41a3ffff"
+      ],
+      [
+        "89f05ab41bbffff",
+        "89f05ab41abffff",
+        "89f05ab41afffff",
+        "89f05ab41b7ffff",
+        "89f05ab41b3ffff"
+      ],
+      [
+        "89f05ab4187ffff",
+        "89f05ab418fffff",
+        "89f05ab4117ffff",
+        "89f05ab4107ffff",
+        "89f05ab4133ffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a4bffff"
+      ]
+    ]
+  },
+  "89f05ab41b3ffff": {
+    "lat": -73.97225762537074,
+    "long": 40.75452164821201,
+    "h3Index": "89f05ab41b3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab41b3ffff"
+      ],
+      [
+        "89f05ab4187ffff",
+        "89f05ab41bbffff",
+        "89f05ab41a3ffff",
+        "89f05ab41b7ffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a4bffff"
+      ],
+      [
+        "89f05ab4197ffff",
+        "89f05ab4183ffff",
+        "89f05ab418fffff",
+        "89f05ab4117ffff",
+        "89f05ab41abffff",
+        "89f05ab41afffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a5bffff"
+      ]
+    ]
+  },
+  "89f05ab4187ffff": {
+    "lat": -73.9738069314589,
+    "long": 40.76479675414526,
+    "h3Index": "89f05ab4187ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4187ffff"
+      ],
+      [
+        "89f05ab4183ffff",
+        "89f05ab418fffff",
+        "89f05ab41bbffff",
+        "89f05ab41b3ffff",
+        "89f05ab6a4bffff",
+        "89f05ab4197ffff"
+      ],
+      [
+        "89f05ab4193ffff",
+        "89f05ab419bffff",
+        "89f05ab418bffff",
+        "89f05ab4113ffff",
+        "89f05ab4117ffff",
+        "89f05ab41abffff",
+        "89f05ab41a3ffff",
+        "89f05ab41b7ffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a5bffff",
+        "89f05ab452fffff"
+      ]
+    ]
+  },
+  "89f05ab4183ffff": {
+    "lat": -73.97535572573976,
+    "long": 40.775073643436386,
+    "h3Index": "89f05ab4183ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4183ffff"
+      ],
+      [
+        "89f05ab419bffff",
+        "89f05ab418bffff",
+        "89f05ab418fffff",
+        "89f05ab4187ffff",
+        "89f05ab4197ffff",
+        "89f05ab4193ffff"
+      ],
+      [
+        "89f05ab4567ffff",
+        "89f05ab456fffff",
+        "89f05ab41d7ffff",
+        "89f05ab41c7ffff",
+        "89f05ab4113ffff",
+        "89f05ab4117ffff",
+        "89f05ab41bbffff",
+        "89f05ab41b3ffff",
+        "89f05ab6a4bffff",
+        "89f05ab6a5bffff",
+        "89f05ab452fffff",
+        "89f05ab452bffff"
+      ]
+    ]
+  },
+  "89f05ab419bffff": {
+    "lat": -73.97690400808368,
+    "long": 40.7853523158883,
+    "h3Index": "89f05ab419bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab419bffff"
+      ],
+      [
+        "89f05ab456fffff",
+        "89f05ab41d7ffff",
+        "89f05ab418bffff",
+        "89f05ab4183ffff",
+        "89f05ab4193ffff",
+        "89f05ab4567ffff"
+      ],
+      [
+        "89f05ab41c7ffff",
+        "89f05ab4113ffff",
+        "89f05ab418fffff",
+        "89f05ab4187ffff",
+        "89f05ab4197ffff",
+        "89f05ab452fffff",
+        "89f05ab452bffff",
+        "89f05ab4577ffff"
+      ]
+    ]
+  },
+  "89f05ab456fffff": {
+    "lat": -73.9784517783609,
+    "long": 40.79563277130322,
+    "h3Index": "89f05ab456fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab456fffff"
+      ],
+      [
+        "89f05ab41d7ffff",
+        "89f05ab419bffff",
+        "89f05ab4567ffff"
+      ],
+      [
+        "89f05ab41c7ffff",
+        "89f05ab418bffff",
+        "89f05ab4183ffff",
+        "89f05ab4193ffff",
+        "89f05ab452bffff",
+        "89f05ab4577ffff"
+      ]
+    ]
+  },
+  "89f05ab43afffff": {
+    "lat": -73.95437900953831,
+    "long": 40.8190962196,
+    "h3Index": "89f05ab43afffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab43afffff"
+      ],
+      [
+        "89f05ab4333ffff",
+        "89f05ab4337ffff",
+        "89f05ab4edbffff",
+        "89f05ab43a7ffff",
+        "89f05ab43a3ffff"
+      ],
+      [
+        "89f05ab4323ffff",
+        "89f05ab4327ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ed3ffff",
+        "89f05ab416bffff",
+        "89f05ab43b7ffff",
+        "89f05ab43b3ffff"
+      ]
+    ]
+  },
+  "89f05ab4edbffff": {
+    "lat": -73.95283236607155,
+    "long": 40.80882998951269,
+    "h3Index": "89f05ab4edbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4edbffff"
+      ],
+      [
+        "89f05ab43afffff",
+        "89f05ab4337ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ed3ffff",
+        "89f05ab43a7ffff"
+      ],
+      [
+        "89f05ab43a3ffff",
+        "89f05ab4333ffff",
+        "89f05ab4323ffff",
+        "89f05ab4327ffff",
+        "89f05ab4e53ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4ed7ffff",
+        "89f05ab416fffff",
+        "89f05ab416bffff",
+        "89f05ab43b7ffff"
+      ]
+    ]
+  },
+  "89f05ab4ec3ffff": {
+    "lat": -73.95128521127337,
+    "long": 40.79856553559941,
+    "h3Index": "89f05ab4ec3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4ec3ffff"
+      ],
+      [
+        "89f05ab4edbffff",
+        "89f05ab4ecbffff",
+        "89f05ab4ecfffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4ed3ffff"
+      ],
+      [
+        "89f05ab43a7ffff",
+        "89f05ab43afffff",
+        "89f05ab4337ffff",
+        "89f05ab4327ffff",
+        "89f05ab4e53ffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e1bffff",
+        "89f05ab4e13ffff",
+        "89f05ab4e8bffff",
+        "89f05ab4e9bffff",
+        "89f05ab416fffff",
+        "89f05ab416bffff"
+      ]
+    ]
+  },
+  "89f05ab4ec7ffff": {
+    "lat": -73.94973754527304,
+    "long": 40.78830285805777,
+    "h3Index": "89f05ab4ec7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4ec7ffff"
+      ],
+      [
+        "89f05ab4ec3ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4e1bffff",
+        "89f05ab4e13ffff",
+        "89f05ab4e8bffff",
+        "89f05ab4ed7ffff"
+      ],
+      [
+        "89f05ab4ed3ffff",
+        "89f05ab4edbffff",
+        "89f05ab4ecbffff",
+        "89f05ab4e53ffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e8fffff",
+        "89f05ab4e83ffff",
+        "89f05ab4e9bffff",
+        "89f05ab416fffff"
+      ]
+    ]
+  },
+  "89f05ab4e8bffff": {
+    "lat": -73.95137961619007,
+    "long": 40.778852890116944,
+    "h3Index": "89f05ab4e8bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e8bffff"
+      ],
+      [
+        "89f05ab4ed7ffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4e13ffff",
+        "89f05ab4e8fffff",
+        "89f05ab4e83ffff",
+        "89f05ab4e9bffff"
+      ],
+      [
+        "89f05ab416fffff",
+        "89f05ab4ed3ffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4e1bffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e93ffff",
+        "89f05ab4167ffff"
+      ]
+    ]
+  },
+  "89f05ab4e83ffff": {
+    "lat": -73.95302133304796,
+    "long": 40.76940069306966,
+    "h3Index": "89f05ab4e83ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e83ffff"
+      ],
+      [
+        "89f05ab4e9bffff",
+        "89f05ab4e8bffff",
+        "89f05ab4e8fffff",
+        "89f05ab4e93ffff"
+      ],
+      [
+        "89f05ab4167ffff",
+        "89f05ab416fffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4e13ffff",
+        "89f05ab412fffff",
+        "89f05ab412bffff"
+      ]
+    ]
+  },
+  "89f05ab41b7ffff": {
+    "lat": -73.97070780760498,
+    "long": 40.74424832583316,
+    "h3Index": "89f05ab41b7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab41b7ffff"
+      ],
+      [
+        "89f05ab41b3ffff",
+        "89f05ab41a3ffff",
+        "89f05ab6a4fffff"
+      ],
+      [
+        "89f05ab6a4bffff",
+        "89f05ab4187ffff",
+        "89f05ab41bbffff",
+        "89f05ab41abffff",
+        "89f05ab41afffff",
+        "89f05ab6a73ffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a43ffff"
+      ]
+    ]
+  },
+  "89f05ab6a4fffff": {
+    "lat": -73.97389883741202,
+    "long": 40.74505355004309,
+    "h3Index": "89f05ab6a4fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a4fffff"
+      ],
+      [
+        "89f05ab6a4bffff",
+        "89f05ab41b3ffff",
+        "89f05ab41b7ffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a43ffff"
+      ],
+      [
+        "89f05ab6a5bffff",
+        "89f05ab4197ffff",
+        "89f05ab4187ffff",
+        "89f05ab41bbffff",
+        "89f05ab41a3ffff",
+        "89f05ab6a73ffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a53ffff"
+      ]
+    ]
+  },
+  "89f05ab6a4bffff": {
+    "lat": -73.97544861033556,
+    "long": 40.75532904695048,
+    "h3Index": "89f05ab6a4bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a4bffff"
+      ],
+      [
+        "89f05ab4197ffff",
+        "89f05ab4187ffff",
+        "89f05ab41b3ffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a5bffff"
+      ],
+      [
+        "89f05ab452fffff",
+        "89f05ab4193ffff",
+        "89f05ab4183ffff",
+        "89f05ab418fffff",
+        "89f05ab41bbffff",
+        "89f05ab41a3ffff",
+        "89f05ab41b7ffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a53ffff",
+        "89f05ab4527ffff"
+      ]
+    ]
+  },
+  "89f05ab4197ffff": {
+    "lat": -73.97699787145665,
+    "long": 40.76560632810338,
+    "h3Index": "89f05ab4197ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4197ffff"
+      ],
+      [
+        "89f05ab4193ffff",
+        "89f05ab4183ffff",
+        "89f05ab4187ffff",
+        "89f05ab6a4bffff",
+        "89f05ab6a5bffff",
+        "89f05ab452fffff"
+      ],
+      [
+        "89f05ab452bffff",
+        "89f05ab4567ffff",
+        "89f05ab419bffff",
+        "89f05ab418bffff",
+        "89f05ab418fffff",
+        "89f05ab41bbffff",
+        "89f05ab41b3ffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a53ffff",
+        "89f05ab4527ffff",
+        "89f05ab4523ffff"
+      ]
+    ]
+  },
+  "89f05ab4193ffff": {
+    "lat": -73.97854662064549,
+    "long": 40.775885393305,
+    "h3Index": "89f05ab4193ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4193ffff"
+      ],
+      [
+        "89f05ab4567ffff",
+        "89f05ab419bffff",
+        "89f05ab4183ffff",
+        "89f05ab4197ffff",
+        "89f05ab452fffff",
+        "89f05ab452bffff"
+      ],
+      [
+        "89f05ab4577ffff",
+        "89f05ab456fffff",
+        "89f05ab41d7ffff",
+        "89f05ab418bffff",
+        "89f05ab418fffff",
+        "89f05ab4187ffff",
+        "89f05ab6a4bffff",
+        "89f05ab6a5bffff",
+        "89f05ab4527ffff",
+        "89f05ab4523ffff",
+        "89f05ab453bffff"
+      ]
+    ]
+  },
+  "89f05ab4567ffff": {
+    "lat": -73.98009485777243,
+    "long": 40.78616624235812,
+    "h3Index": "89f05ab4567ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4567ffff"
+      ],
+      [
+        "89f05ab456fffff",
+        "89f05ab419bffff",
+        "89f05ab4193ffff",
+        "89f05ab452bffff",
+        "89f05ab4577ffff"
+      ],
+      [
+        "89f05ab41d7ffff",
+        "89f05ab418bffff",
+        "89f05ab4183ffff",
+        "89f05ab4197ffff",
+        "89f05ab452fffff",
+        "89f05ab4523ffff",
+        "89f05ab453bffff"
+      ]
+    ]
+  },
+  "89f05ab4333ffff": {
+    "lat": -73.95273518704066,
+    "long": 40.82854277660259,
+    "h3Index": "89f05ab4333ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4333ffff"
+      ],
+      [
+        "89f05ab4323ffff",
+        "89f05ab4337ffff",
+        "89f05ab43afffff"
+      ],
+      [
+        "89f05ab432bffff",
+        "89f05ab432fffff",
+        "89f05ab4327ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4edbffff",
+        "89f05ab43a7ffff",
+        "89f05ab43a3ffff"
+      ]
+    ]
+  },
+  "89f05ab4337ffff": {
+    "lat": -73.95118900947847,
+    "long": 40.81827694143481,
+    "h3Index": "89f05ab4337ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4337ffff"
+      ],
+      [
+        "89f05ab4333ffff",
+        "89f05ab4323ffff",
+        "89f05ab4327ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4edbffff",
+        "89f05ab43afffff"
+      ],
+      [
+        "89f05ab432bffff",
+        "89f05ab432fffff",
+        "89f05ab4e5bffff",
+        "89f05ab4e53ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ed3ffff",
+        "89f05ab43a7ffff",
+        "89f05ab43a3ffff"
+      ]
+    ]
+  },
+  "89f05ab4ecbffff": {
+    "lat": -73.94964232058045,
+    "long": 40.808012881556735,
+    "h3Index": "89f05ab4ecbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4ecbffff"
+      ],
+      [
+        "89f05ab4337ffff",
+        "89f05ab4327ffff",
+        "89f05ab4e53ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4edbffff"
+      ],
+      [
+        "89f05ab43afffff",
+        "89f05ab4333ffff",
+        "89f05ab4323ffff",
+        "89f05ab432fffff",
+        "89f05ab4e5bffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e1bffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4ed3ffff",
+        "89f05ab43a7ffff"
+      ]
+    ]
+  },
+  "89f05ab4ecfffff": {
+    "lat": -73.94809512047573,
+    "long": 40.7977505971665,
+    "h3Index": "89f05ab4ecfffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4ecfffff"
+      ],
+      [
+        "89f05ab4ecbffff",
+        "89f05ab4e53ffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e1bffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4ec3ffff"
+      ],
+      [
+        "89f05ab4edbffff",
+        "89f05ab4337ffff",
+        "89f05ab4327ffff",
+        "89f05ab4e5bffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e13ffff",
+        "89f05ab4e8bffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4ed3ffff"
+      ]
+    ]
+  },
+  "89f05ab4e1bffff": {
+    "lat": -73.94654740929346,
+    "long": 40.78749008846175,
+    "h3Index": "89f05ab4e1bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e1bffff"
+      ],
+      [
+        "89f05ab4ecfffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e13ffff",
+        "89f05ab4ec7ffff"
+      ],
+      [
+        "89f05ab4ec3ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4e53ffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e8fffff",
+        "89f05ab4e8bffff",
+        "89f05ab4ed7ffff"
+      ]
+    ]
+  },
+  "89f05ab4e13ffff": {
+    "lat": -73.9481893681997,
+    "long": 40.7780419570852,
+    "h3Index": "89f05ab4e13ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e13ffff"
+      ],
+      [
+        "89f05ab4ec7ffff",
+        "89f05ab4e1bffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e8fffff",
+        "89f05ab4e8bffff"
+      ],
+      [
+        "89f05ab4ed7ffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e83ffff",
+        "89f05ab4e9bffff"
+      ]
+    ]
+  },
+  "89f05ab4e8fffff": {
+    "lat": -73.94983097313418,
+    "long": 40.76859159753523,
+    "h3Index": "89f05ab4e8fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e8fffff"
+      ],
+      [
+        "89f05ab4e8bffff",
+        "89f05ab4e13ffff",
+        "89f05ab4e83ffff"
+      ],
+      [
+        "89f05ab4e9bffff",
+        "89f05ab4ed7ffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4e1bffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e93ffff"
+      ]
+    ]
+  },
+  "89f05ab6a47ffff": {
+    "lat": -73.9755396942393,
+    "long": 40.73558321699475,
+    "h3Index": "89f05ab6a47ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a47ffff"
+      ],
+      [
+        "89f05ab6a43ffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a73ffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a57ffff"
+      ],
+      [
+        "89f05ab6a53ffff",
+        "89f05ab6a5bffff",
+        "89f05ab6a4bffff",
+        "89f05ab41b3ffff",
+        "89f05ab41b7ffff",
+        "89f05ab6a0fffff",
+        "89f05ab6a03ffff",
+        "89f05ab6a1bffff",
+        "89f05ab6acfffff"
+      ]
+    ]
+  },
+  "89f05ab6a43ffff": {
+    "lat": -73.97708993408992,
+    "long": 40.74585910421313,
+    "h3Index": "89f05ab6a43ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a43ffff"
+      ],
+      [
+        "89f05ab6a5bffff",
+        "89f05ab6a4bffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a53ffff"
+      ],
+      [
+        "89f05ab4527ffff",
+        "89f05ab452fffff",
+        "89f05ab4197ffff",
+        "89f05ab4187ffff",
+        "89f05ab41b3ffff",
+        "89f05ab41b7ffff",
+        "89f05ab6a73ffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a1bffff",
+        "89f05ab6acfffff",
+        "89f05ab6acbffff"
+      ]
+    ]
+  },
+  "89f05ab6a5bffff": {
+    "lat": -73.97863966214288,
+    "long": 40.756136776564745,
+    "h3Index": "89f05ab6a5bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a5bffff"
+      ],
+      [
+        "89f05ab452fffff",
+        "89f05ab4197ffff",
+        "89f05ab6a4bffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a53ffff",
+        "89f05ab4527ffff"
+      ],
+      [
+        "89f05ab4523ffff",
+        "89f05ab452bffff",
+        "89f05ab4193ffff",
+        "89f05ab4183ffff",
+        "89f05ab4187ffff",
+        "89f05ab41b3ffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a57ffff",
+        "89f05ab6acfffff",
+        "89f05ab6acbffff",
+        "89f05ab4537ffff"
+      ]
+    ]
+  },
+  "89f05ab452fffff": {
+    "lat": -73.9801888782685,
+    "long": 40.76641623385331,
+    "h3Index": "89f05ab452fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab452fffff"
+      ],
+      [
+        "89f05ab452bffff",
+        "89f05ab4193ffff",
+        "89f05ab4197ffff",
+        "89f05ab6a5bffff",
+        "89f05ab4527ffff",
+        "89f05ab4523ffff"
+      ],
+      [
+        "89f05ab453bffff",
+        "89f05ab4577ffff",
+        "89f05ab4567ffff",
+        "89f05ab419bffff",
+        "89f05ab4183ffff",
+        "89f05ab4187ffff",
+        "89f05ab6a4bffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a53ffff",
+        "89f05ab6acbffff",
+        "89f05ab4537ffff",
+        "89f05ab4533ffff"
+      ]
+    ]
+  },
+  "89f05ab452bffff": {
+    "lat": -73.98173758233698,
+    "long": 40.776697475882024,
+    "h3Index": "89f05ab452bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab452bffff"
+      ],
+      [
+        "89f05ab4577ffff",
+        "89f05ab4567ffff",
+        "89f05ab4193ffff",
+        "89f05ab452fffff",
+        "89f05ab4523ffff",
+        "89f05ab453bffff"
+      ],
+      [
+        "89f05ab456fffff",
+        "89f05ab419bffff",
+        "89f05ab4183ffff",
+        "89f05ab4197ffff",
+        "89f05ab6a5bffff",
+        "89f05ab4527ffff",
+        "89f05ab4537ffff",
+        "89f05ab4533ffff",
+        "89f05ab4507ffff"
+      ]
+    ]
+  },
+  "89f05ab4577ffff": {
+    "lat": -73.9832857742185,
+    "long": 40.786980502453424,
+    "h3Index": "89f05ab4577ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4577ffff"
+      ],
+      [
+        "89f05ab4567ffff",
+        "89f05ab452bffff",
+        "89f05ab453bffff"
+      ],
+      [
+        "89f05ab456fffff",
+        "89f05ab419bffff",
+        "89f05ab4193ffff",
+        "89f05ab452fffff",
+        "89f05ab4523ffff",
+        "89f05ab4533ffff",
+        "89f05ab4507ffff"
+      ]
+    ]
+  },
+  "89f05ab4323ffff": {
+    "lat": -73.94954529936723,
+    "long": 40.82772166348416,
+    "h3Index": "89f05ab4323ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4323ffff"
+      ],
+      [
+        "89f05ab432bffff",
+        "89f05ab432fffff",
+        "89f05ab4327ffff",
+        "89f05ab4337ffff",
+        "89f05ab4333ffff"
+      ],
+      [
+        "89f05ab4367ffff",
+        "89f05ab5d93ffff",
+        "89f05ab5d97ffff",
+        "89f05ab4e5bffff",
+        "89f05ab4e53ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4edbffff",
+        "89f05ab43afffff"
+      ]
+    ]
+  },
+  "89f05ab4327ffff": {
+    "lat": -73.9479990762777,
+    "long": 40.81745799829912,
+    "h3Index": "89f05ab4327ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4327ffff"
+      ],
+      [
+        "89f05ab4323ffff",
+        "89f05ab432fffff",
+        "89f05ab4e5bffff",
+        "89f05ab4e53ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4337ffff"
+      ],
+      [
+        "89f05ab4333ffff",
+        "89f05ab432bffff",
+        "89f05ab5d93ffff",
+        "89f05ab5d97ffff",
+        "89f05ab4e4bffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e57ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4edbffff",
+        "89f05ab43afffff"
+      ]
+    ]
+  },
+  "89f05ab4e53ffff": {
+    "lat": -73.94645234197702,
+    "long": 40.80719610771814,
+    "h3Index": "89f05ab4e53ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e53ffff"
+      ],
+      [
+        "89f05ab4327ffff",
+        "89f05ab4e5bffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e57ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4ecbffff"
+      ],
+      [
+        "89f05ab4337ffff",
+        "89f05ab4323ffff",
+        "89f05ab432fffff",
+        "89f05ab5d97ffff",
+        "89f05ab4e4bffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e1bffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4ec3ffff",
+        "89f05ab4edbffff"
+      ]
+    ]
+  },
+  "89f05ab4e57ffff": {
+    "lat": -73.94490509659423,
+    "long": 40.796935991939165,
+    "h3Index": "89f05ab4e57ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e57ffff"
+      ],
+      [
+        "89f05ab4e53ffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e1bffff",
+        "89f05ab4ecfffff"
+      ],
+      [
+        "89f05ab4ecbffff",
+        "89f05ab4327ffff",
+        "89f05ab4e5bffff",
+        "89f05ab4e4bffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e13ffff",
+        "89f05ab4ec7ffff",
+        "89f05ab4ec3ffff"
+      ]
+    ]
+  },
+  "89f05ab4e0bffff": {
+    "lat": -73.94335734025846,
+    "long": 40.78667765115979,
+    "h3Index": "89f05ab4e0bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e0bffff"
+      ],
+      [
+        "89f05ab4e57ffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e1bffff"
+      ],
+      [
+        "89f05ab4ecfffff",
+        "89f05ab4e53ffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e13ffff",
+        "89f05ab4ec7ffff"
+      ]
+    ]
+  },
+  "89f05ab4e03ffff": {
+    "lat": -73.9449991871627,
+    "long": 40.777231355639415,
+    "h3Index": "89f05ab4e03ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e03ffff"
+      ],
+      [
+        "89f05ab4e1bffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e13ffff"
+      ],
+      [
+        "89f05ab4ec7ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e8fffff",
+        "89f05ab4e8bffff"
+      ]
+    ]
+  },
+  "89f05ab6a73ffff": {
+    "lat": -73.97398894272096,
+    "long": 40.72530911510564,
+    "h3Index": "89f05ab6a73ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a73ffff"
+      ],
+      [
+        "89f05ab6a47ffff",
+        "89f05ab6a0fffff",
+        "89f05ab6a0bffff"
+      ],
+      [
+        "89f05ab6a57ffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a4fffff",
+        "89f05ab41b7ffff",
+        "89f05ab6a03ffff",
+        "89f05ab6a1bffff"
+      ]
+    ]
+  },
+  "89f05ab6a0bffff": {
+    "lat": -73.97718019567318,
+    "long": 40.72611064879324,
+    "h3Index": "89f05ab6a0bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a0bffff"
+      ],
+      [
+        "89f05ab6a57ffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a73ffff",
+        "89f05ab6a0fffff",
+        "89f05ab6a03ffff",
+        "89f05ab6a1bffff"
+      ],
+      [
+        "89f05ab6acfffff",
+        "89f05ab6a53ffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a13ffff",
+        "89f05ab6ac7ffff"
+      ]
+    ]
+  },
+  "89f05ab6a57ffff": {
+    "lat": -73.97873090254241,
+    "long": 40.73638692565875,
+    "h3Index": "89f05ab6a57ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a57ffff"
+      ],
+      [
+        "89f05ab6a53ffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a1bffff",
+        "89f05ab6acfffff"
+      ],
+      [
+        "89f05ab6acbffff",
+        "89f05ab4527ffff",
+        "89f05ab6a5bffff",
+        "89f05ab6a4bffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a73ffff",
+        "89f05ab6a0fffff",
+        "89f05ab6a03ffff",
+        "89f05ab6a13ffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6ac3ffff"
+      ]
+    ]
+  },
+  "89f05ab6a53ffff": {
+    "lat": -73.98028109761903,
+    "long": 40.74666498854569,
+    "h3Index": "89f05ab6a53ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a53ffff"
+      ],
+      [
+        "89f05ab4527ffff",
+        "89f05ab6a5bffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a57ffff",
+        "89f05ab6acfffff",
+        "89f05ab6acbffff"
+      ],
+      [
+        "89f05ab4537ffff",
+        "89f05ab4523ffff",
+        "89f05ab452fffff",
+        "89f05ab4197ffff",
+        "89f05ab6a4bffff",
+        "89f05ab6a4fffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a1bffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6adbffff"
+      ]
+    ]
+  },
+  "89f05ab4527ffff": {
+    "lat": -73.98183078077317,
+    "long": 40.756944837258,
+    "h3Index": "89f05ab4527ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4527ffff"
+      ],
+      [
+        "89f05ab4523ffff",
+        "89f05ab452fffff",
+        "89f05ab6a5bffff",
+        "89f05ab6a53ffff",
+        "89f05ab6acbffff",
+        "89f05ab4537ffff"
+      ],
+      [
+        "89f05ab4533ffff",
+        "89f05ab453bffff",
+        "89f05ab452bffff",
+        "89f05ab4193ffff",
+        "89f05ab4197ffff",
+        "89f05ab6a4bffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a57ffff",
+        "89f05ab6acfffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6adbffff",
+        "89f05ab45afffff"
+      ]
+    ]
+  },
+  "89f05ab4523ffff": {
+    "lat": -73.98337995187491,
+    "long": 40.767226471598974,
+    "h3Index": "89f05ab4523ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4523ffff"
+      ],
+      [
+        "89f05ab453bffff",
+        "89f05ab452bffff",
+        "89f05ab452fffff",
+        "89f05ab4527ffff",
+        "89f05ab4537ffff",
+        "89f05ab4533ffff"
+      ],
+      [
+        "89f05ab4507ffff",
+        "89f05ab4577ffff",
+        "89f05ab4567ffff",
+        "89f05ab4193ffff",
+        "89f05ab4197ffff",
+        "89f05ab6a5bffff",
+        "89f05ab6a53ffff",
+        "89f05ab6acbffff",
+        "89f05ab6adbffff",
+        "89f05ab45afffff",
+        "89f05ab45abffff"
+      ]
+    ]
+  },
+  "89f05ab453bffff": {
+    "lat": -73.98492861079455,
+    "long": 40.77750989137185,
+    "h3Index": "89f05ab453bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab453bffff"
+      ],
+      [
+        "89f05ab4577ffff",
+        "89f05ab452bffff",
+        "89f05ab4523ffff",
+        "89f05ab4533ffff",
+        "89f05ab4507ffff"
+      ],
+      [
+        "89f05ab4567ffff",
+        "89f05ab4193ffff",
+        "89f05ab452fffff",
+        "89f05ab4527ffff",
+        "89f05ab4537ffff",
+        "89f05ab45afffff",
+        "89f05ab45abffff"
+      ]
+    ]
+  },
+  "89f05ab432bffff": {
+    "lat": -73.94790123591673,
+    "long": 40.83716415593716,
+    "h3Index": "89f05ab432bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab432bffff"
+      ],
+      [
+        "89f05ab4367ffff",
+        "89f05ab5d93ffff",
+        "89f05ab432fffff",
+        "89f05ab4323ffff"
+      ],
+      [
+        "89f05ab5d9bffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d97ffff",
+        "89f05ab4e5bffff",
+        "89f05ab4327ffff",
+        "89f05ab4337ffff",
+        "89f05ab4333ffff"
+      ]
+    ]
+  },
+  "89f05ab432fffff": {
+    "lat": -73.946355478544,
+    "long": 40.82690088610228,
+    "h3Index": "89f05ab432fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab432fffff"
+      ],
+      [
+        "89f05ab432bffff",
+        "89f05ab5d93ffff",
+        "89f05ab5d97ffff",
+        "89f05ab4e5bffff",
+        "89f05ab4327ffff",
+        "89f05ab4323ffff"
+      ],
+      [
+        "89f05ab4367ffff",
+        "89f05ab5d9bffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d87ffff",
+        "89f05ab4e4bffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e53ffff",
+        "89f05ab4ecbffff",
+        "89f05ab4337ffff",
+        "89f05ab4333ffff"
+      ]
+    ]
+  },
+  "89f05ab4e5bffff": {
+    "lat": -73.94480920995575,
+    "long": 40.81663938998784,
+    "h3Index": "89f05ab4e5bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e5bffff"
+      ],
+      [
+        "89f05ab432fffff",
+        "89f05ab5d97ffff",
+        "89f05ab4e4bffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e53ffff",
+        "89f05ab4327ffff"
+      ],
+      [
+        "89f05ab4323ffff",
+        "89f05ab432bffff",
+        "89f05ab5d93ffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d87ffff",
+        "89f05ab5db3ffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e57ffff",
+        "89f05ab4ecfffff",
+        "89f05ab4ecbffff",
+        "89f05ab4337ffff"
+      ]
+    ]
+  },
+  "89f05ab4e43ffff": {
+    "lat": -73.94326243028091,
+    "long": 40.80637966779235,
+    "h3Index": "89f05ab4e43ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e43ffff"
+      ],
+      [
+        "89f05ab4e5bffff",
+        "89f05ab4e4bffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e53ffff"
+      ],
+      [
+        "89f05ab4327ffff",
+        "89f05ab432fffff",
+        "89f05ab5d97ffff",
+        "89f05ab5d87ffff",
+        "89f05ab5db3ffff",
+        "89f05ab5db7ffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e1bffff",
+        "89f05ab4ecfffff",
+        "89f05ab4ecbffff"
+      ]
+    ]
+  },
+  "89f05ab4e47ffff": {
+    "lat": -73.94171513964854,
+    "long": 40.79612171971346,
+    "h3Index": "89f05ab4e47ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e47ffff"
+      ],
+      [
+        "89f05ab4e43ffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e57ffff"
+      ],
+      [
+        "89f05ab4e53ffff",
+        "89f05ab4e5bffff",
+        "89f05ab4e4bffff",
+        "89f05ab5db3ffff",
+        "89f05ab5db7ffff",
+        "89f05ab4e6bffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e1bffff",
+        "89f05ab4ecfffff"
+      ]
+    ]
+  },
+  "89f05ab4e73ffff": {
+    "lat": -73.94016733818768,
+    "long": 40.78586554594865,
+    "h3Index": "89f05ab4e73ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e73ffff"
+      ],
+      [
+        "89f05ab4e47ffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e0bffff"
+      ],
+      [
+        "89f05ab4e57ffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e4fffff",
+        "89f05ab5db7ffff",
+        "89f05ab4e6bffff",
+        "89f05ab4e03ffff",
+        "89f05ab4e1bffff"
+      ]
+    ]
+  },
+  "89f05ab6a0fffff": {
+    "lat": -73.97562897714116,
+    "long": 40.71583615814448,
+    "h3Index": "89f05ab6a0fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a0fffff"
+      ],
+      [
+        "89f05ab6a0bffff",
+        "89f05ab6a73ffff",
+        "89f05ab6a03ffff"
+      ],
+      [
+        "89f05ab6a1bffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a13ffff"
+      ]
+    ]
+  },
+  "89f05ab6a03ffff": {
+    "lat": -73.97882034153409,
+    "long": 40.71663584516524,
+    "h3Index": "89f05ab6a03ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a03ffff"
+      ],
+      [
+        "89f05ab6a1bffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a0fffff",
+        "89f05ab6a13ffff"
+      ],
+      [
+        "89f05ab6ac7ffff",
+        "89f05ab6acfffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a73ffff",
+        "89f05ab6a8bffff"
+      ]
+    ]
+  },
+  "89f05ab6a1bffff": {
+    "lat": -73.9803715155136,
+    "long": 40.726912511013694,
+    "h3Index": "89f05ab6a1bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a1bffff"
+      ],
+      [
+        "89f05ab6acfffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a03ffff",
+        "89f05ab6a13ffff",
+        "89f05ab6ac7ffff"
+      ],
+      [
+        "89f05ab6ac3ffff",
+        "89f05ab6acbffff",
+        "89f05ab6a53ffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a73ffff",
+        "89f05ab6a0fffff",
+        "89f05ab6a8bffff",
+        "89f05ab6ad7ffff"
+      ]
+    ]
+  },
+  "89f05ab6acfffff": {
+    "lat": -73.9819221777055,
+    "long": 40.73719096377175,
+    "h3Index": "89f05ab6acfffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6acfffff"
+      ],
+      [
+        "89f05ab6acbffff",
+        "89f05ab6a53ffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a1bffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6ac3ffff"
+      ],
+      [
+        "89f05ab6adbffff",
+        "89f05ab4537ffff",
+        "89f05ab4527ffff",
+        "89f05ab6a5bffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a47ffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a03ffff",
+        "89f05ab6a13ffff",
+        "89f05ab6a8bffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6ad3ffff"
+      ]
+    ]
+  },
+  "89f05ab6acbffff": {
+    "lat": -73.98347232797987,
+    "long": 40.74747120324367,
+    "h3Index": "89f05ab6acbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6acbffff"
+      ],
+      [
+        "89f05ab4537ffff",
+        "89f05ab4527ffff",
+        "89f05ab6a53ffff",
+        "89f05ab6acfffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6adbffff"
+      ],
+      [
+        "89f05ab45afffff",
+        "89f05ab4533ffff",
+        "89f05ab4523ffff",
+        "89f05ab452fffff",
+        "89f05ab6a5bffff",
+        "89f05ab6a43ffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a1bffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6ad3ffff",
+        "89f05ab45a7ffff"
+      ]
+    ]
+  },
+  "89f05ab4537ffff": {
+    "lat": -73.98502196620674,
+    "long": 40.75775322923336,
+    "h3Index": "89f05ab4537ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4537ffff"
+      ],
+      [
+        "89f05ab4533ffff",
+        "89f05ab4523ffff",
+        "89f05ab4527ffff",
+        "89f05ab6acbffff",
+        "89f05ab6adbffff",
+        "89f05ab45afffff"
+      ],
+      [
+        "89f05ab45abffff",
+        "89f05ab4507ffff",
+        "89f05ab453bffff",
+        "89f05ab452bffff",
+        "89f05ab452fffff",
+        "89f05ab6a5bffff",
+        "89f05ab6a53ffff",
+        "89f05ab6acfffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6ad3ffff",
+        "89f05ab45a7ffff",
+        "89f05ab45a3ffff"
+      ]
+    ]
+  },
+  "89f05ab4533ffff": {
+    "lat": -73.98657109225628,
+    "long": 40.7680370415441,
+    "h3Index": "89f05ab4533ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4533ffff"
+      ],
+      [
+        "89f05ab4507ffff",
+        "89f05ab453bffff",
+        "89f05ab4523ffff",
+        "89f05ab4537ffff",
+        "89f05ab45afffff",
+        "89f05ab45abffff"
+      ],
+      [
+        "89f05ab4577ffff",
+        "89f05ab452bffff",
+        "89f05ab452fffff",
+        "89f05ab4527ffff",
+        "89f05ab6acbffff",
+        "89f05ab6adbffff",
+        "89f05ab45a7ffff",
+        "89f05ab45a3ffff",
+        "89f05ab45bbffff"
+      ]
+    ]
+  },
+  "89f05ab4507ffff": {
+    "lat": -73.98811970599861,
+    "long": 40.77832263997871,
+    "h3Index": "89f05ab4507ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4507ffff"
+      ],
+      [
+        "89f05ab453bffff",
+        "89f05ab4533ffff",
+        "89f05ab45abffff"
+      ],
+      [
+        "89f05ab4577ffff",
+        "89f05ab452bffff",
+        "89f05ab4523ffff",
+        "89f05ab4537ffff",
+        "89f05ab45afffff",
+        "89f05ab45a3ffff",
+        "89f05ab45bbffff"
+      ]
+    ]
+  },
+  "89f05ab4367ffff": {
+    "lat": -73.94625681930579,
+    "long": 40.846604419070424,
+    "h3Index": "89f05ab4367ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4367ffff"
+      ],
+      [
+        "89f05ab5d9bffff",
+        "89f05ab5d93ffff",
+        "89f05ab432bffff"
+      ],
+      [
+        "89f05ab5dd7ffff",
+        "89f05ab5d8bffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d97ffff",
+        "89f05ab432fffff",
+        "89f05ab4323ffff"
+      ]
+    ]
+  },
+  "89f05ab5d93ffff": {
+    "lat": -73.94471152755813,
+    "long": 40.83634154524215,
+    "h3Index": "89f05ab5d93ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d93ffff"
+      ],
+      [
+        "89f05ab4367ffff",
+        "89f05ab5d9bffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d97ffff",
+        "89f05ab432fffff",
+        "89f05ab432bffff"
+      ],
+      [
+        "89f05ab5dd7ffff",
+        "89f05ab5d8bffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d87ffff",
+        "89f05ab4e4bffff",
+        "89f05ab4e5bffff",
+        "89f05ab4327ffff",
+        "89f05ab4323ffff"
+      ]
+    ]
+  },
+  "89f05ab5d97ffff": {
+    "lat": -73.94316572459066,
+    "long": 40.82608044425119,
+    "h3Index": "89f05ab5d97ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d97ffff"
+      ],
+      [
+        "89f05ab5d93ffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d87ffff",
+        "89f05ab4e4bffff",
+        "89f05ab4e5bffff",
+        "89f05ab432fffff"
+      ],
+      [
+        "89f05ab432bffff",
+        "89f05ab4367ffff",
+        "89f05ab5d9bffff",
+        "89f05ab5d8bffff",
+        "89f05ab5d8fffff",
+        "89f05ab5dbbffff",
+        "89f05ab5db3ffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e53ffff",
+        "89f05ab4327ffff",
+        "89f05ab4323ffff"
+      ]
+    ]
+  },
+  "89f05ab4e4bffff": {
+    "lat": -73.94161941053217,
+    "long": 40.815821116296014,
+    "h3Index": "89f05ab4e4bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e4bffff"
+      ],
+      [
+        "89f05ab5d97ffff",
+        "89f05ab5d87ffff",
+        "89f05ab5db3ffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e5bffff"
+      ],
+      [
+        "89f05ab432fffff",
+        "89f05ab5d93ffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5dbbffff",
+        "89f05ab5da3ffff",
+        "89f05ab5db7ffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e53ffff",
+        "89f05ab4327ffff"
+      ]
+    ]
+  },
+  "89f05ab4e4fffff": {
+    "lat": -73.9400725855117,
+    "long": 40.80556356157487,
+    "h3Index": "89f05ab4e4fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e4fffff"
+      ],
+      [
+        "89f05ab4e4bffff",
+        "89f05ab5db3ffff",
+        "89f05ab5db7ffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e43ffff"
+      ],
+      [
+        "89f05ab4e5bffff",
+        "89f05ab5d97ffff",
+        "89f05ab5d87ffff",
+        "89f05ab5dbbffff",
+        "89f05ab5da3ffff",
+        "89f05ab5da7ffff",
+        "89f05ab4e6bffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e57ffff",
+        "89f05ab4e53ffff"
+      ]
+    ]
+  },
+  "89f05ab4e7bffff": {
+    "lat": -73.93852524965823,
+    "long": 40.79530778028549,
+    "h3Index": "89f05ab4e7bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e7bffff"
+      ],
+      [
+        "89f05ab4e4fffff",
+        "89f05ab5db7ffff",
+        "89f05ab4e6bffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e47ffff"
+      ],
+      [
+        "89f05ab4e43ffff",
+        "89f05ab4e4bffff",
+        "89f05ab5db3ffff",
+        "89f05ab5da3ffff",
+        "89f05ab5da7ffff",
+        "89f05ab4ad3ffff",
+        "89f05ab4e0bffff",
+        "89f05ab4e57ffff"
+      ]
+    ]
+  },
+  "89f05ab6a13ffff": {
+    "lat": -73.98201177282388,
+    "long": 40.7174358600042,
+    "h3Index": "89f05ab6a13ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a13ffff"
+      ],
+      [
+        "89f05ab6ac7ffff",
+        "89f05ab6a1bffff",
+        "89f05ab6a03ffff",
+        "89f05ab6a8bffff"
+      ],
+      [
+        "89f05ab6ad7ffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6acfffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a0fffff",
+        "89f05ab6a9bffff"
+      ]
+    ]
+  },
+  "89f05ab6ac7ffff": {
+    "lat": -73.98356290222269,
+    "long": 40.72771470196869,
+    "h3Index": "89f05ab6ac7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6ac7ffff"
+      ],
+      [
+        "89f05ab6ac3ffff",
+        "89f05ab6acfffff",
+        "89f05ab6a1bffff",
+        "89f05ab6a13ffff",
+        "89f05ab6a8bffff",
+        "89f05ab6ad7ffff"
+      ],
+      [
+        "89f05ab6ad3ffff",
+        "89f05ab6adbffff",
+        "89f05ab6acbffff",
+        "89f05ab6a53ffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a0bffff",
+        "89f05ab6a03ffff",
+        "89f05ab6a9bffff",
+        "89f05ab6e6fffff"
+      ]
+    ]
+  },
+  "89f05ab6ac3ffff": {
+    "lat": -73.98511351970893,
+    "long": 40.73799533153583,
+    "h3Index": "89f05ab6ac3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6ac3ffff"
+      ],
+      [
+        "89f05ab6adbffff",
+        "89f05ab6acbffff",
+        "89f05ab6acfffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6ad3ffff"
+      ],
+      [
+        "89f05ab45a7ffff",
+        "89f05ab45afffff",
+        "89f05ab4537ffff",
+        "89f05ab4527ffff",
+        "89f05ab6a53ffff",
+        "89f05ab6a57ffff",
+        "89f05ab6a1bffff",
+        "89f05ab6a13ffff",
+        "89f05ab6a8bffff",
+        "89f05ab6a9bffff",
+        "89f05ab6e6fffff",
+        "89f05ab6e6bffff"
+      ]
+    ]
+  },
+  "89f05ab6adbffff": {
+    "lat": -73.9866636251527,
+    "long": 40.74827774850978,
+    "h3Index": "89f05ab6adbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6adbffff"
+      ],
+      [
+        "89f05ab45afffff",
+        "89f05ab4537ffff",
+        "89f05ab6acbffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6ad3ffff",
+        "89f05ab45a7ffff"
+      ],
+      [
+        "89f05ab45a3ffff",
+        "89f05ab45abffff",
+        "89f05ab4533ffff",
+        "89f05ab4523ffff",
+        "89f05ab4527ffff",
+        "89f05ab6a53ffff",
+        "89f05ab6acfffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6e6fffff",
+        "89f05ab6e6bffff",
+        "89f05ab45b7ffff"
+      ]
+    ]
+  },
+  "89f05ab45afffff": {
+    "lat": -73.98821321842402,
+    "long": 40.75856195269444,
+    "h3Index": "89f05ab45afffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab45afffff"
+      ],
+      [
+        "89f05ab45abffff",
+        "89f05ab4533ffff",
+        "89f05ab4537ffff",
+        "89f05ab6adbffff",
+        "89f05ab45a7ffff",
+        "89f05ab45a3ffff"
+      ],
+      [
+        "89f05ab45bbffff",
+        "89f05ab4507ffff",
+        "89f05ab453bffff",
+        "89f05ab4523ffff",
+        "89f05ab4527ffff",
+        "89f05ab6acbffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6e6bffff",
+        "89f05ab45b7ffff",
+        "89f05ab45b3ffff"
+      ]
+    ]
+  },
+  "89f05ab45abffff": {
+    "lat": -73.98976229939295,
+    "long": 40.76884794389279,
+    "h3Index": "89f05ab45abffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab45abffff"
+      ],
+      [
+        "89f05ab4507ffff",
+        "89f05ab4533ffff",
+        "89f05ab45afffff",
+        "89f05ab45a3ffff",
+        "89f05ab45bbffff"
+      ],
+      [
+        "89f05ab453bffff",
+        "89f05ab4523ffff",
+        "89f05ab4537ffff",
+        "89f05ab6adbffff",
+        "89f05ab45a7ffff",
+        "89f05ab45b7ffff",
+        "89f05ab45b3ffff",
+        "89f05ab4587ffff"
+      ]
+    ]
+  },
+  "89f05ab5d9bffff": {
+    "lat": -73.94306722349886,
+    "long": 40.84577997599552,
+    "h3Index": "89f05ab5d9bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d9bffff"
+      ],
+      [
+        "89f05ab5dd7ffff",
+        "89f05ab5d8bffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d93ffff",
+        "89f05ab4367ffff"
+      ],
+      [
+        "89f05ab5dc7ffff",
+        "89f05ab5d13ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d87ffff",
+        "89f05ab5d97ffff",
+        "89f05ab432fffff",
+        "89f05ab432bffff"
+      ]
+    ]
+  },
+  "89f05ab5d83ffff": {
+    "lat": -73.94152188606044,
+    "long": 40.83551927078394,
+    "h3Index": "89f05ab5d83ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d83ffff"
+      ],
+      [
+        "89f05ab5d9bffff",
+        "89f05ab5d8bffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d87ffff",
+        "89f05ab5d97ffff",
+        "89f05ab5d93ffff"
+      ],
+      [
+        "89f05ab4367ffff",
+        "89f05ab5dd7ffff",
+        "89f05ab5dc7ffff",
+        "89f05ab5d13ffff",
+        "89f05ab5d17ffff",
+        "89f05ab5dbbffff",
+        "89f05ab5db3ffff",
+        "89f05ab4e4bffff",
+        "89f05ab4e5bffff",
+        "89f05ab432fffff",
+        "89f05ab432bffff"
+      ]
+    ]
+  },
+  "89f05ab5d87ffff": {
+    "lat": -73.9399760375267,
+    "long": 40.825260337725474,
+    "h3Index": "89f05ab5d87ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d87ffff"
+      ],
+      [
+        "89f05ab5d83ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5dbbffff",
+        "89f05ab5db3ffff",
+        "89f05ab4e4bffff",
+        "89f05ab5d97ffff"
+      ],
+      [
+        "89f05ab5d93ffff",
+        "89f05ab5d9bffff",
+        "89f05ab5d8bffff",
+        "89f05ab5d13ffff",
+        "89f05ab5d17ffff",
+        "89f05ab5da3ffff",
+        "89f05ab5db7ffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e5bffff",
+        "89f05ab432fffff"
+      ]
+    ]
+  },
+  "89f05ab5db3ffff": {
+    "lat": -73.93842967802661,
+    "long": 40.815003177018596,
+    "h3Index": "89f05ab5db3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5db3ffff"
+      ],
+      [
+        "89f05ab5d87ffff",
+        "89f05ab5dbbffff",
+        "89f05ab5da3ffff",
+        "89f05ab5db7ffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e4bffff"
+      ],
+      [
+        "89f05ab5d97ffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d17ffff",
+        "89f05ab5da7ffff",
+        "89f05ab4e6bffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e43ffff",
+        "89f05ab4e5bffff"
+      ]
+    ]
+  },
+  "89f05ab5db7ffff": {
+    "lat": -73.936882807689,
+    "long": 40.80474778886138,
+    "h3Index": "89f05ab5db7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5db7ffff"
+      ],
+      [
+        "89f05ab5db3ffff",
+        "89f05ab5da3ffff",
+        "89f05ab5da7ffff",
+        "89f05ab4e6bffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e4fffff"
+      ],
+      [
+        "89f05ab4e4bffff",
+        "89f05ab5d87ffff",
+        "89f05ab5dbbffff",
+        "89f05ab4adbffff",
+        "89f05ab4ad3ffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e47ffff",
+        "89f05ab4e43ffff"
+      ]
+    ]
+  },
+  "89f05ab4e6bffff": {
+    "lat": -73.93533542664287,
+    "long": 40.79449417345143,
+    "h3Index": "89f05ab4e6bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4e6bffff"
+      ],
+      [
+        "89f05ab5db7ffff",
+        "89f05ab5da7ffff",
+        "89f05ab4ad3ffff",
+        "89f05ab4e7bffff"
+      ],
+      [
+        "89f05ab4e4fffff",
+        "89f05ab5db3ffff",
+        "89f05ab5da3ffff",
+        "89f05ab4adbffff",
+        "89f05ab4e73ffff",
+        "89f05ab4e47ffff"
+      ]
+    ]
+  },
+  "89f05ab6a8bffff": {
+    "lat": -73.98520327099092,
+    "long": 40.71823620286282,
+    "h3Index": "89f05ab6a8bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a8bffff"
+      ],
+      [
+        "89f05ab6ad7ffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6a13ffff",
+        "89f05ab6a9bffff"
+      ],
+      [
+        "89f05ab6e6fffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6acfffff",
+        "89f05ab6a1bffff",
+        "89f05ab6a03ffff",
+        "89f05ab6a93ffff",
+        "89f05ab6e67ffff"
+      ]
+    ]
+  },
+  "89f05ab6ad7ffff": {
+    "lat": -73.98675435578079,
+    "long": 40.72851722186002,
+    "h3Index": "89f05ab6ad7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6ad7ffff"
+      ],
+      [
+        "89f05ab6ad3ffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6a8bffff",
+        "89f05ab6a9bffff",
+        "89f05ab6e6fffff"
+      ],
+      [
+        "89f05ab6e6bffff",
+        "89f05ab45a7ffff",
+        "89f05ab6adbffff",
+        "89f05ab6acbffff",
+        "89f05ab6acfffff",
+        "89f05ab6a1bffff",
+        "89f05ab6a13ffff",
+        "89f05ab6a93ffff",
+        "89f05ab6e67ffff",
+        "89f05ab6e63ffff"
+      ]
+    ]
+  },
+  "89f05ab6ad3ffff": {
+    "lat": -73.98830492853318,
+    "long": 40.738800029153495,
+    "h3Index": "89f05ab6ad3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6ad3ffff"
+      ],
+      [
+        "89f05ab45a7ffff",
+        "89f05ab6adbffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6e6fffff",
+        "89f05ab6e6bffff"
+      ],
+      [
+        "89f05ab45b7ffff",
+        "89f05ab45a3ffff",
+        "89f05ab45afffff",
+        "89f05ab4537ffff",
+        "89f05ab6acbffff",
+        "89f05ab6acfffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6a8bffff",
+        "89f05ab6a9bffff",
+        "89f05ab6e67ffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e7bffff"
+      ]
+    ]
+  },
+  "89f05ab45a7ffff": {
+    "lat": -73.98985498911806,
+    "long": 40.74908462454717,
+    "h3Index": "89f05ab45a7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab45a7ffff"
+      ],
+      [
+        "89f05ab45a3ffff",
+        "89f05ab45afffff",
+        "89f05ab6adbffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6e6bffff",
+        "89f05ab45b7ffff"
+      ],
+      [
+        "89f05ab45b3ffff",
+        "89f05ab45bbffff",
+        "89f05ab45abffff",
+        "89f05ab4533ffff",
+        "89f05ab4537ffff",
+        "89f05ab6acbffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6e6fffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e4fffff"
+      ]
+    ]
+  },
+  "89f05ab45a3ffff": {
+    "lat": -73.9914045374054,
+    "long": 40.75937100784466,
+    "h3Index": "89f05ab45a3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab45a3ffff"
+      ],
+      [
+        "89f05ab45bbffff",
+        "89f05ab45abffff",
+        "89f05ab45afffff",
+        "89f05ab45a7ffff",
+        "89f05ab45b7ffff",
+        "89f05ab45b3ffff"
+      ],
+      [
+        "89f05ab4587ffff",
+        "89f05ab4507ffff",
+        "89f05ab4533ffff",
+        "89f05ab4537ffff",
+        "89f05ab6adbffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6e6bffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e4bffff"
+      ]
+    ]
+  },
+  "89f05ab45bbffff": {
+    "lat": -73.99295357326524,
+    "long": 40.76965917884894,
+    "h3Index": "89f05ab45bbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab45bbffff"
+      ],
+      [
+        "89f05ab45abffff",
+        "89f05ab45a3ffff",
+        "89f05ab45b3ffff",
+        "89f05ab4587ffff"
+      ],
+      [
+        "89f05ab4507ffff",
+        "89f05ab4533ffff",
+        "89f05ab45afffff",
+        "89f05ab45a7ffff",
+        "89f05ab45b7ffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e4bffff"
+      ]
+    ]
+  },
+  "89f05ab5dd7ffff": {
+    "lat": -73.9414225665448,
+    "long": 40.85521617863892,
+    "h3Index": "89f05ab5dd7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5dd7ffff"
+      ],
+      [
+        "89f05ab5dc7ffff",
+        "89f05ab5d8bffff",
+        "89f05ab5d9bffff"
+      ],
+      [
+        "89f05ab5dcfffff",
+        "89f05ab5d1bffff",
+        "89f05ab5d13ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d93ffff",
+        "89f05ab4367ffff"
+      ]
+    ]
+  },
+  "89f05ab5d8bffff": {
+    "lat": -73.93987769454381,
+    "long": 40.844955869862524,
+    "h3Index": "89f05ab5d8bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d8bffff"
+      ],
+      [
+        "89f05ab5dd7ffff",
+        "89f05ab5dc7ffff",
+        "89f05ab5d13ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d9bffff"
+      ],
+      [
+        "89f05ab5dcfffff",
+        "89f05ab5d1bffff",
+        "89f05ab5d03ffff",
+        "89f05ab5d17ffff",
+        "89f05ab5dbbffff",
+        "89f05ab5d87ffff",
+        "89f05ab5d97ffff",
+        "89f05ab5d93ffff",
+        "89f05ab4367ffff"
+      ]
+    ]
+  },
+  "89f05ab5d8fffff": {
+    "lat": -73.93833231144318,
+    "long": 40.83469733235656,
+    "h3Index": "89f05ab5d8fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d8fffff"
+      ],
+      [
+        "89f05ab5d8bffff",
+        "89f05ab5d13ffff",
+        "89f05ab5d17ffff",
+        "89f05ab5dbbffff",
+        "89f05ab5d87ffff",
+        "89f05ab5d83ffff"
+      ],
+      [
+        "89f05ab5d9bffff",
+        "89f05ab5dd7ffff",
+        "89f05ab5dc7ffff",
+        "89f05ab5d1bffff",
+        "89f05ab5d03ffff",
+        "89f05ab5da3ffff",
+        "89f05ab5db3ffff",
+        "89f05ab4e4bffff",
+        "89f05ab5d97ffff",
+        "89f05ab5d93ffff"
+      ]
+    ]
+  },
+  "89f05ab5dbbffff": {
+    "lat": -73.93678641737186,
+    "long": 40.82444056632006,
+    "h3Index": "89f05ab5dbbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5dbbffff"
+      ],
+      [
+        "89f05ab5d8fffff",
+        "89f05ab5d17ffff",
+        "89f05ab5da3ffff",
+        "89f05ab5db3ffff",
+        "89f05ab5d87ffff"
+      ],
+      [
+        "89f05ab5d83ffff",
+        "89f05ab5d8bffff",
+        "89f05ab5d13ffff",
+        "89f05ab5d03ffff",
+        "89f05ab5da7ffff",
+        "89f05ab5db7ffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e4bffff",
+        "89f05ab5d97ffff"
+      ]
+    ]
+  },
+  "89f05ab5da3ffff": {
+    "lat": -73.93524001245869,
+    "long": 40.81418557195135,
+    "h3Index": "89f05ab5da3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5da3ffff"
+      ],
+      [
+        "89f05ab5dbbffff",
+        "89f05ab5da7ffff",
+        "89f05ab5db7ffff",
+        "89f05ab5db3ffff"
+      ],
+      [
+        "89f05ab5d87ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d17ffff",
+        "89f05ab4adbffff",
+        "89f05ab4ad3ffff",
+        "89f05ab4e6bffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e4fffff",
+        "89f05ab4e4bffff"
+      ]
+    ]
+  },
+  "89f05ab5da7ffff": {
+    "lat": -73.93369309683247,
+    "long": 40.803932349448246,
+    "h3Index": "89f05ab5da7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5da7ffff"
+      ],
+      [
+        "89f05ab5da3ffff",
+        "89f05ab4adbffff",
+        "89f05ab4ad3ffff",
+        "89f05ab4e6bffff",
+        "89f05ab5db7ffff"
+      ],
+      [
+        "89f05ab5db3ffff",
+        "89f05ab5dbbffff",
+        "89f05ab4e7bffff",
+        "89f05ab4e4fffff"
+      ]
+    ]
+  },
+  "89f05ab4ad3ffff": {
+    "lat": -73.9321456706221,
+    "long": 40.79368089900796,
+    "h3Index": "89f05ab4ad3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4ad3ffff"
+      ],
+      [
+        "89f05ab5da7ffff",
+        "89f05ab4adbffff",
+        "89f05ab4e6bffff"
+      ],
+      [
+        "89f05ab5db7ffff",
+        "89f05ab5da3ffff",
+        "89f05ab4e7bffff"
+      ]
+    ]
+  },
+  "89f05ab6a9bffff": {
+    "lat": -73.98839483601563,
+    "long": 40.71903687394226,
+    "h3Index": "89f05ab6a9bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a9bffff"
+      ],
+      [
+        "89f05ab6e6fffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6a8bffff",
+        "89f05ab6a93ffff",
+        "89f05ab6e67ffff"
+      ],
+      [
+        "89f05ab6e63ffff",
+        "89f05ab6e6bffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6a13ffff",
+        "89f05ab6e2bffff",
+        "89f05ab6e77ffff"
+      ]
+    ]
+  },
+  "89f05ab6e6fffff": {
+    "lat": -73.98994587616838,
+    "long": 40.729320070889756,
+    "h3Index": "89f05ab6e6fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e6fffff"
+      ],
+      [
+        "89f05ab6e6bffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6a9bffff",
+        "89f05ab6e67ffff",
+        "89f05ab6e63ffff"
+      ],
+      [
+        "89f05ab6e7bffff",
+        "89f05ab45b7ffff",
+        "89f05ab45a7ffff",
+        "89f05ab6adbffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6ac7ffff",
+        "89f05ab6a8bffff",
+        "89f05ab6a93ffff",
+        "89f05ab6e2bffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e73ffff"
+      ]
+    ]
+  },
+  "89f05ab6e6bffff": {
+    "lat": -73.9914964041586,
+    "long": 40.7396050568275,
+    "h3Index": "89f05ab6e6bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e6bffff"
+      ],
+      [
+        "89f05ab45b7ffff",
+        "89f05ab45a7ffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6e6fffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e7bffff"
+      ],
+      [
+        "89f05ab6e4fffff",
+        "89f05ab45b3ffff",
+        "89f05ab45a3ffff",
+        "89f05ab45afffff",
+        "89f05ab6adbffff",
+        "89f05ab6ac3ffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6a9bffff",
+        "89f05ab6e67ffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e47ffff"
+      ]
+    ]
+  },
+  "89f05ab45b7ffff": {
+    "lat": -73.99304641985624,
+    "long": 40.74989183155912,
+    "h3Index": "89f05ab45b7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab45b7ffff"
+      ],
+      [
+        "89f05ab45b3ffff",
+        "89f05ab45a3ffff",
+        "89f05ab45a7ffff",
+        "89f05ab6e6bffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e4fffff"
+      ],
+      [
+        "89f05ab6e4bffff",
+        "89f05ab4587ffff",
+        "89f05ab45bbffff",
+        "89f05ab45abffff",
+        "89f05ab45afffff",
+        "89f05ab6adbffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6e6fffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e43ffff"
+      ]
+    ]
+  },
+  "89f05ab45b3ffff": {
+    "lat": -73.99459592313124,
+    "long": 40.76018039488805,
+    "h3Index": "89f05ab45b3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab45b3ffff"
+      ],
+      [
+        "89f05ab4587ffff",
+        "89f05ab45bbffff",
+        "89f05ab45a3ffff",
+        "89f05ab45b7ffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e4bffff"
+      ],
+      [
+        "89f05ab45abffff",
+        "89f05ab45afffff",
+        "89f05ab45a7ffff",
+        "89f05ab6e6bffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e5bffff"
+      ]
+    ]
+  },
+  "89f05ab4587ffff": {
+    "lat": -73.99614491385363,
+    "long": 40.77047074661735,
+    "h3Index": "89f05ab4587ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4587ffff"
+      ],
+      [
+        "89f05ab45bbffff",
+        "89f05ab45b3ffff",
+        "89f05ab6e4bffff"
+      ],
+      [
+        "89f05ab45abffff",
+        "89f05ab45a3ffff",
+        "89f05ab45b7ffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e5bffff"
+      ]
+    ]
+  },
+  "89f05ab5dc7ffff": {
+    "lat": -73.93823315021938,
+    "long": 40.85439024176348,
+    "h3Index": "89f05ab5dc7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5dc7ffff"
+      ],
+      [
+        "89f05ab5dcfffff",
+        "89f05ab5d1bffff",
+        "89f05ab5d13ffff",
+        "89f05ab5d8bffff",
+        "89f05ab5dd7ffff"
+      ],
+      [
+        "89f05ab5d57ffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d03ffff",
+        "89f05ab5d17ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d9bffff"
+      ]
+    ]
+  },
+  "89f05ab5d13ffff": {
+    "lat": -73.93668823246023,
+    "long": 40.84413210046538,
+    "h3Index": "89f05ab5d13ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d13ffff"
+      ],
+      [
+        "89f05ab5dc7ffff",
+        "89f05ab5d1bffff",
+        "89f05ab5d03ffff",
+        "89f05ab5d17ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d8bffff"
+      ],
+      [
+        "89f05ab5dd7ffff",
+        "89f05ab5dcfffff",
+        "89f05ab5d57ffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d0fffff",
+        "89f05ab5dbbffff",
+        "89f05ab5d87ffff",
+        "89f05ab5d83ffff",
+        "89f05ab5d9bffff"
+      ]
+    ]
+  },
+  "89f05ab5d17ffff": {
+    "lat": -73.93514280372611,
+    "long": 40.83387572975468,
+    "h3Index": "89f05ab5d17ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d17ffff"
+      ],
+      [
+        "89f05ab5d13ffff",
+        "89f05ab5d03ffff",
+        "89f05ab5dbbffff",
+        "89f05ab5d8fffff"
+      ],
+      [
+        "89f05ab5d8bffff",
+        "89f05ab5dc7ffff",
+        "89f05ab5d1bffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d0fffff",
+        "89f05ab5da3ffff",
+        "89f05ab5db3ffff",
+        "89f05ab5d87ffff",
+        "89f05ab5d83ffff"
+      ]
+    ]
+  },
+  "89f05ab4adbffff": {
+    "lat": -73.93050345296166,
+    "long": 40.80311724313109,
+    "h3Index": "89f05ab4adbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab4adbffff"
+      ],
+      [
+        "89f05ab4ad3ffff",
+        "89f05ab5da7ffff"
+      ],
+      [
+        "89f05ab5da3ffff",
+        "89f05ab4e6bffff",
+        "89f05ab5db7ffff"
+      ]
+    ]
+  },
+  "89f05ab6a93ffff": {
+    "lat": -73.99003496023376,
+    "long": 40.709554287508965,
+    "h3Index": "89f05ab6a93ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6a93ffff"
+      ],
+      [
+        "89f05ab6e67ffff",
+        "89f05ab6a9bffff",
+        "89f05ab6e2bffff"
+      ],
+      [
+        "89f05ab6e77ffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e6fffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6a8bffff",
+        "89f05ab6e3bffff"
+      ]
+    ]
+  },
+  "89f05ab6e67ffff": {
+    "lat": -73.99158646787852,
+    "long": 40.71983787344455,
+    "h3Index": "89f05ab6e67ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e67ffff"
+      ],
+      [
+        "89f05ab6e63ffff",
+        "89f05ab6e6fffff",
+        "89f05ab6a9bffff",
+        "89f05ab6a93ffff",
+        "89f05ab6e2bffff",
+        "89f05ab6e77ffff"
+      ],
+      [
+        "89f05ab6e73ffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e6bffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6a8bffff",
+        "89f05ab6e3bffff",
+        "89f05ab6e0fffff"
+      ]
+    ]
+  },
+  "89f05ab6e63ffff": {
+    "lat": -73.99313746336584,
+    "long": 40.730123249260245,
+    "h3Index": "89f05ab6e63ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e63ffff"
+      ],
+      [
+        "89f05ab6e7bffff",
+        "89f05ab6e6bffff",
+        "89f05ab6e6fffff",
+        "89f05ab6e67ffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e73ffff"
+      ],
+      [
+        "89f05ab6e47ffff",
+        "89f05ab6e4fffff",
+        "89f05ab45b7ffff",
+        "89f05ab45a7ffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6ad7ffff",
+        "89f05ab6a9bffff",
+        "89f05ab6a93ffff",
+        "89f05ab6e2bffff",
+        "89f05ab6e3bffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e0bffff"
+      ]
+    ]
+  },
+  "89f05ab6e7bffff": {
+    "lat": -73.99468794656556,
+    "long": 40.740410414760305,
+    "h3Index": "89f05ab6e7bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e7bffff"
+      ],
+      [
+        "89f05ab6e4fffff",
+        "89f05ab45b7ffff",
+        "89f05ab6e6bffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e47ffff"
+      ],
+      [
+        "89f05ab6e43ffff",
+        "89f05ab6e4bffff",
+        "89f05ab45b3ffff",
+        "89f05ab45a3ffff",
+        "89f05ab45a7ffff",
+        "89f05ab6ad3ffff",
+        "89f05ab6e6fffff",
+        "89f05ab6e67ffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e57ffff"
+      ]
+    ]
+  },
+  "89f05ab6e4fffff": {
+    "lat": -73.99623791734768,
+    "long": 40.75069936974881,
+    "h3Index": "89f05ab6e4fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e4fffff"
+      ],
+      [
+        "89f05ab6e4bffff",
+        "89f05ab45b3ffff",
+        "89f05ab45b7ffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e43ffff"
+      ],
+      [
+        "89f05ab6e5bffff",
+        "89f05ab4587ffff",
+        "89f05ab45bbffff",
+        "89f05ab45a3ffff",
+        "89f05ab45a7ffff",
+        "89f05ab6e6bffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e53ffff"
+      ]
+    ]
+  },
+  "89f05ab6e4bffff": {
+    "lat": -73.99778737558195,
+    "long": 40.76099011402836,
+    "h3Index": "89f05ab6e4bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e4bffff"
+      ],
+      [
+        "89f05ab4587ffff",
+        "89f05ab45b3ffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e5bffff"
+      ],
+      [
+        "89f05ab45bbffff",
+        "89f05ab45a3ffff",
+        "89f05ab45b7ffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e53ffff"
+      ]
+    ]
+  },
+  "89f05ab5dcfffff": {
+    "lat": -73.93658825326571,
+    "long": 40.86382238676383,
+    "h3Index": "89f05ab5dcfffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5dcfffff"
+      ],
+      [
+        "89f05ab5d57ffff",
+        "89f05ab5d1bffff",
+        "89f05ab5dc7ffff"
+      ],
+      [
+        "89f05ab5d43ffff",
+        "89f05ab5d47ffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d03ffff",
+        "89f05ab5d13ffff",
+        "89f05ab5d8bffff",
+        "89f05ab5dd7ffff"
+      ]
+    ]
+  },
+  "89f05ab5d1bffff": {
+    "lat": -73.93504380075638,
+    "long": 40.853564642328294,
+    "h3Index": "89f05ab5d1bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d1bffff"
+      ],
+      [
+        "89f05ab5dcfffff",
+        "89f05ab5d57ffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d03ffff",
+        "89f05ab5d13ffff",
+        "89f05ab5dc7ffff"
+      ],
+      [
+        "89f05ab5d43ffff",
+        "89f05ab5d47ffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d0fffff",
+        "89f05ab5d17ffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d8bffff",
+        "89f05ab5dd7ffff"
+      ]
+    ]
+  },
+  "89f05ab5d03ffff": {
+    "lat": -73.93349883726783,
+    "long": 40.8433086675982,
+    "h3Index": "89f05ab5d03ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d03ffff"
+      ],
+      [
+        "89f05ab5d1bffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d0fffff",
+        "89f05ab5d17ffff",
+        "89f05ab5d13ffff"
+      ],
+      [
+        "89f05ab5dc7ffff",
+        "89f05ab5dcfffff",
+        "89f05ab5d57ffff",
+        "89f05ab5d47ffff",
+        "89f05ab5d73ffff",
+        "89f05ab5dbbffff",
+        "89f05ab5d8fffff",
+        "89f05ab5d8bffff"
+      ]
+    ]
+  },
+  "89f05ab6e2bffff": {
+    "lat": -73.99322670348374,
+    "long": 40.71035343654382,
+    "h3Index": "89f05ab6e2bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e2bffff"
+      ],
+      [
+        "89f05ab6e77ffff",
+        "89f05ab6e67ffff",
+        "89f05ab6a93ffff",
+        "89f05ab6e3bffff"
+      ],
+      [
+        "89f05ab6e0fffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e6fffff",
+        "89f05ab6a9bffff",
+        "89f05ab6e07ffff"
+      ]
+    ]
+  },
+  "89f05ab6e77ffff": {
+    "lat": -73.99477816655987,
+    "long": 40.720639201571124,
+    "h3Index": "89f05ab6e77ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e77ffff"
+      ],
+      [
+        "89f05ab6e73ffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e67ffff",
+        "89f05ab6e2bffff",
+        "89f05ab6e3bffff",
+        "89f05ab6e0fffff"
+      ],
+      [
+        "89f05ab6e0bffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e6bffff",
+        "89f05ab6e6fffff",
+        "89f05ab6a9bffff",
+        "89f05ab6a93ffff",
+        "89f05ab6e07ffff",
+        "89f05ab6e03ffff"
+      ]
+    ]
+  },
+  "89f05ab6e73ffff": {
+    "lat": -73.99632911735355,
+    "long": 40.73092675717373,
+    "h3Index": "89f05ab6e73ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e73ffff"
+      ],
+      [
+        "89f05ab6e47ffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e0bffff"
+      ],
+      [
+        "89f05ab6e57ffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e4fffff",
+        "89f05ab45b7ffff",
+        "89f05ab6e6bffff",
+        "89f05ab6e6fffff",
+        "89f05ab6e67ffff",
+        "89f05ab6e2bffff",
+        "89f05ab6e3bffff",
+        "89f05ab6e07ffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e1bffff"
+      ]
+    ]
+  },
+  "89f05ab6e47ffff": {
+    "lat": -73.99787955573454,
+    "long": 40.74121610315525,
+    "h3Index": "89f05ab6e47ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e47ffff"
+      ],
+      [
+        "89f05ab6e43ffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e57ffff"
+      ],
+      [
+        "89f05ab6e53ffff",
+        "89f05ab6e5bffff",
+        "89f05ab6e4bffff",
+        "89f05ab45b3ffff",
+        "89f05ab45b7ffff",
+        "89f05ab6e6bffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e1bffff",
+        "89f05ab6ecfffff"
+      ]
+    ]
+  },
+  "89f05ab6e43ffff": {
+    "lat": -73.9994294815727,
+    "long": 40.751507239319665,
+    "h3Index": "89f05ab6e43ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e43ffff"
+      ],
+      [
+        "89f05ab6e5bffff",
+        "89f05ab6e4bffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e53ffff"
+      ],
+      [
+        "89f05ab4587ffff",
+        "89f05ab45b3ffff",
+        "89f05ab45b7ffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e1bffff",
+        "89f05ab6ecfffff",
+        "89f05ab6ecbffff"
+      ]
+    ]
+  },
+  "89f05ab6e5bffff": {
+    "lat": -74.00097889473787,
+    "long": 40.76180016546985,
+    "h3Index": "89f05ab6e5bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e5bffff"
+      ],
+      [
+        "89f05ab6e4bffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e53ffff"
+      ],
+      [
+        "89f05ab4587ffff",
+        "89f05ab45b3ffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e57ffff",
+        "89f05ab6ecfffff",
+        "89f05ab6ecbffff"
+      ]
+    ]
+  },
+  "89f05ab5d57ffff": {
+    "lat": -73.93339901651014,
+    "long": 40.86299495822196,
+    "h3Index": "89f05ab5d57ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d57ffff"
+      ],
+      [
+        "89f05ab5d43ffff",
+        "89f05ab5d47ffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d1bffff",
+        "89f05ab5dcfffff"
+      ],
+      [
+        "89f05ab5d4fffff",
+        "89f05ab5d7bffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d0fffff",
+        "89f05ab5d03ffff",
+        "89f05ab5d13ffff",
+        "89f05ab5dc7ffff"
+      ]
+    ]
+  },
+  "89f05ab5d0bffff": {
+    "lat": -73.93185451817553,
+    "long": 40.85273938012682,
+    "h3Index": "89f05ab5d0bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d0bffff"
+      ],
+      [
+        "89f05ab5d57ffff",
+        "89f05ab5d47ffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d0fffff",
+        "89f05ab5d03ffff",
+        "89f05ab5d1bffff"
+      ],
+      [
+        "89f05ab5dcfffff",
+        "89f05ab5d43ffff",
+        "89f05ab5d4fffff",
+        "89f05ab5d7bffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d17ffff",
+        "89f05ab5d13ffff",
+        "89f05ab5dc7ffff"
+      ]
+    ]
+  },
+  "89f05ab5d0fffff": {
+    "lat": -73.93030950898624,
+    "long": 40.84248557105491,
+    "h3Index": "89f05ab5d0fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d0fffff"
+      ],
+      [
+        "89f05ab5d0bffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d03ffff"
+      ],
+      [
+        "89f05ab5d1bffff",
+        "89f05ab5d57ffff",
+        "89f05ab5d47ffff",
+        "89f05ab5d7bffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d17ffff",
+        "89f05ab5d13ffff"
+      ]
+    ]
+  },
+  "89f05ab6e3bffff": {
+    "lat": -73.9964185135609,
+    "long": 40.711152913486266,
+    "h3Index": "89f05ab6e3bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e3bffff"
+      ],
+      [
+        "89f05ab6e0fffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e2bffff",
+        "89f05ab6e07ffff"
+      ],
+      [
+        "89f05ab6e03ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e67ffff",
+        "89f05ab6a93ffff",
+        "89f05ab6e17ffff"
+      ]
+    ]
+  },
+  "89f05ab6e0fffff": {
+    "lat": -73.99796993204023,
+    "long": 40.72144085852437,
+    "h3Index": "89f05ab6e0fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e0fffff"
+      ],
+      [
+        "89f05ab6e0bffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e3bffff",
+        "89f05ab6e07ffff",
+        "89f05ab6e03ffff"
+      ],
+      [
+        "89f05ab6e1bffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e67ffff",
+        "89f05ab6e2bffff",
+        "89f05ab6e17ffff",
+        "89f05ab6e13ffff"
+      ]
+    ]
+  },
+  "89f05ab6e0bffff": {
+    "lat": -73.99952083811198,
+    "long": 40.731730594832705,
+    "h3Index": "89f05ab6e0bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e0bffff"
+      ],
+      [
+        "89f05ab6e57ffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e1bffff"
+      ],
+      [
+        "89f05ab6ecfffff",
+        "89f05ab6e53ffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e63ffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e3bffff",
+        "89f05ab6e07ffff",
+        "89f05ab6e17ffff",
+        "89f05ab6e13ffff",
+        "89f05ab6ec7ffff"
+      ]
+    ]
+  },
+  "89f05ab6e57ffff": {
+    "lat": -74.00107123164587,
+    "long": 40.7420221222153,
+    "h3Index": "89f05ab6e57ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e57ffff"
+      ],
+      [
+        "89f05ab6e53ffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e1bffff",
+        "89f05ab6ecfffff"
+      ],
+      [
+        "89f05ab6ecbffff",
+        "89f05ab6e5bffff",
+        "89f05ab6e4bffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e7bffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e13ffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6ec3ffff"
+      ]
+    ]
+  },
+  "89f05ab6e53ffff": {
+    "lat": -74.00262111251175,
+    "long": 40.75231544047566,
+    "h3Index": "89f05ab6e53ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e53ffff"
+      ],
+      [
+        "89f05ab6e5bffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e57ffff",
+        "89f05ab6ecfffff",
+        "89f05ab6ecbffff"
+      ],
+      [
+        "89f05ab6e4bffff",
+        "89f05ab6e4fffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e1bffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6ec3ffff"
+      ]
+    ]
+  },
+  "89f05ab5d43ffff": {
+    "lat": -73.93175387989999,
+    "long": 40.87242304842364,
+    "h3Index": "89f05ab5d43ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d43ffff"
+      ],
+      [
+        "89f05ab5d4fffff",
+        "89f05ab5d47ffff",
+        "89f05ab5d57ffff"
+      ],
+      [
+        "89f05ab58b7ffff",
+        "89f05ab5d7bffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d1bffff",
+        "89f05ab5dcfffff"
+      ]
+    ]
+  },
+  "89f05ab5d47ffff": {
+    "lat": -73.93020984662765,
+    "long": 40.86216786761715,
+    "h3Index": "89f05ab5d47ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d47ffff"
+      ],
+      [
+        "89f05ab5d43ffff",
+        "89f05ab5d4fffff",
+        "89f05ab5d7bffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d57ffff"
+      ],
+      [
+        "89f05ab58b7ffff",
+        "89f05ab5d6bffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d0fffff",
+        "89f05ab5d03ffff",
+        "89f05ab5d1bffff",
+        "89f05ab5dcfffff"
+      ]
+    ]
+  },
+  "89f05ab5d73ffff": {
+    "lat": -73.9286653024965,
+    "long": 40.851914454952926,
+    "h3Index": "89f05ab5d73ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d73ffff"
+      ],
+      [
+        "89f05ab5d47ffff",
+        "89f05ab5d7bffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d0fffff",
+        "89f05ab5d0bffff"
+      ],
+      [
+        "89f05ab5d57ffff",
+        "89f05ab5d43ffff",
+        "89f05ab5d4fffff",
+        "89f05ab58b7ffff",
+        "89f05ab5d6bffff",
+        "89f05ab5d03ffff",
+        "89f05ab5d1bffff"
+      ]
+    ]
+  },
+  "89f05ab6e07ffff": {
+    "lat": -73.99961039044561,
+    "long": 40.711952718538,
+    "h3Index": "89f05ab6e07ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e07ffff"
+      ],
+      [
+        "89f05ab6e03ffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e3bffff",
+        "89f05ab6e17ffff"
+      ],
+      [
+        "89f05ab6e13ffff",
+        "89f05ab6e1bffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e2bffff",
+        "89f05ab6e8fffff"
+      ]
+    ]
+  },
+  "89f05ab6e03ffff": {
+    "lat": -74.00116176429992,
+    "long": 40.72224284450597,
+    "h3Index": "89f05ab6e03ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e03ffff"
+      ],
+      [
+        "89f05ab6e1bffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e07ffff",
+        "89f05ab6e17ffff",
+        "89f05ab6e13ffff"
+      ],
+      [
+        "89f05ab6ec7ffff",
+        "89f05ab6ecfffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e77ffff",
+        "89f05ab6e3bffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e8bffff"
+      ]
+    ]
+  },
+  "89f05ab6e1bffff": {
+    "lat": -74.00271262562146,
+    "long": 40.73253476243992,
+    "h3Index": "89f05ab6e1bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e1bffff"
+      ],
+      [
+        "89f05ab6ecfffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e13ffff",
+        "89f05ab6ec7ffff"
+      ],
+      [
+        "89f05ab6ec3ffff",
+        "89f05ab6ecbffff",
+        "89f05ab6e53ffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e73ffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e07ffff",
+        "89f05ab6e17ffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e8bffff",
+        "89f05ab6ed7ffff"
+      ]
+    ]
+  },
+  "89f05ab6ecfffff": {
+    "lat": -74.00426297427995,
+    "long": 40.74282847214373,
+    "h3Index": "89f05ab6ecfffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6ecfffff"
+      ],
+      [
+        "89f05ab6ecbffff",
+        "89f05ab6e53ffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e1bffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6ec3ffff"
+      ],
+      [
+        "89f05ab6e5bffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e47ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e13ffff",
+        "89f05ab6e8bffff",
+        "89f05ab6ed7ffff"
+      ]
+    ]
+  },
+  "89f05ab6ecbffff": {
+    "lat": -74.00581281014516,
+    "long": 40.75312397342064,
+    "h3Index": "89f05ab6ecbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6ecbffff"
+      ],
+      [
+        "89f05ab6e53ffff",
+        "89f05ab6ecfffff",
+        "89f05ab6ec3ffff"
+      ],
+      [
+        "89f05ab6e5bffff",
+        "89f05ab6e43ffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e1bffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6ed7ffff"
+      ]
+    ]
+  },
+  "89f05ab5d4fffff": {
+    "lat": -73.92856482280264,
+    "long": 40.8715941303462,
+    "h3Index": "89f05ab5d4fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d4fffff"
+      ],
+      [
+        "89f05ab58b7ffff",
+        "89f05ab5d7bffff",
+        "89f05ab5d47ffff",
+        "89f05ab5d43ffff"
+      ],
+      [
+        "89f05ab58a7ffff",
+        "89f05ab5d6bffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d57ffff"
+      ]
+    ]
+  },
+  "89f05ab5d7bffff": {
+    "lat": -73.92702074363794,
+    "long": 40.86134111474292,
+    "h3Index": "89f05ab5d7bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d7bffff"
+      ],
+      [
+        "89f05ab5d4fffff",
+        "89f05ab58b7ffff",
+        "89f05ab5d6bffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d47ffff"
+      ],
+      [
+        "89f05ab5d43ffff",
+        "89f05ab58a7ffff",
+        "89f05ab59d3ffff",
+        "89f05ab5d0fffff",
+        "89f05ab5d0bffff",
+        "89f05ab5d57ffff"
+      ]
+    ]
+  },
+  "89f05ab5d63ffff": {
+    "lat": -73.92547615373887,
+    "long": 40.85108986660035,
+    "h3Index": "89f05ab5d63ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d63ffff"
+      ],
+      [
+        "89f05ab5d7bffff",
+        "89f05ab5d6bffff",
+        "89f05ab5d73ffff"
+      ],
+      [
+        "89f05ab5d47ffff",
+        "89f05ab5d4fffff",
+        "89f05ab58b7ffff",
+        "89f05ab58a7ffff",
+        "89f05ab59d3ffff",
+        "89f05ab5d0fffff",
+        "89f05ab5d0bffff"
+      ]
+    ]
+  },
+  "89f05ab6e17ffff": {
+    "lat": -74.00280233411833,
+    "long": 40.712752851900746,
+    "h3Index": "89f05ab6e17ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e17ffff"
+      ],
+      [
+        "89f05ab6e13ffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e07ffff",
+        "89f05ab6e8fffff"
+      ],
+      [
+        "89f05ab6e8bffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6e1bffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e3bffff",
+        "89f05ab6e87ffff",
+        "89f05ab6e83ffff"
+      ]
+    ]
+  },
+  "89f05ab6e13ffff": {
+    "lat": -74.00435366331938,
+    "long": 40.723045159718474,
+    "h3Index": "89f05ab6e13ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e13ffff"
+      ],
+      [
+        "89f05ab6ec7ffff",
+        "89f05ab6e1bffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e17ffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e8bffff"
+      ],
+      [
+        "89f05ab6ed7ffff",
+        "89f05ab6ec3ffff",
+        "89f05ab6ecfffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e0fffff",
+        "89f05ab6e07ffff",
+        "89f05ab6e87ffff",
+        "89f05ab6e83ffff",
+        "89f05ab6e9bffff"
+      ]
+    ]
+  },
+  "89f05ab6ec7ffff": {
+    "lat": -74.00590447986241,
+    "long": 40.73333926019834,
+    "h3Index": "89f05ab6ec7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6ec7ffff"
+      ],
+      [
+        "89f05ab6ec3ffff",
+        "89f05ab6ecfffff",
+        "89f05ab6e1bffff",
+        "89f05ab6e13ffff",
+        "89f05ab6e8bffff",
+        "89f05ab6ed7ffff"
+      ],
+      [
+        "89f05ab6ecbffff",
+        "89f05ab6e53ffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e0bffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e17ffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e83ffff",
+        "89f05ab6e9bffff"
+      ]
+    ]
+  },
+  "89f05ab6ec3ffff": {
+    "lat": -74.00745478361713,
+    "long": 40.7436351531439,
+    "h3Index": "89f05ab6ec3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6ec3ffff"
+      ],
+      [
+        "89f05ab6ecbffff",
+        "89f05ab6ecfffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6ed7ffff"
+      ],
+      [
+        "89f05ab6e53ffff",
+        "89f05ab6e57ffff",
+        "89f05ab6e1bffff",
+        "89f05ab6e13ffff",
+        "89f05ab6e8bffff",
+        "89f05ab6e9bffff"
+      ]
+    ]
+  },
+  "89f05ab58b7ffff": {
+    "lat": -73.92537583258897,
+    "long": 40.870765550701634,
+    "h3Index": "89f05ab58b7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab58b7ffff"
+      ],
+      [
+        "89f05ab58a7ffff",
+        "89f05ab5d6bffff",
+        "89f05ab5d7bffff",
+        "89f05ab5d4fffff"
+      ],
+      [
+        "89f05ab59dbffff",
+        "89f05ab59d3ffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d47ffff",
+        "89f05ab5d43ffff"
+      ]
+    ]
+  },
+  "89f05ab5d6bffff": {
+    "lat": -73.92383170756064,
+    "long": 40.86051469939256,
+    "h3Index": "89f05ab5d6bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5d6bffff"
+      ],
+      [
+        "89f05ab58b7ffff",
+        "89f05ab58a7ffff",
+        "89f05ab59d3ffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d7bffff"
+      ],
+      [
+        "89f05ab5d4fffff",
+        "89f05ab59dbffff",
+        "89f05ab5d73ffff",
+        "89f05ab5d47ffff"
+      ]
+    ]
+  },
+  "89f05ab6e8fffff": {
+    "lat": -74.00599434455948,
+    "long": 40.71355331377626,
+    "h3Index": "89f05ab6e8fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e8fffff"
+      ],
+      [
+        "89f05ab6e8bffff",
+        "89f05ab6e13ffff",
+        "89f05ab6e17ffff",
+        "89f05ab6e87ffff",
+        "89f05ab6e83ffff"
+      ],
+      [
+        "89f05ab6e9bffff",
+        "89f05ab6ed7ffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6e1bffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e07ffff",
+        "89f05ab6e97ffff",
+        "89f05ab6e93ffff"
+      ]
+    ]
+  },
+  "89f05ab6e8bffff": {
+    "lat": -74.00754562907893,
+    "long": 40.72384780436424,
+    "h3Index": "89f05ab6e8bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e8bffff"
+      ],
+      [
+        "89f05ab6ed7ffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6e13ffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e83ffff",
+        "89f05ab6e9bffff"
+      ],
+      [
+        "89f05ab6ec3ffff",
+        "89f05ab6ecfffff",
+        "89f05ab6e1bffff",
+        "89f05ab6e03ffff",
+        "89f05ab6e17ffff",
+        "89f05ab6e87ffff",
+        "89f05ab6e97ffff",
+        "89f05ab6e93ffff"
+      ]
+    ]
+  },
+  "89f05ab6ed7ffff": {
+    "lat": -74.00909640081518,
+    "long": 40.73414408831084,
+    "h3Index": "89f05ab6ed7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6ed7ffff"
+      ],
+      [
+        "89f05ab6ec3ffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6e8bffff",
+        "89f05ab6e9bffff"
+      ],
+      [
+        "89f05ab6ecbffff",
+        "89f05ab6ecfffff",
+        "89f05ab6e1bffff",
+        "89f05ab6e13ffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e83ffff",
+        "89f05ab6e93ffff"
+      ]
+    ]
+  },
+  "89f05ab58a7ffff": {
+    "lat": -73.92218690927861,
+    "long": 40.869937309282875,
+    "h3Index": "89f05ab58a7ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab58a7ffff"
+      ],
+      [
+        "89f05ab59dbffff",
+        "89f05ab59d3ffff",
+        "89f05ab5d6bffff",
+        "89f05ab58b7ffff"
+      ],
+      [
+        "89f05ab59cbffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d7bffff",
+        "89f05ab5d4fffff"
+      ]
+    ]
+  },
+  "89f05ab59d3ffff": {
+    "lat": -73.92064273841535,
+    "long": 40.85968862135984,
+    "h3Index": "89f05ab59d3ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab59d3ffff"
+      ],
+      [
+        "89f05ab58a7ffff",
+        "89f05ab59dbffff",
+        "89f05ab5d6bffff"
+      ],
+      [
+        "89f05ab58b7ffff",
+        "89f05ab59cbffff",
+        "89f05ab5d63ffff",
+        "89f05ab5d7bffff"
+      ]
+    ]
+  },
+  "89f05ab6e87ffff": {
+    "lat": -74.00763466916169,
+    "long": 40.70405922433909,
+    "h3Index": "89f05ab6e87ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e87ffff"
+      ],
+      [
+        "89f05ab6e83ffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e97ffff"
+      ],
+      [
+        "89f05ab6e93ffff",
+        "89f05ab6e9bffff",
+        "89f05ab6e8bffff",
+        "89f05ab6e13ffff",
+        "89f05ab6e17ffff",
+        "89f05ab612fffff"
+      ]
+    ]
+  },
+  "89f05ab6e83ffff": {
+    "lat": -74.00918642174943,
+    "long": 40.71435410436678,
+    "h3Index": "89f05ab6e83ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e83ffff"
+      ],
+      [
+        "89f05ab6e9bffff",
+        "89f05ab6e8bffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e87ffff",
+        "89f05ab6e97ffff",
+        "89f05ab6e93ffff"
+      ],
+      [
+        "89f05ab6ed7ffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6e13ffff",
+        "89f05ab6e17ffff",
+        "89f05ab612fffff",
+        "89f05ab612bffff"
+      ]
+    ]
+  },
+  "89f05ab6e9bffff": {
+    "lat": -74.0107376615591,
+    "long": 40.724650778646016,
+    "h3Index": "89f05ab6e9bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e9bffff"
+      ],
+      [
+        "89f05ab6ed7ffff",
+        "89f05ab6e8bffff",
+        "89f05ab6e83ffff",
+        "89f05ab6e93ffff"
+      ],
+      [
+        "89f05ab6ec3ffff",
+        "89f05ab6ec7ffff",
+        "89f05ab6e13ffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e87ffff",
+        "89f05ab6e97ffff",
+        "89f05ab612fffff",
+        "89f05ab612bffff"
+      ]
+    ]
+  },
+  "89f05ab59dbffff": {
+    "lat": -73.9189980528913,
+    "long": 40.869109405883506,
+    "h3Index": "89f05ab59dbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab59dbffff"
+      ],
+      [
+        "89f05ab59cbffff",
+        "89f05ab59d3ffff",
+        "89f05ab58a7ffff"
+      ],
+      [
+        "89f05ab5953ffff",
+        "89f05ab5d6bffff",
+        "89f05ab58b7ffff"
+      ]
+    ]
+  },
+  "89f05ab6e97ffff": {
+    "lat": -74.01082685769357,
+    "long": 40.70485815993103,
+    "h3Index": "89f05ab6e97ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e97ffff"
+      ],
+      [
+        "89f05ab6e93ffff",
+        "89f05ab6e83ffff",
+        "89f05ab6e87ffff",
+        "89f05ab612fffff"
+      ],
+      [
+        "89f05ab612bffff",
+        "89f05ab6e9bffff",
+        "89f05ab6e8bffff",
+        "89f05ab6e8fffff",
+        "89f05ab6123ffff"
+      ]
+    ]
+  },
+  "89f05ab6e93ffff": {
+    "lat": -74.01237856566857,
+    "long": 40.71515522387418,
+    "h3Index": "89f05ab6e93ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6e93ffff"
+      ],
+      [
+        "89f05ab6e9bffff",
+        "89f05ab6e83ffff",
+        "89f05ab6e97ffff",
+        "89f05ab612fffff",
+        "89f05ab612bffff"
+      ],
+      [
+        "89f05ab6ed7ffff",
+        "89f05ab6e8bffff",
+        "89f05ab6e8fffff",
+        "89f05ab6e87ffff",
+        "89f05ab6123ffff"
+      ]
+    ]
+  },
+  "89f05ab59cbffff": {
+    "lat": -73.9158092634466,
+    "long": 40.868281840296625,
+    "h3Index": "89f05ab59cbffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab59cbffff"
+      ],
+      [
+        "89f05ab5953ffff",
+        "89f05ab59dbffff"
+      ],
+      [
+        "89f05ab59d3ffff",
+        "89f05ab58a7ffff"
+      ]
+    ]
+  },
+  "89f05ab612fffff": {
+    "lat": -74.0140191129634,
+    "long": 40.705657423720844,
+    "h3Index": "89f05ab612fffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab612fffff"
+      ],
+      [
+        "89f05ab612bffff",
+        "89f05ab6e93ffff",
+        "89f05ab6e97ffff",
+        "89f05ab6123ffff"
+      ],
+      [
+        "89f05ab6e9bffff",
+        "89f05ab6e83ffff",
+        "89f05ab6e87ffff"
+      ]
+    ]
+  },
+  "89f05ab612bffff": {
+    "lat": -74.01557077629737,
+    "long": 40.715956672501186,
+    "h3Index": "89f05ab612bffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab612bffff"
+      ],
+      [
+        "89f05ab6e93ffff",
+        "89f05ab612fffff",
+        "89f05ab6123ffff"
+      ],
+      [
+        "89f05ab6e9bffff",
+        "89f05ab6e83ffff",
+        "89f05ab6e97ffff"
+      ]
+    ]
+  },
+  "89f05ab5953ffff": {
+    "lat": -73.9126205409642,
+    "long": 40.86745461231623,
+    "h3Index": "89f05ab5953ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab5953ffff"
+      ],
+      [
+        "89f05ab59cbffff"
+      ],
+      [
+        "89f05ab59dbffff"
+      ]
+    ]
+  },
+  "89f05ab6123ffff": {
+    "lat": -74.0172114349514,
+    "long": 40.70645701591003,
+    "h3Index": "89f05ab6123ffff",
+    "kRingNeighbors": [
+      [
+        "89f05ab6123ffff"
+      ],
+      [
+        "89f05ab612bffff",
+        "89f05ab612fffff"
+      ],
+      [
+        "89f05ab6e93ffff",
+        "89f05ab6e97ffff"
+      ]
+    ]
+  }
+}

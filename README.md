@@ -1,7 +1,7 @@
 # ResourceSearch
 
 ### Authors
-- Amrish Javeri
+- Amrish Jhaveri
 - Akshun Jhingan
 - Mohitkumar Paritosh Ghia
 - Chinmay Gangal

@@ -1,16 +1,19 @@
 import com.uic.cs581.utils.BasicCSVReader;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.TimeZone;
 
+@Slf4j
 public class App {
 
     public static void main(String args[]) throws IOException, ParseException {
 
-//        System.out.println(TimeZone.getDefault());
+        log.info(TimeZone.getDefault().toString());
         TimeZone.setDefault(TimeZone.getTimeZone("America/New_York"));
-        System.out.println(TimeZone.getDefault());
+        log.info(TimeZone.getDefault().toString());
+
         // Read the test data csv
         BasicCSVReader.getResourcesFromTestData("test.csv");
 

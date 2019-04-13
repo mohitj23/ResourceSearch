@@ -16,11 +16,13 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.uic.cs581.model.Resource.EXPIRATION_TIME_MILLIS;
+
 @Slf4j
 public class BasicCSVReader {
     private static final String CSV_FILE_PATH = "./src/main/resources/";
     private static int resourceCount = 1;
-    private static long EXPIRATION_TIME_MILLIS = 600000;
+
     private static String TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     public static List<Resource> getResourcesFromTestData(String fileName) throws IOException, ParseException {

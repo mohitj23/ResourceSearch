@@ -21,4 +21,5 @@ public class Resource {
     private long pickupTimeInMillis;        // provided in the data at runtime
     private long dropOffTimeInMillis;       // provided in the data at runtime
 
+    public static long EXPIRATION_TIME_MILLIS = 600000;
 }

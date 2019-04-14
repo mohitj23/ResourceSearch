@@ -15,7 +15,7 @@ function writeToFile() {
 
 function getH3IndexFromH3Geo() {
 
-    const hexagons = h3.polyfill(manhattan_polygon, 9, true);
+    const hexagons = h3.polyfill(manhattan_polygon, 9, false);
 
     // put zones's h3Index to a Map
     hexagons.map(hex => hexagonsMap[hex] = 1);

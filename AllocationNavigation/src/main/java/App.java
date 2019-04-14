@@ -1,15 +1,10 @@
-import com.uic.cs581.model.Zone;
+import com.uic.cs581.model.ZoneMap;
 import com.uic.cs581.utils.BasicCSVReader;
 import lombok.extern.slf4j.Slf4j;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.type.TypeReference;
 
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.TimeZone;
 
 @Slf4j
@@ -24,12 +19,10 @@ public class App {
         // Read the test data csv
         BasicCSVReader.getResourcesFromTestData("test.csv");
 
-        // Read zone data from JSON file
-        HashMap<String,Zone> result =
-                new ObjectMapper().readValue(
-                        new File("./src/main/resources/manhattan_zones_lat_lon_3.json"),
-                        new TypeReference<Map<String, Zone>>() {});
+        //Hit Python App and get the zone score map
 
+        // Read zone data from JSON file and update with the zoneScore
+        ZoneMap.updateZonesWithScores(new HashMap<>());
         // append h3Index to the test data
 
         //TODO: provide random locations to the cabs from the list of h3Indices

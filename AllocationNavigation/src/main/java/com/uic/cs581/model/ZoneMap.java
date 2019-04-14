@@ -64,7 +64,7 @@ public class ZoneMap {
 
         if (count[0] != zones.size()) {
             log.error("Size of ZoneMap updated is different from scoresMap");
-            System.exit(1); //remove only after its verified that its ok to continue
+            System.exit(1); //TODO remove only after its verified that its ok to continue
         }
 
         return zones;

@@ -42,13 +42,13 @@ public class BasicCSVReader {
                 log.info(csvRecord.toString());
 
                 Resource r = Resource.builder()
+                        .resourceId(resourceCount++)
                         .dropOffLat(csvRecord.get(10))
                         .dropOffLong(csvRecord.get(9))
                         .dropOffTimeInMillis(DateUtils.parseDate(csvRecord.get(2), TIME_FORMAT).getTime())
                         .expirationTimeLeftInMillis(EXPIRATION_TIME_MILLIS)
-                        .resourceId(resourceCount++)
-//                        .pickUpLat()
-//                        .pickUpLong()
+                        .pickUpLat(csvRecord.get(6))
+                        .pickUpLong(csvRecord.get(5))
                         .pickupTimeInMillis(DateUtils.parseDate(csvRecord.get(1), TIME_FORMAT).getTime()).build();
 
 

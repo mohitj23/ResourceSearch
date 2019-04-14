@@ -25,7 +25,6 @@ public class App {
         BasicCSVReader.getResourcesFromTestData("test.csv");
 
         // Read zone data from JSON file
-//        new FileReader("./src/main/resources/manhattan_zones_lat_lon_3.json");
         HashMap<String,Zone> result =
                 new ObjectMapper().readValue(
                         new File("./src/main/resources/manhattan_zones_lat_lon_3.json"),

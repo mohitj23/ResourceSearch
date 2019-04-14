@@ -15,7 +15,7 @@ import java.util.TimeZone;
 @Slf4j
 public class App {
 
-    public static void main(String args[]) throws IOException, ParseException {
+    public static void main(String[] args) throws IOException, ParseException {
 
         log.info(TimeZone.getDefault().toString());
         TimeZone.setDefault(TimeZone.getTimeZone("America/New_York"));
@@ -32,7 +32,7 @@ public class App {
 
         // append h3Index to the test data
 
-        // provide random locations to the cabs from the list of h3Indices
+        //TODO: provide random locations to the cabs from the list of h3Indices
 
         //Initialize the simulation time entity
 

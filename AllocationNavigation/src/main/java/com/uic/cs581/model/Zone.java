@@ -14,5 +14,6 @@ public class Zone {
     String h3Index;
     Double lat;
     Double long1;
+    Double score;
     public List<List<String>> kRingNeighbors;
 }

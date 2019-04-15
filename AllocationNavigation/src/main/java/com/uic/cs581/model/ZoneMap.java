@@ -18,7 +18,7 @@ public class ZoneMap {
 
     }
 
-    private static Map<String, Zone> getInstance() {
+    public static Map<String, Zone> getInstance() {
         zoneMap = Optional.ofNullable(zoneMap).orElse(readDataFromFile());
         return zoneMap;
     }

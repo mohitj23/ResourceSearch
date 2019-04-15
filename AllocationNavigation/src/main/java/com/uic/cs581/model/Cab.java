@@ -15,4 +15,5 @@ public class Cab {
     private long totalSearchTime;
     private String currentZone;
     private String targetZone;
+    private Double speed;
 }

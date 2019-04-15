@@ -18,7 +18,7 @@ public class ZoneMap {
 
     }
 
-    public static Map<String, Zone> getInstance() {
+    private static Map<String, Zone> getInstance() {
         zoneMap = Optional.ofNullable(zoneMap).orElse(readDataFromFile());
         return zoneMap;
     }
@@ -30,6 +30,9 @@ public class ZoneMap {
      */
     private static Map<String, Zone> readDataFromFile() {
         try {
+            log.info("Working Directory = " +
+                    System.getProperty("user.dir"));
+
             return new ObjectMapper().readValue(
                     new File("./src/main/resources/manhattan_zones_lat_lon_3.json"),
                     new TypeReference<Map<String, Zone>>() {

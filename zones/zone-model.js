@@ -1,9 +1,9 @@
 const method = zoneModel.prototype;
 
 //Constructor for zoneModel
-function zoneModel(lat, long, h3Index, kRingNeighbors) {
+function zoneModel(lat, long1, h3Index, kRingNeighbors) {
     this.lat = lat;
-    this.long = long;
+    this.long1 = long1;
     this.h3Index = h3Index;
     this.kRingNeighbors = kRingNeighbors;
 }

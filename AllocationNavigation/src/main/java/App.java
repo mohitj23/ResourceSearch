@@ -27,6 +27,7 @@ public class App {
 
         //TODO: provide random locations to the cabs from the list of h3Indices
 
+
         //Initialize the simulation time entity
 
         //read the appropriate entries from the test data

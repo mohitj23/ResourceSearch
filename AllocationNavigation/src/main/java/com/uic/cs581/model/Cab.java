@@ -5,6 +5,7 @@ import lombok.*;
 import java.util.List;
 
 @Builder
+@ToString
 public class Cab {
 
     private int id;
@@ -15,5 +16,7 @@ public class Cab {
     private long totalSearchTime;
     private String currentZone;
     private String targetZone;
-    private Double speed;
+    private Double speed = SPEED;
+
+    private static final Double SPEED = 40.0;
 }

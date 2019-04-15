@@ -8,11 +8,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Random;
+import java.util.Set;
 
 @Slf4j
 public class ZoneMap {
 
     private static Map<String, Zone> zoneMap;
+    private static Random random = new Random();
+    private static Set<String> keys;
 
     private ZoneMap() {
 
@@ -75,5 +79,12 @@ public class ZoneMap {
 
     public static Zone getZone(String h3Index) {
         return getInstance().get(h3Index);
+    }
+
+    public static String getRandomZoneIndex() {
+        if (keys == null) {
+            keys = getInstance().keySet();
+        }
+        return (String) keys.toArray()[random.nextInt(keys.size())];
     }
 }

@@ -69,4 +69,8 @@ public class ZoneMap {
 
         return zones;
     }
+
+    public static Zone getZone(String h3Index) {
+        return getInstance().get(h3Index);
+    }
 }

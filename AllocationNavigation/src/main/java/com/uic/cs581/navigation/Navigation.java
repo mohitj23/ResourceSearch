@@ -11,12 +11,16 @@ import java.util.MissingResourceException;
 @Slf4j
 public class Navigation {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
 
-        oneHop("892a10089dbffff");
+        oneHop(ZoneMap.getRandomZoneIndex());
+        //oneHop("892a10089dbffff");
     }
 
-    static String kHops(String currZone)    {
+    static String kHops(String currZone, String prevZone, int k)    {
+
+        if(k==1)
+            return oneHop(currZone, prevZone);
 
         return currZone;
     }

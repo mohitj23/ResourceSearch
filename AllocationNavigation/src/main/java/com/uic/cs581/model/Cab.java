@@ -15,7 +15,7 @@ public class Cab {
     private List<List<String>> searchPaths;
     private List<String> futurePath;
     private long nextAvailableTime;
-    private long totalSearchTime;
+    private long totalSearchTime; // based on simulation time
     private String currentZone;
     private String targetZone;
     private Double speed = SPEED;

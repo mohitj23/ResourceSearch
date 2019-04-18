@@ -15,7 +15,7 @@ import java.util.Set;
 public class ZoneMap {
 
     private static Map<String, Zone> zoneMap;
-    private static Random random = new Random();
+    private static final Random random = new Random();
     private static Set<String> keys;
 
     private ZoneMap() {

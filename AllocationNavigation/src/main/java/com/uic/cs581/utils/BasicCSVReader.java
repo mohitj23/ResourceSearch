@@ -26,9 +26,13 @@ public class BasicCSVReader {
 
     private static H3Core h3;
 
-    private static int resolutionLevel = 9;
+    private static final int resolutionLevel = 9;
 
-    private static String TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
+    private static final String TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
+
+    private static final long REQUEST_TIME_DIFFERENCE = 600000;
+
+    public static long MIN_REQUEST_TIME = Long.MAX_VALUE;
 
     public static List<Resource> getResourcesFromTestData(String fileName) throws IOException, ParseException {
 
@@ -49,6 +53,12 @@ public class BasicCSVReader {
                 log.info("---------------");
                 log.info(csvRecord.toString());
 
+                long pickupTime = DateUtils.parseDate(csvRecord.get(1), TIME_FORMAT).getTime();
+                long requestTime = pickupTime - REQUEST_TIME_DIFFERENCE;
+                if (MIN_REQUEST_TIME > requestTime) {
+                    MIN_REQUEST_TIME = requestTime;
+                }
+
                 Resource r = Resource.builder()
                         .resourceId(resourceCount++)
                         .dropOffLat(csvRecord.get(10))
@@ -65,7 +75,8 @@ public class BasicCSVReader {
                                 Double.parseDouble(csvRecord.get(6)),
                                 Double.parseDouble(csvRecord.get(5)),
                                 resolutionLevel))
-                        .pickupTimeInMillis(DateUtils.parseDate(csvRecord.get(1), TIME_FORMAT).getTime()).build();
+                        .pickupTimeInMillis(pickupTime)
+                        .requestTimeInMillis(requestTime).build();
 
 
                 log.info(r.toString());

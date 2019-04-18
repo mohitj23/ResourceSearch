@@ -12,32 +12,38 @@ import java.util.Optional;
 @Setter
 public class SimulationClock {
 
-    private Date startTime;
+    private long startTime;
 
-    private Integer incrementInMillis;
+    private int incrementInMillis;
+
+    private int noOfIncrements;
+
+    private long currentSimTime;
 
     private static SimulationClock sc;
 
-    public static SimulationClock getInstance(Date startTime, Integer incrementInMillis) {
-        return Optional.ofNullable(sc).orElse(new SimulationClock(startTime, incrementInMillis));
+    public static void initializeSimulationClock(long startTime, int incrementInMillis) {
+        sc = Optional.ofNullable(sc).orElse(new SimulationClock(startTime, incrementInMillis));
     }
 
-    public static SimulationClock incrementSimulationTime() {
+    public static long incrementSimulationTime() {
         if (sc == null) {
             log.error("Simulation clock should be initialized first.");
             System.exit(1);
         }
-        sc.setStartTime(new Date(sc.getStartTime().getTime() + sc.getIncrementInMillis()));
-        return sc;
+        sc.setNoOfIncrements(sc.getNoOfIncrements() + 1);
+        sc.setCurrentSimTime(sc.getCurrentSimTime() + sc.getIncrementInMillis());
+        return sc.getCurrentSimTime();
     }
 
     private SimulationClock() {
 
     }
 
-    private SimulationClock(Date startTime, Integer incrementInMillis) {
+    private SimulationClock(long startTime, int incrementInMillis) {
         this.startTime = startTime;
         this.incrementInMillis = incrementInMillis;
+        this.currentSimTime = startTime;
     }
 
 }

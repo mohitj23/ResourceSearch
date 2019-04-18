@@ -1,5 +1,6 @@
 package com.uic.cs581.model;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,7 +10,10 @@ public class CabPool {
 
     public static void initialize(int noOfCabs) {
         for (int i = 0; i < noOfCabs; i++) {
-            cabList.add(Cab.builder().currentZone(ZoneMap.getRandomZoneIndex()).build());
+            cabList.add(Cab.builder()
+                            .searchPaths(new ArrayList<>())
+                            .currentZone(ZoneMap.getRandomZoneIndex())
+                            .build());
         }
     }
 

@@ -1,21 +1,21 @@
 package com.uic.cs581.model;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import lombok.extern.slf4j.Slf4j;
 
+import java.util.*;
+
+@Slf4j
 public class ResourcePool {
 
     // entire resource pool
     private static final List<Resource> entirePool = new ArrayList<>();
-    private static Iterator<Resource> entirePoolIterator;
+    private static ListIterator<Resource> entirePoolIterator;
 
     // current resource pool based on the simulation time
     private static final List<Resource> currentPool = new ArrayList<>();
 
     // completed resource pool - either reached destination or expired
-    private static final List<Resource> completedPool = new ArrayList<>();
+    private static final List<Resource> assignedPool = new ArrayList<>();
 
     public static List<Resource> getEntirePool() {
         return entirePool;
@@ -25,8 +25,8 @@ public class ResourcePool {
         return currentPool;
     }
 
-    public static List<Resource> getCompletedPool() {
-        return completedPool;
+    public static List<Resource> getAssignedPool() {
+        return assignedPool;
     }
 
     public static void updateCurrentPool() {
@@ -38,10 +38,11 @@ public class ResourcePool {
         while (currentPoolItr.hasNext()) {
             Resource temp = currentPoolItr.next();
 
-            //expiration time(mlt) is exhausted then remove and add to completed pool
-            if (temp.getExpirationTimeLeftInMillis() <= 0) {
+            //expiration time(mlt) is exhausted then remove and add to assigned pool
+            // or a resource is assigned a cab
+            if (temp.getExpirationTimeLeftInMillis() <= 0 || temp.getCabId() > 0) {
                 currentPoolItr.remove();
-                completedPool.add(temp);
+                assignedPool.add(temp);
             }
         }
 
@@ -58,6 +59,7 @@ public class ResourcePool {
             }
 
         }
+        entirePoolIterator.previous();
     }
 
 }

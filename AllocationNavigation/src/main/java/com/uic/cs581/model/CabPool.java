@@ -11,9 +11,10 @@ public class CabPool {
     public static void initialize(int noOfCabs) {
         for (int i = 0; i < noOfCabs; i++) {
             cabList.add(Cab.builder()
-                            .searchPaths(new ArrayList<>())
-                            .currentZone(ZoneMap.getRandomZoneIndex())
-                            .build());
+                    .id(i)
+                    .searchPaths(new ArrayList<>())
+                    .currentZone(ZoneMap.getRandomZoneIndex())
+                    .build());
         }
     }
 

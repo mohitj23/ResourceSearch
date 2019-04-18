@@ -49,10 +49,6 @@ public final class SimulationClock {
         return sc.getCurrentSimTime();
     }
 
-    private SimulationClock() {
-
-    }
-
     private SimulationClock(long startTime, int incrementInMillis) {
         this.startTime = startTime;
         this.incrementInMillis = incrementInMillis;

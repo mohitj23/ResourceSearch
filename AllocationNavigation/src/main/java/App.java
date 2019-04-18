@@ -45,6 +45,10 @@ public class App {
 
         while (System.currentTimeMillis() < systemEndTime) {
 
+            //Simulation time increment
+
+            //Zone score update
+
             //read the appropriate entries from the test data
             ResourcePool.updateCurrentPool();
 

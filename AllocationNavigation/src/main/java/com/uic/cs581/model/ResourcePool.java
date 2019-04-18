@@ -46,7 +46,7 @@ public class ResourcePool {
         }
 
         //iterate over entire pool from last breakpoint , remove them and move to current pool.
-        entirePoolIterator = Optional.of(entirePoolIterator).orElse(entirePool.listIterator());
+        entirePoolIterator = Optional.ofNullable(entirePoolIterator).orElse(entirePool.listIterator());
 
         while (entirePoolIterator.hasNext()) {
             Resource temp = entirePoolIterator.next();

@@ -6,12 +6,14 @@ import java.util.List;
 
 @Builder
 @ToString
+@Getter
+@Setter
 public class Cab {
 
     private int id;
     private int resourceId;
-    private List<String> searchPaths;
-    private String futurePath;
+    private List<List<String>> searchPaths;
+    private List<String> futurePath;
     private long nextAvailableTime;
     private long totalSearchTime;
     private String currentZone;

@@ -1,31 +1,79 @@
 package com.uic.cs581.navigation;
 
+import com.uic.cs581.model.Cab;
 import com.uic.cs581.model.Zone;
 import com.uic.cs581.model.ZoneMap;
-import java.io.IOException;
 import lombok.extern.slf4j.Slf4j;
-import java.util.Arrays;
-import java.util.List;
-import java.util.MissingResourceException;
+
+import java.util.*;
 
 @Slf4j
 public class Navigation {
 
+    private final static int k = 1;
+
     public static void main(String[] args)  {
 
-        oneHop(ZoneMap.getRandomZoneIndex());
+        //kHops("892a10089dbffff");
+        kHops(ZoneMap.getRandomZoneIndex());
+        //oneHop(ZoneMap.getRandomZoneIndex());
         //oneHop("892a10089dbffff");
     }
 
-    static String kHops(String currZone, String prevZone, int k)    {
+    static void navigateCab(Cab cab) {
 
-        if(k==1)
-            return oneHop(currZone, prevZone);
+        //TODO: check edge cases (general reminder)
 
-        return currZone;
+        //only if cab doesn't have a resource
+        if(cab.getTargetZone()!=null)// || cab.getTargetZone().length()!=0)
+            return;
+
+        /*
+            if future Path is empty
+                calculate future by kHops
+                if currZone != end of searchPath
+                    //this means cab had a resource in the gap observed
+                    add new searchPath
+        */
+        if(cab.getFuturePath().size()==0 || cab.getFuturePath()==null) {
+            List<String> nextZones = kHops(cab.getCurrentZone(),null);
+            cab.setFuturePath(nextZones);
+
+            List<String> lastPath = cab.getSearchPaths().get(cab.getSearchPaths().size()-1);
+            if(!cab.getCurrentZone().equals(lastPath.get(lastPath.size()-1)))
+                cab.getSearchPaths().add(new ArrayList<>());
+
+        }
+
+        //Transfer one zone from future to last-search-path
+        String z = cab.getFuturePath().remove(0);
+        cab.getSearchPaths().get(cab.getSearchPaths().size()-1).add(z);
+
     }
 
-    static String oneHop(String currZone, String prevZone)   {
+    private static List<String> kHops(String currZone)   {
+        int rand = (int)(Math.random() * 6);
+        return kHops(currZone, ZoneMap.getZone(currZone).kRingNeighbors.get(1).get(rand));
+    }
+
+    private static List<String> kHops(String currZone, String prevZone)    {
+
+        List<String> nextPath = new ArrayList<>();
+
+        for(int i=0;i<k;i++)    {
+            String tempZone = currZone;
+            if(prevZone==null)
+                currZone = oneHop(currZone);
+            else
+                currZone = oneHop(currZone, prevZone);
+            prevZone = tempZone;
+            nextPath.add(currZone);
+        }
+        log.debug(String.join(", ", nextPath));
+        return nextPath;
+    }
+
+    private static String oneHop(String currZone, String prevZone)   {
 
         //TODO: [-90,+90] neighbor selection
 
@@ -58,7 +106,7 @@ public class Navigation {
         return kRing1.get(selectedIndex);
     }
 
-    static String oneHop(String currZone)  {
+    private static String oneHop(String currZone)  {
 
         //random index
         int rand = (int)(Math.random() * 6);

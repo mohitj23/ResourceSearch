@@ -2,6 +2,7 @@ package com.uic.cs581.utils;
 
 import com.uber.h3core.H3Core;
 import com.uic.cs581.model.Resource;
+import com.uic.cs581.model.ResourcePool;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -14,7 +15,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import static com.uic.cs581.model.Resource.EXPIRATION_TIME_MILLIS;
@@ -34,18 +35,19 @@ public class BasicCSVReader {
 
     public static long MIN_REQUEST_TIME = Long.MAX_VALUE;
 
-    public static List<Resource> getResourcesFromTestData(String fileName) throws IOException, ParseException {
+    public static void readResourcesFromTestData(String fileName) throws IOException, ParseException {
 
         log.info("Working Directory = " +
                 System.getProperty("user.dir"));
-        List<Resource> resources = new ArrayList<>();
+
+        //get a reference to the final list and add the resources to this list.
+        List<Resource> resources = ResourcePool.getEntirePool();
         h3 = H3Core.newInstance();
         try (
                 Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH + fileName), StandardCharsets.UTF_8);
                 CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader()
                         .withIgnoreHeaderCase()
                         .withTrim())
-
         ) {
             for (CSVRecord csvRecord : csvParser) {
                 // Accessing Values by Column Index
@@ -78,12 +80,10 @@ public class BasicCSVReader {
                         .pickupTimeInMillis(pickupTime)
                         .requestTimeInMillis(requestTime).build();
 
-
                 log.info(r.toString());
                 log.info("---------------\n\n");
                 resources.add(r);
             }
-            return resources;
         }
     }
 }

@@ -14,7 +14,7 @@ public class Cab {
     private int resourceId;
     private List<List<String>> searchPaths;
     private List<String> futurePath;
-    private long nextAvailableTime;
+    private long nextAvailableTime; //based on simulation time
     private long totalSearchTime; // based on simulation time
     private String currentZone;
     private String targetZone;

@@ -88,15 +88,16 @@ public class Navigation {
 
     private static String oneHop(String currZone, String prevZone)   {
 
-        //TODO: [-90,+90] neighbor selection
-
         Zone zone = ZoneMap.getZone(currZone);
         List<String> kRing1 = zone.kRingNeighbors.get(1);
 
-        //TODO: replace with appropriate exception
-        if(!kRing1.contains(prevZone))
-            throw new MissingResourceException("prevZone not in currZone's neighbors", "String", "prevZone");
+        if(!kRing1.contains(prevZone)) {
+            log.error("prevZone not in currZone's neighbors");
+            //throw new MissingResourceException("prevZone not in currZone's neighbors", "String", "prevZone");
+            return oneHop(currZone);
+        }
 
+        //TODO: [-90,+90] neighbor selection
         return oneHop(currZone);
     }
 

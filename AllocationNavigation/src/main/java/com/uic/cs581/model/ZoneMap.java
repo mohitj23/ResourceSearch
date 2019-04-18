@@ -34,7 +34,7 @@ public class ZoneMap {
      */
     private static Map<String, Zone> readDataFromFile() {
         try {
-            log.info("Working Directory = " +
+            log.debug("Working Directory = " +
                     System.getProperty("user.dir"));
 
             return new ObjectMapper().readValue(
@@ -57,10 +57,10 @@ public class ZoneMap {
         zones.entrySet().stream()
                 .filter(h3Index -> {
                     if (scores.containsKey(h3Index)) {
-                        log.info("h3Index found scoresMap - keep the record");
+                        log.debug("h3Index found scoresMap - keep the record");
                         return true;
                     }
-                    log.error("h3Index not present in scores");
+                    log.debug("h3Index not present in scores");
                     return false;
                 })
                 .forEach(h3Index -> {

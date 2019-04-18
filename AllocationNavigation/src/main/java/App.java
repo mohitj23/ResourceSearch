@@ -23,9 +23,9 @@ public class App {
         long runningTimeInMins = Long.parseLong(args[2]);
         long systemEndTime = System.currentTimeMillis() + runningTimeInMins * 60 * 100;
 
-        log.info("Default Timezone:" + TimeZone.getDefault().toString());
+        log.debug("Default Timezone:" + TimeZone.getDefault().toString());
         TimeZone.setDefault(TimeZone.getTimeZone("America/New_York"));
-        log.info("Default Timezone changed:" + TimeZone.getDefault().toString());
+        log.debug("Default Timezone changed:" + TimeZone.getDefault().toString());
 
         // Read the test data csv, get the resource list from ResourcePool
         BasicCSVReader.readResourcesFromTestData("test.csv");

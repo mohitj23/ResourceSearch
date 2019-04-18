@@ -36,7 +36,7 @@ public final class SimulationClock {
         sc.setCurrentSimTime(sc.getCurrentSimTime() + sc.getIncrementInMillis());
 
         //TODO new Date should be removed for performance
-        log.info("Simulation Time incremented by " + sc.getIncrementInMillis() + "millis to " + new Date(sc.getCurrentSimTime()));
+        log.debug("Simulation Time incremented by " + sc.getIncrementInMillis() + "millis to " + new Date(sc.getCurrentSimTime()));
 
 //        return sc.getCurrentSimTime();
     }

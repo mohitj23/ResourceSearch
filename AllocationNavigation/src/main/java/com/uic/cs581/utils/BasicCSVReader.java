@@ -37,7 +37,7 @@ public class BasicCSVReader {
 
     public static void readResourcesFromTestData(String fileName) throws IOException, ParseException {
 
-        log.info("Working Directory = " +
+        log.debug("Working Directory = " +
                 System.getProperty("user.dir"));
 
         //get a reference to the final list and add the resources to this list.
@@ -51,9 +51,9 @@ public class BasicCSVReader {
         ) {
             for (CSVRecord csvRecord : csvParser) {
                 // Accessing Values by Column Index
-                log.info("Record No - " + csvRecord.getRecordNumber());
-                log.info("---------------");
-                log.info(csvRecord.toString());
+                log.debug("Record No - " + csvRecord.getRecordNumber());
+                log.debug("---------------");
+                log.debug(csvRecord.toString());
 
                 long pickupTime = DateUtils.parseDate(csvRecord.get(1), TIME_FORMAT).getTime();
                 long requestTime = pickupTime - REQUEST_TIME_DIFFERENCE;
@@ -80,8 +80,8 @@ public class BasicCSVReader {
                         .pickupTimeInMillis(pickupTime)
                         .requestTimeInMillis(requestTime).build();
 
-                log.info(r.toString());
-                log.info("---------------\n\n");
+                log.debug(r.toString());
+                log.debug("---------------\n\n");
                 resources.add(r);
             }
         }

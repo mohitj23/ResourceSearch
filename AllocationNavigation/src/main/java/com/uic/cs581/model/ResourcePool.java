@@ -29,7 +29,14 @@ public class ResourcePool {
         return assignedPool;
     }
 
-    public static void updateCurrentPool() {
+
+    /**
+     * Current pool resources is updated based on MLT left and cab assignment.
+     * Fetch new resources from entire pool based on Simulation current time.
+     *
+     * @return boolean: true if entire pool has resources left, else false.
+     */
+    public static boolean updateCurrentPool() {
 
         //iterate over current pool, remove expired resources to completed pool.
         //later use this iterator to add element form entire pool
@@ -56,10 +63,18 @@ public class ResourcePool {
                     temp.getRequestTimeInMillis() <= SimulationClock.getSimCurrentTime()) {
                 entirePoolIterator.remove();
                 currentPool.add(temp);
+
+            } else {
+                log.debug("Resource ReqTime is:" + new Date(temp.getRequestTimeInMillis()) +
+                        "and Sim curr time is:" +
+                        new Date(SimulationClock.getSimCurrentTime()));
+                entirePoolIterator.previous();
+                break;
             }
 
         }
-        entirePoolIterator.previous();
+        return entirePoolIterator.hasNext();
+        //TODO if required sort current pool based on MLT left
     }
 
 }

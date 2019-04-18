@@ -1,6 +1,7 @@
 package com.uic.cs581.navigation;
 
 import com.uic.cs581.model.Cab;
+import com.uic.cs581.model.CabPool;
 import com.uic.cs581.model.Zone;
 import com.uic.cs581.model.ZoneMap;
 import lombok.extern.slf4j.Slf4j;
@@ -15,12 +16,17 @@ public class Navigation {
     public static void main(String[] args)  {
 
         //kHops("892a10089dbffff");
-        kHops(ZoneMap.getRandomZoneIndex());
+        //kHops(ZoneMap.getRandomZoneIndex());
         //oneHop(ZoneMap.getRandomZoneIndex());
         //oneHop("892a10089dbffff");
+
+        CabPool.initialize(5);
+
+        for(Cab cab: CabPool.getEntireCabPool())
+            navigateCab(cab);
     }
 
-    static void navigateCab(Cab cab) {
+    private static void navigateCab(Cab cab) {
 
         //TODO: check edge cases (general reminder)
 
@@ -35,25 +41,33 @@ public class Navigation {
                     //this means cab had a resource in the gap observed
                     add new searchPath
         */
-        if(cab.getFuturePath().size()==0 || cab.getFuturePath()==null) {
-            List<String> lastPath = cab.getSearchPaths().get(cab.getSearchPaths().size()-1);
+        if(cab.getFuturePath()==null || cab.getFuturePath().size()==0) {
+
             List<String> nextZones;
 
-            //if no previous paths traversed, OR if resource was just dropped (means restart search)
-            if(cab.getSearchPaths().size()==0 || !cab.getCurrentZone().equals(lastPath.get(lastPath.size()-1)))
+            //if no previous paths traversed
+            if(cab.getSearchPaths().size()==0) {
                 nextZones = kHops(cab.getCurrentZone());
-            else
-                nextZones = kHops(cab.getCurrentZone(), lastPath.get(lastPath.size()-1));
-            cab.setFuturePath(nextZones);
-
-            if(!cab.getCurrentZone().equals(lastPath.get(lastPath.size()-1)))
                 cab.getSearchPaths().add(new ArrayList<>());
+            }
+            else {
+                List<String> lastPath = cab.getSearchPaths().get(cab.getSearchPaths().size()-1);
+
+                //if resource was just dropped (means restart search)
+                if (!cab.getCurrentZone().equals(lastPath.get(lastPath.size() - 1))) {
+                    nextZones = kHops(cab.getCurrentZone());
+                    cab.getSearchPaths().add(new ArrayList<>());
+                } else
+                    nextZones = kHops(cab.getCurrentZone(), lastPath.get(lastPath.size() - 1));
+            }
+            cab.setFuturePath(nextZones);
 
         }
 
         //Transfer one zone from future to last-search-path
         String z = cab.getFuturePath().remove(0);
         cab.getSearchPaths().get(cab.getSearchPaths().size()-1).add(z);
+        cab.setCurrentZone(z);
 
     }
 

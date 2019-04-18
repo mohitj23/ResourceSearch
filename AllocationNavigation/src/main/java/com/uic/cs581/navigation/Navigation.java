@@ -36,10 +36,16 @@ public class Navigation {
                     add new searchPath
         */
         if(cab.getFuturePath().size()==0 || cab.getFuturePath()==null) {
-            List<String> nextZones = kHops(cab.getCurrentZone(),null);
+            List<String> lastPath = cab.getSearchPaths().get(cab.getSearchPaths().size()-1);
+            List<String> nextZones;
+
+            //if no previous paths traversed, OR if resource was just dropped (means restart search)
+            if(cab.getSearchPaths().size()==0 || !cab.getCurrentZone().equals(lastPath.get(lastPath.size()-1)))
+                nextZones = kHops(cab.getCurrentZone());
+            else
+                nextZones = kHops(cab.getCurrentZone(), lastPath.get(lastPath.size()-1));
             cab.setFuturePath(nextZones);
 
-            List<String> lastPath = cab.getSearchPaths().get(cab.getSearchPaths().size()-1);
             if(!cab.getCurrentZone().equals(lastPath.get(lastPath.size()-1)))
                 cab.getSearchPaths().add(new ArrayList<>());
 
@@ -52,8 +58,18 @@ public class Navigation {
     }
 
     private static List<String> kHops(String currZone)   {
-        int rand = (int)(Math.random() * 6);
-        return kHops(currZone, ZoneMap.getZone(currZone).kRingNeighbors.get(1).get(rand));
+
+        List<String> nextPath = new ArrayList<>();
+
+        for(int i=0;i<k;i++)    {
+            currZone = oneHop(currZone);
+            nextPath.add(currZone);
+        }
+        log.debug(String.join(", ", nextPath));
+        return nextPath;
+
+        //int rand = (int)(Math.random() * 6);
+        //return kHops(currZone, ZoneMap.getZone(currZone).kRingNeighbors.get(1).get(rand));
     }
 
     private static List<String> kHops(String currZone, String prevZone)    {
@@ -62,10 +78,7 @@ public class Navigation {
 
         for(int i=0;i<k;i++)    {
             String tempZone = currZone;
-            if(prevZone==null)
-                currZone = oneHop(currZone);
-            else
-                currZone = oneHop(currZone, prevZone);
+            currZone = oneHop(currZone, prevZone);
             prevZone = tempZone;
             nextPath.add(currZone);
         }
@@ -84,9 +97,19 @@ public class Navigation {
         if(!kRing1.contains(prevZone))
             throw new MissingResourceException("prevZone not in currZone's neighbors", "String", "prevZone");
 
+        return oneHop(currZone);
+    }
+
+    private static String oneHop(String currZone)  {
+
+        Zone zone = ZoneMap.getZone(currZone);
+        List<String> kRing1 = zone.kRingNeighbors.get(1);
+
+        //log.debug("Zone: "+currZone);
+
         //Get scores of neighbors from Uber-API: (API results stored in zones folder)
-        Double[] zoneScores = new Double[6];
-        for(int i=0;i<6;i++)    {
+        Double[] zoneScores = new Double[kRing1.size()];
+        for(int i=0;i<kRing1.size();i++)    {
             zoneScores[i]=ZoneMap.getZone(kRing1.get(i)).getScore();
 
             //TODO: remove below 2 lines.......placed because scores are null at the time of coding
@@ -104,13 +127,10 @@ public class Navigation {
 
         //Return h3-index of picked zone
         return kRing1.get(selectedIndex);
-    }
-
-    private static String oneHop(String currZone)  {
 
         //random index
-        int rand = (int)(Math.random() * 6);
-        return oneHop(currZone, ZoneMap.getZone(currZone).kRingNeighbors.get(1).get(rand));
+        //int rand = (int)(Math.random() * 6);
+        //return oneHop(currZone, ZoneMap.getZone(currZone).kRingNeighbors.get(1).get(rand));
     }
 
     private static int nonDeterministic(Double[] scores)   {

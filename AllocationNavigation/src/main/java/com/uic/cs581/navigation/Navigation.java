@@ -22,13 +22,18 @@ public class Navigation {
 
         CabPool.initialize(5);
 
-        for(Cab cab: CabPool.getEntireCabPool())
+        navigate();
+    }
+
+    public static void navigate()    {
+        for(Cab cab: CabPool.getAvailableCabs())    {
             navigateCab(cab);
+        }
     }
 
     private static void navigateCab(Cab cab) {
 
-        //TODO: check edge cases (general reminder)
+        log.info("Navigating cab: "+cab.getId());
 
         //only if cab doesn't have a resource
         if(cab.getTargetZone()!=null)// || cab.getTargetZone().length()!=0)
@@ -57,6 +62,8 @@ public class Navigation {
                 if (!cab.getCurrentZone().equals(lastPath.get(lastPath.size() - 1))) {
                     nextZones = kHops(cab.getCurrentZone());
                     cab.getSearchPaths().add(new ArrayList<>());
+                    //Record current zone as start of new search path
+                    cab.getSearchPaths().get(cab.getSearchPaths().size()-1).add(cab.getCurrentZone());
                 } else
                     nextZones = kHops(cab.getCurrentZone(), lastPath.get(lastPath.size() - 1));
             }
@@ -119,6 +126,11 @@ public class Navigation {
 
         Zone zone = ZoneMap.getZone(currZone);
         List<String> kRing1 = zone.kRingNeighbors.get(1);
+
+        if(kRing1.size()<1) {
+            log.error("Zone has no neighbors");
+            return currZone;
+        }
 
         //log.debug("Zone: "+currZone);
 

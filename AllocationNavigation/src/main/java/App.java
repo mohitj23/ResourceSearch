@@ -42,7 +42,10 @@ public class App {
         //provide random locations to the cabs from the list of h3Indices
         CabPool.initialize(noOfCabs);
 
-        while (System.currentTimeMillis() < systemEndTime) {
+        //entire pool & current pool for resources is empty
+        boolean resourcesLeft = true;
+
+        while (resourcesLeft && System.currentTimeMillis() < systemEndTime) {
 
             //Simulation time increment, start iteration
             SimulationClock.incrementSimulationTime();
@@ -53,7 +56,7 @@ public class App {
             }
 
             //read the appropriate entries from the test data
-            ResourcePool.updateCurrentPool();
+            resourcesLeft = ResourcePool.updateCurrentPool();
 
             // run resource allocation component on cab pool and current resource pool
 

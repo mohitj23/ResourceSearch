@@ -10,6 +10,7 @@ import java.util.TimeZone;
 
 @Slf4j
 public class App {
+    private static final long ZONE_SCORE_UPDATE_INTERVAL = 30000;
 
     public static void main(String[] args) throws IOException, ParseException {
 
@@ -33,10 +34,8 @@ public class App {
         //Initialize the simulation time entity
         SimulationClock.initializeSimulationClock(BasicCSVReader.MIN_REQUEST_TIME, simTimeIncrementsInMillis);
 
-        //start iteration
-
         //Hit Python App and get the zone score map
-
+        long prevZoneScoreUpdateTime = SimulationClock.getSimCurrentTime();
         // Read zone data from JSON file and update with the zoneScore
         // todo: uncomment        ZoneMap.updateZonesWithScores(new HashMap<>());
 
@@ -45,17 +44,24 @@ public class App {
 
         while (System.currentTimeMillis() < systemEndTime) {
 
-            //Simulation time increment
+            //Simulation time increment, start iteration
+            SimulationClock.incrementSimulationTime();
 
             //Zone score update
+            if (SimulationClock.getSimCurrentTime() - prevZoneScoreUpdateTime >= ZONE_SCORE_UPDATE_INTERVAL) {
+                //hit python api and update the score
+            }
 
             //read the appropriate entries from the test data
             ResourcePool.updateCurrentPool();
 
-            // run resource allocation component
+            // run resource allocation component on cab pool and current resource pool
 
             //run the navigation component
-            SimulationClock.incrementSimulationTime();
         }
+
+        //calculate the required metrics
+
+        //dump all the data into json file
     }
 }

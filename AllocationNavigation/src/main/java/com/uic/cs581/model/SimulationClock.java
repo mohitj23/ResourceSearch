@@ -16,7 +16,7 @@ public final class SimulationClock {
 
     private int incrementInMillis;
 
-    private int noOfIncrements; // default count is 0
+    private int noOfIterations; // default count is 0
 
     private long currentSimTime;
 
@@ -32,7 +32,7 @@ public final class SimulationClock {
             log.error("Simulation clock should be initialized first.");
             System.exit(1);
         }
-        sc.setNoOfIncrements(sc.getNoOfIncrements() + 1);
+        sc.setNoOfIterations(sc.getNoOfIterations() + 1);
         sc.setCurrentSimTime(sc.getCurrentSimTime() + sc.getIncrementInMillis());
 
         //TODO new Date should be removed for performance

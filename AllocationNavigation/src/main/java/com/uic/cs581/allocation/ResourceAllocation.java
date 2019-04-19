@@ -6,6 +6,7 @@ import com.uic.cs581.model.Resource;
 import com.uic.cs581.model.ResourcePool;
 
 import java.util.List;
+import java.util.ListIterator;
 
 public class ResourceAllocation {
 
@@ -13,12 +14,17 @@ public class ResourceAllocation {
         List<Resource> currentResourcePool= ResourcePool.getCurrentPool();
         List<Cab> availableCabs= CabPool.getAvailableCabs();
 
+        ListIterator currResourcePoolItr = currentResourcePool.listIterator();
+
         // hit h3 Api for each resource and each cab
 
         // find the shortest distance for the current resource
 
-        // update the resource and cab object
+        // update the resource and cab object IMMEDIATELY
+        //else the cab will be considered again
 
         // calculate the next available time
+
+        //TODO set future path to null in allocation
     }
 }

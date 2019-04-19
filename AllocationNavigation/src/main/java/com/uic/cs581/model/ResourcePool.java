@@ -47,7 +47,9 @@ public class ResourcePool {
 
             //expiration time(mlt) is exhausted then remove and add to assigned pool
             // or a resource is assigned a cab
+            //TODO update expired time left attribute
             if (temp.getExpirationTimeLeftInMillis() <= 0 || temp.getCabId() > 0) {
+                //TODO expired pool shoudl be different
                 currentPoolItr.remove();
                 assignedPool.add(temp);
             }

@@ -55,6 +55,8 @@ public class App {
                 //hit python api and update the score
             }
 
+            //TODO revisit all Cab to check its availability Cappool
+
             //read the appropriate entries from the test data
             resourcesLeft = ResourcePool.updateCurrentPool();
 

@@ -12,12 +12,15 @@ public class CabPool {
 
     private static final List<Cab> entireCabPool = new LinkedList<>();
 
-    public static void initialize(int noOfCabs) {
+    private static List<Cab> availableCabs;
+
+    public static void initialize(int noOfCabs, int cabSpeed) {
         for (int i = 0; i < noOfCabs; i++) {
             entireCabPool.add(Cab.builder()
                     .id(i)
                     .searchPaths(new ArrayList<>())
                     .currentZone(ZoneMap.getRandomZoneIndex())
+                    .speed(cabSpeed)
                     .build());
         }
     }
@@ -26,15 +29,17 @@ public class CabPool {
         return entireCabPool;
     }
 
+    public static List<Cab> getAvailableCabs() {
+        return availableCabs;
+    }
+
     /**
      * Get all cabs from the entireCabPool which don't have a resourceId tagged or(and)
      * next available time is <= current simulation time.
-     *
-     * @return List of available Cabs
      */
-    public static List<Cab> getAvailableCabs() {
+    public static void findAvailableCabs() {
         ListIterator<Cab> entireCabsItr = entireCabPool.listIterator();
-        List<Cab> availableCabs = new ArrayList<>();
+        availableCabs = new ArrayList<>();
 
         while (entireCabsItr.hasNext()) {
             Cab cab = entireCabsItr.next();
@@ -44,7 +49,7 @@ public class CabPool {
                 availableCabs.add(cab);
             }
         }
-        return availableCabs;
+//        return availableCabs;
     }
 
     private CabPool() {

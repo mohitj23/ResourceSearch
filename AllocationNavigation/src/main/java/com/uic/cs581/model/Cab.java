@@ -18,7 +18,7 @@ public class Cab {
     private long totalSearchTime; // based on simulation time
     private String currentZone;
     private String targetZone;
-    private Double speed = SPEED;
+    private int speed;
 
-    private static final Double SPEED = 40.0;
+//    private static final Double SPEED = 40.0;
 }

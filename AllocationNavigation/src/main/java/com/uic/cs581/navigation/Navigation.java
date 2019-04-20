@@ -20,7 +20,7 @@ public class Navigation {
         //oneHop(ZoneMap.getRandomZoneIndex());
         //oneHop("892a10089dbffff");
 
-        CabPool.initialize(5);
+        CabPool.initialize(5,40);
 
         navigate();
     }

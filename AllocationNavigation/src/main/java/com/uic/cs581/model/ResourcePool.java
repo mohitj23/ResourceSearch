@@ -75,8 +75,12 @@ public class ResourcePool {
             }
 
         }
+
+        //sort current pool based on MLT left
+        currentPool.sort((cab1, cab2) -> (int) (cab1.getExpirationTimeLeftInMillis() - cab2.getExpirationTimeLeftInMillis()));
+
         return entirePoolIterator.hasNext();
-        //TODO if required sort current pool based on MLT left
+
     }
 
 }

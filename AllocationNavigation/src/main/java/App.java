@@ -1,3 +1,6 @@
+import com.uber.h3core.H3Core;
+import com.uber.h3core.LengthUnit;
+import com.uic.cs581.allocation.ResourceAllocation;
 import com.uic.cs581.model.*;
 import com.uic.cs581.utils.BasicCSVReader;
 import lombok.extern.slf4j.Slf4j;
@@ -11,16 +14,17 @@ import java.util.TimeZone;
 public class App {
     private static final long ZONE_SCORE_UPDATE_INTERVAL = 30000;
 
-    private static final double ZONE_DIAMETER_MILES = 0.108;                 //Resolution 9 -> converted to miles
-
     public static void main(String[] args) throws IOException, ParseException {
+
+        final double ZONE_DIAMETER_MILES = H3Core.newInstance()
+                .edgeLength(BasicCSVReader.RESOLUTION_LEVEL, LengthUnit.km); //Resolution 9 edge length in miles
 
         if (args.length != 3) {
             log.error("Please provide the required command line parameters");
             System.exit(1);
         }
         int noOfCabs = Integer.parseInt(args[0]);
-        int cabSpeed = Integer.parseInt(args[1]);     //in mph
+        int cabSpeed = Integer.parseInt(args[1]);     //in kph
         // TODO String csvFileName = args[2];
         long runningTimeInMins = Long.parseLong(args[2]);
         long systemEndTime = System.currentTimeMillis() + runningTimeInMins * 60 * 100;
@@ -56,6 +60,7 @@ public class App {
             //Zone score update
             if (SimulationClock.getSimCurrentTime() - prevZoneScoreUpdateTime >= ZONE_SCORE_UPDATE_INTERVAL) {
                 //hit python api and update the score
+                //TODO 12,1230,1 scenario to be handled.
             }
 
             //revisit all Cab to check its availability from Cab pool
@@ -65,6 +70,7 @@ public class App {
             resourcesLeft = ResourcePool.updateCurrentPool();
 
             // run resource allocation component on cab pool and current resource pool
+            ResourceAllocation.assignCabsToResources();
 
             //run the navigation component
         }

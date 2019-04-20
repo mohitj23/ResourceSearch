@@ -45,6 +45,10 @@ public final class SimulationClock {
         return sc.getCurrentSimTime();
     }
 
+    public static int getSimIncrInMillis() {
+        return sc.getIncrementInMillis();
+    }
+
     public static long getSimStartTime() {
         return sc.getCurrentSimTime();
     }

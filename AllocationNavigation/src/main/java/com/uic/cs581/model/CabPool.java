@@ -17,7 +17,7 @@ public class CabPool {
     public static void initialize(int noOfCabs, int cabSpeed) {
         for (int i = 0; i < noOfCabs; i++) {
             entireCabPool.add(Cab.builder()
-                    .id(i)
+                    .id(++i)
                     .searchPaths(new ArrayList<>())
                     .currentZone(ZoneMap.getRandomZoneIndex())
                     .speed(cabSpeed)
@@ -43,8 +43,9 @@ public class CabPool {
 
         while (entireCabsItr.hasNext()) {
             Cab cab = entireCabsItr.next();
-            //cab is available
-            //TODO check which condition will be provided
+
+            // cab is available
+            // both conditions are required.
             if (cab.getResourceId() <= 0 || cab.getNextAvailableTime() <= SimulationClock.getSimCurrentTime()) {
                 availableCabs.add(cab);
             }

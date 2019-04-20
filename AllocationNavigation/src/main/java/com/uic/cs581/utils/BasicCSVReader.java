@@ -15,7 +15,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
-import java.util.LinkedList;
 import java.util.List;
 
 import static com.uic.cs581.model.Resource.EXPIRATION_TIME_MILLIS;
@@ -27,7 +26,7 @@ public class BasicCSVReader {
 
     private static H3Core h3;
 
-    private static final int resolutionLevel = 9;
+    public static final int RESOLUTION_LEVEL = 9;
 
     private static final String TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
@@ -69,14 +68,14 @@ public class BasicCSVReader {
                         .dropOffH3Index(h3.geoToH3Address(
                                 Double.parseDouble(csvRecord.get(10)),
                                 Double.parseDouble(csvRecord.get(9)),
-                                resolutionLevel))
+                                RESOLUTION_LEVEL))
                         .expirationTimeLeftInMillis(EXPIRATION_TIME_MILLIS)
                         .pickUpLat(csvRecord.get(6))
                         .pickUpLong(csvRecord.get(5))
                         .pickUpH3Index(h3.geoToH3Address(
                                 Double.parseDouble(csvRecord.get(6)),
                                 Double.parseDouble(csvRecord.get(5)),
-                                resolutionLevel))
+                                RESOLUTION_LEVEL))
                         .pickupTimeInMillis(pickupTime)
                         .requestTimeInMillis(requestTime).build();
 

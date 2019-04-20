@@ -1,29 +1,64 @@
 package com.uic.cs581.allocation;
 
 import com.uber.h3core.H3Core;
-import com.uic.cs581.model.Cab;
-import com.uic.cs581.model.CabPool;
-import com.uic.cs581.model.Resource;
-import com.uic.cs581.model.ResourcePool;
+import com.uber.h3core.exceptions.DistanceUndefinedException;
+import com.uic.cs581.model.*;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Optional;
 
+@Slf4j
 public class ResourceAllocation {
 
     private static H3Core h3;
 
     public static void assignCabsToResources() throws IOException {
 
-        h3= H3Core.newInstance();
+        h3 = Optional.ofNullable(h3).orElse(H3Core.newInstance());
 
-        List<Resource> currentResourcePool= ResourcePool.getCurrentPool();
-        List<Cab> availableCabs= CabPool.getAvailableCabs();
+        List<Resource> currentResourcePool = ResourcePool.getCurrentPool();
+        List<Cab> availableCabs = CabPool.getAvailableCabs();
 
-        ListIterator currResourcePoolItr = currentResourcePool.listIterator();
+        ListIterator<Resource> currResourcePoolItr = currentResourcePool.listIterator();
+        ListIterator<Cab> availableCabsItr;
+        Optional<Cab> nearestCab;
+        int minDistanceFromCabToRes = Integer.MAX_VALUE;
 
-        // hit h3 Api for each resource and each cab
+
+        while (currResourcePoolItr.hasNext()) {
+            Resource tempRes = currResourcePoolItr.next();
+            nearestCab = Optional.empty();
+            availableCabsItr = availableCabs.listIterator();
+
+            while (availableCabsItr.hasNext()) {
+                Cab tempCab = availableCabsItr.next();
+                int distanceInHops = -1;
+                //Cab's distance from currentZone to the zone of resource and time taken to reach is less than MLT of resource
+
+                // hit h3 Api for each resource and each cab
+                distanceInHops = getDistanceFromH3(tempCab.getCurrentZone(), tempRes.getPickUpH3Index());
+
+                // shortest distance is based on the hops. MLT/simulation_increments = hops possible
+                if ((tempRes.getExpirationTimeLeftInMillis() / SimulationClock.getSimIncrInMillis()) >= distanceInHops && distanceInHops < minDistanceFromCabToRes) {
+                    minDistanceFromCabToRes = distanceInHops;
+                    nearestCab = Optional.of(tempCab);
+                }
+            }
+
+            final int cabDistanceToRes = minDistanceFromCabToRes;
+            //remove nearest cab from cab pool, else it becomes available for other resources too
+            nearestCab.ifPresent(cab -> {
+                // calculate next available time for this cab
+                // total distance is from current zone to the resource zone and from there to the destination zone
+                int totalHopsToCover = cabDistanceToRes + getDistanceFromH3(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
+                cab.setNextAvailableTime(SimulationClock.getSimCurrentTime() + (totalHopsToCover * SimulationClock.getSimIncrInMillis()));
+                cab.setFuturePath(null);
+                availableCabs.remove(cab.getId() - 1);  // Id is initialized from 1 and its an ArrayList.
+            });
+        }
 
         // find the shortest distance for the current resource
 
@@ -33,5 +68,16 @@ public class ResourceAllocation {
         // calculate the next available time
 
         //TODO set future path to null in allocation
+    }
+
+    private static int getDistanceFromH3(String zone1, String zone2) {
+        int distanceInHops = -1;
+        try {
+            // hit h3 Api for each resource and each cab
+            distanceInHops = h3.h3Distance(zone1, zone2);
+        } catch (DistanceUndefinedException e) {
+            log.error("H3 Distance cannot be calculated between the indexes:" + zone1 + "," + zone2);
+        }
+        return distanceInHops;
     }
 }

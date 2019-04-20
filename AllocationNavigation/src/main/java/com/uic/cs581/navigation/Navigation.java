@@ -35,10 +35,6 @@ public class Navigation {
 
         log.info("Navigating cab: "+cab.getId());
 
-        //only if cab doesn't have a resource
-        if(cab.getTargetZone()!=null)// || cab.getTargetZone().length()!=0)
-            return;
-
         /*
             if future Path is empty
                 calculate future by kHops
@@ -75,7 +71,9 @@ public class Navigation {
         String z = cab.getFuturePath().remove(0);
         cab.getSearchPaths().get(cab.getSearchPaths().size()-1).add(z);
         cab.setCurrentZone(z);
-
+        //TODO: Update cab total search time = cab.speed * cab.distance //take care of units of dist & time
+        double zone_diameter = 0.1;//miles
+        cab.setTotalSearchTime(cab.getTotalSearchTime() + (long)((zone_diameter*60)/(cab.getSpeed()))*1000);
     }
 
     private static List<String> kHops(String currZone)   {

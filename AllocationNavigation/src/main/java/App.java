@@ -3,6 +3,7 @@ import com.uber.h3core.LengthUnit;
 import com.uic.cs581.allocation.ResourceAllocation;
 import com.uic.cs581.model.*;
 import com.uic.cs581.utils.BasicCSVReader;
+import com.uic.cs581.utils.SendHttpRequest;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -15,6 +16,8 @@ public class App {
     private static final long ZONE_SCORE_UPDATE_INTERVAL = 30000;
 
     public static void main(String[] args) throws IOException, ParseException {
+
+        SendHttpRequest.getRequest();
 
         final double ZONE_DIAMETER_MILES = H3Core.newInstance()
                 .edgeLength(BasicCSVReader.RESOLUTION_LEVEL, LengthUnit.km); //Resolution 9 edge length in miles
@@ -35,7 +38,7 @@ public class App {
         log.debug("Default Timezone changed:" + TimeZone.getDefault().toString());
 
         // Read the test data csv, get the resource list from ResourcePool
-        BasicCSVReader.readResourcesFromTestData("test.csv");
+        BasicCSVReader.readResourcesFromTestData("preprocessed.csv");
 
         //Initialize the simulation time entity
         SimulationClock.initializeSimulationClock(BasicCSVReader.MIN_REQUEST_TIME, simTimeIncrementsInMillis);

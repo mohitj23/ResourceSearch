@@ -17,12 +17,18 @@ public class ResourcePool {
     // completed resource pool - either reached destination or expired
     private static final List<Resource> assignedPool = new ArrayList<>();
 
+    private static final List<Resource> expiredPool = new ArrayList<>();
+
     public static List<Resource> getEntirePool() {
         return entirePool;
     }
 
     public static List<Resource> getCurrentPool() {
         return currentPool;
+    }
+
+    public static List<Resource> getExpiredPool() {
+        return expiredPool;
     }
 
     public static List<Resource> getAssignedPool() {
@@ -45,13 +51,17 @@ public class ResourcePool {
         while (currentPoolItr.hasNext()) {
             Resource temp = currentPoolItr.next();
 
-            //expiration time(mlt) is exhausted then remove and add to assigned pool
+            // expiration time(mlt) is exhausted then remove and add to assigned pool
             // or a resource is assigned a cab
-            //TODO update expired time left attribute
-            if (temp.getExpirationTimeLeftInMillis() <= 0 || temp.getCabId() > 0) {
-                //TODO expired pool shoudl be different
+            // update expired time left attribute
+            if (temp.getCabId() > 0) {
+                // expired pool should be different
                 currentPoolItr.remove();
                 assignedPool.add(temp);
+            }
+            if (temp.getExpirationTimeLeftInMillis() <= 0) {
+                currentPoolItr.remove();
+                expiredPool.add(temp);
             }
         }
 

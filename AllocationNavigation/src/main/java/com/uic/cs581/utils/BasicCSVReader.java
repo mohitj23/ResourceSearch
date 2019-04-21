@@ -54,7 +54,7 @@ public class BasicCSVReader {
                 log.debug("---------------");
                 log.debug(csvRecord.toString());
 
-                long pickupTime = DateUtils.parseDate(csvRecord.get(1), TIME_FORMAT).getTime();
+                long pickupTime = DateUtils.parseDate(csvRecord.get(0), TIME_FORMAT).getTime();
                 long requestTime = pickupTime - REQUEST_TIME_DIFFERENCE;
                 if (MIN_REQUEST_TIME > requestTime) {
                     MIN_REQUEST_TIME = requestTime;
@@ -62,20 +62,14 @@ public class BasicCSVReader {
 
                 Resource r = Resource.builder()
                         .resourceId(resourceCount++)
-                        .dropOffLat(csvRecord.get(10))
-                        .dropOffLong(csvRecord.get(9))
-                        .dropOffTimeInMillis(DateUtils.parseDate(csvRecord.get(2), TIME_FORMAT).getTime())
-                        .dropOffH3Index(h3.geoToH3Address(
-                                Double.parseDouble(csvRecord.get(10)),
-                                Double.parseDouble(csvRecord.get(9)),
-                                RESOLUTION_LEVEL))
+//                        .dropOffLat(csvRecord.get(10))
+//                        .dropOffLong(csvRecord.get(9))
+                        .dropOffTimeInMillis(DateUtils.parseDate(csvRecord.get(1), TIME_FORMAT).getTime())
+                        .dropOffH3Index(csvRecord.get(3))
                         .expirationTimeLeftInMillis(EXPIRATION_TIME_MILLIS)
-                        .pickUpLat(csvRecord.get(6))
-                        .pickUpLong(csvRecord.get(5))
-                        .pickUpH3Index(h3.geoToH3Address(
-                                Double.parseDouble(csvRecord.get(6)),
-                                Double.parseDouble(csvRecord.get(5)),
-                                RESOLUTION_LEVEL))
+//                        .pickUpLat(csvRecord.get(6))
+//                        .pickUpLong(csvRecord.get(5))
+                        .pickUpH3Index(csvRecord.get(2))
                         .pickupTimeInMillis(pickupTime)
                         .requestTimeInMillis(requestTime).build();
 

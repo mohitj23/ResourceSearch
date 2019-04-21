@@ -35,11 +35,10 @@ public class ResourceAllocation {
 
             while (availableCabsItr.hasNext()) {
                 Cab tempCab = availableCabsItr.next();
-                int distanceInHops = -1;
                 //Cab's distance from currentZone to the zone of resource and time taken to reach is less than MLT of resource
 
                 // hit h3 Api for each resource and each cab
-                distanceInHops = getDistanceFromH3(tempCab.getCurrentZone(), tempRes.getPickUpH3Index());
+                int distanceInHops = getDistanceFromH3(tempCab.getCurrentZone(), tempRes.getPickUpH3Index());
 
                 // shortest distance is based on the hops. MLT/simulation_increments = hops possible
                 if ((tempRes.getExpirationTimeLeftInMillis() / SimulationClock.getSimIncrInMillis()) >= distanceInHops && distanceInHops < minDistanceFromCabToRes) {
@@ -55,9 +54,21 @@ public class ResourceAllocation {
                 // total distance is from current zone to the resource zone and from there to the destination zone
                 int totalHopsToCover = cabDistanceToRes + getDistanceFromH3(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
                 cab.setNextAvailableTime(SimulationClock.getSimCurrentTime() + (totalHopsToCover * SimulationClock.getSimIncrInMillis()));
-                cab.setFuturePath(null);
+                cab.setFuturePath(null);        //set future path to null in allocation, required for navigation module
+                cab.setResourceId(tempRes.getResourceId());
+                cab.setTotalIdealTime(cab.getTotalIdealTime());
+                cab.setTotalSearchTime(cab.getTotalSearchTime() + (cabDistanceToRes * SimulationClock.getSimIncrInMillis())); // search time = added by navigation & time to pickup the resource
+
+                //since the cab is assigned a resource remove it from the available list of cabs.
                 availableCabs.remove(cab.getId() - 1);  // Id is initialized from 1 and its an ArrayList.
+
+                tempRes.setExpirationTimeLeftInMillis(0);
+                tempRes.setCabId(cab.getId());
             });
+            if (!nearestCab.isPresent()) {
+                //reduce resource's expiration time
+                tempRes.setExpirationTimeLeftInMillis(tempRes.getExpirationTimeLeftInMillis() - SimulationClock.getSimIncrInMillis());
+            }
         }
 
         // find the shortest distance for the current resource
@@ -67,7 +78,6 @@ public class ResourceAllocation {
 
         // calculate the next available time
 
-        //TODO set future path to null in allocation
     }
 
     private static int getDistanceFromH3(String zone1, String zone2) {

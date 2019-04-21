@@ -15,7 +15,7 @@ public class CabPool {
     private static List<Cab> availableCabs;
 
     public static void initialize(int noOfCabs, int cabSpeed) {
-        for (int i = 0; i < noOfCabs; i++) {
+        for (int i = 0; i < noOfCabs;) {
             entireCabPool.add(Cab.builder()
                     .id(++i)
                     .searchPaths(new ArrayList<>())

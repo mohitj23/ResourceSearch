@@ -8,7 +8,7 @@ import java.util.List;
 @ToString
 @Getter
 @Setter
-public class Cab {
+public class Cab implements CommonInterface {
 
     private int id;
     private int resourceId;
@@ -16,6 +16,7 @@ public class Cab {
     private List<String> futurePath;
     private long nextAvailableTime; //based on simulation time
     private long totalSearchTime; // based on simulation time
+    private long totalIdleTime;
     private String currentZone;
     private String targetZone;
     private int speed;

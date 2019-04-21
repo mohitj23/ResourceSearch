@@ -4,6 +4,7 @@ import com.uic.cs581.allocation.ResourceAllocation;
 import com.uic.cs581.model.*;
 import com.uic.cs581.utils.BasicCSVReader;
 import com.uic.cs581.utils.JsonUtility;
+import com.uic.cs581.utils.Results;
 import com.uic.cs581.utils.SendHttpRequest;
 import lombok.extern.slf4j.Slf4j;
 
@@ -81,6 +82,8 @@ public class App {
         }
 
         //calculate the required metrics
+        Results.avgSearchTimeOfAgents();
+        Results.avgIdleTimeOfAgents();
 
         //dump all the data into json file
         JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Expired_resources.json", ResourcePool.getExpiredPool());

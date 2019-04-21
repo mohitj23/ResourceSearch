@@ -8,7 +8,7 @@ import java.util.*;
 @Slf4j
 public class Navigation {
 
-    private final static int k = 5;
+    private static int k = 5; // overridden by the parameter passed
 
     public static void main(String[] args)  {
 
@@ -19,10 +19,11 @@ public class Navigation {
 
         CabPool.initialize(5,40);
 
-        navigate();
+        navigate(k);
     }
 
-    public static void navigate()    {
+    public static void navigate(int noOfHopsPreCalculate)    {
+        k=noOfHopsPreCalculate;
         CabPool.getAvailableCabs().parallelStream().forEach(Navigation::navigateCab);
         /*for(Cab cab: CabPool.getAvailableCabs())    {
             navigateCab(cab);

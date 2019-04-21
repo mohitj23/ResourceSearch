@@ -17,6 +17,7 @@ public class Cab implements CommonInterface {
     private long nextAvailableTime; //based on simulation time
     private long totalSearchTime; // based on simulation time
     private long totalIdleTime;
+    private long totalTimeToResFromCurZone;
     private String currentZone;
     private String targetZone;
     private int speed;

@@ -30,7 +30,7 @@ public class App {
         final double ZONE_DIAMETER_MILES = 2 * H3Core.newInstance()
                 .edgeLength(BasicCSVReader.RESOLUTION_LEVEL, LengthUnit.km); //Resolution 9 edge length in miles
 
-        if (args.length != 5) {
+        if (args.length != 6) {
             log.error("Please provide the required command line parameters");
             System.exit(1);
         }
@@ -40,6 +40,7 @@ public class App {
         long runningTimeInMins = Long.parseLong(args[2]);
         long expirationTimeInMillis = Long.parseLong(args[3]);
         long requestDifferenceTimeInMillis = Long.parseLong(args[4]);
+        int noOfHopsPreCalculate=Integer.parseInt(args[5]);
 
         int simTimeIncrementsInMillis = (int) Math.ceil((ZONE_DIAMETER_MILES / cabSpeed) * 60 * 60 * 1000);
 
@@ -87,7 +88,7 @@ public class App {
             ResourceAllocation.assignCabsToResources();
 
             //run the navigation component
-            Navigation.navigate();
+            Navigation.navigate(noOfHopsPreCalculate);
         }
         Results.SimulationCompleted();
 

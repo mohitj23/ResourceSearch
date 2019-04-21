@@ -18,7 +18,7 @@ public class Results {
     public static void avgSearchTimeOfAgents() {
         double avgSearchTime = CabPool.getEntireCabPool()
                 .parallelStream()
-                .peek(cab -> cab.setTotalSearchTime(cab.getTotalSearchTime() == 0 ? cab.getTotalIdleTime() : cab.getTotalSearchTime()))
+                .peek(cab -> cab.setTotalSearchTime(cab.getTotalIdleTime() + cab.getTotalTimeToResFromCurZone()))
                 .collect(Collectors.averagingDouble(Cab::getTotalSearchTime));
 //                .reduce(0.0, (subtotal, element) -> subtotal + element.getTotalSearchTime(), Double::sum);
         log.info("Average Search Time:\t " + avgSearchTime / 1000.0 + " s");

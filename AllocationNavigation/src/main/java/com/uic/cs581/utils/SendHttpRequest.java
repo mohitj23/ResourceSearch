@@ -1,6 +1,8 @@
 package com.uic.cs581.utils;
 
 import lombok.extern.slf4j.Slf4j;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +11,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -16,29 +19,38 @@ import java.util.Map;
 @Slf4j
 public class SendHttpRequest {
 
-    public static void getRequest() {
+    public  static void  main(String args[]){
+        SendHttpRequest.getRequest();
+    }
+
+    public static Map<String, Double> getRequest() {
+        BufferedReader in = null;
+        HttpURLConnection con = null;
         try {
             URL url = new URL("http://example.com");
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con = (HttpURLConnection) url.openConnection();
 
             con.setRequestMethod("GET");
             con.setRequestProperty("Content-Type", "application/json");
 
-            BufferedReader in = new BufferedReader(
+            in = new BufferedReader(
                     new InputStreamReader(con.getInputStream()));
             String inputLine;
-            StringBuffer content = new StringBuffer();
+            StringBuilder content = new StringBuilder();
             while ((inputLine = in.readLine()) != null) {
                 content.append(inputLine);
             }
             in.close();
-
             con.disconnect();
+
+            return new ObjectMapper().readValue(content.toString(),
+                    new TypeReference<Map<String, Double>>() {
+                    });
 
         } catch (IOException e) {
             log.error("Exception with fetch data from Python api.");
         }
-
+        return new HashMap<>();
     }
 
 

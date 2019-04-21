@@ -1,9 +1,6 @@
 package com.uic.cs581.navigation;
 
-import com.uic.cs581.model.Cab;
-import com.uic.cs581.model.CabPool;
-import com.uic.cs581.model.Zone;
-import com.uic.cs581.model.ZoneMap;
+import com.uic.cs581.model.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
@@ -71,9 +68,7 @@ public class Navigation {
         String z = cab.getFuturePath().remove(0);
         cab.getSearchPaths().get(cab.getSearchPaths().size()-1).add(z);
         cab.setCurrentZone(z);
-        //TODO: Update cab total search time = cab.speed * cab.distance //take care of units of dist & time
-        double zone_diameter = 0.1;//miles
-        cab.setTotalSearchTime(cab.getTotalSearchTime() + (long)((zone_diameter*60)/(cab.getSpeed()))*1000);
+        cab.setTotalIdleTime(cab.getTotalIdleTime() + SimulationClock.getSimIncrInMillis());
     }
 
     private static List<String> kHops(String currZone)   {

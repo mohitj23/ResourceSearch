@@ -2,6 +2,7 @@ import com.uber.h3core.H3Core;
 import com.uber.h3core.LengthUnit;
 import com.uic.cs581.allocation.ResourceAllocation;
 import com.uic.cs581.model.*;
+import com.uic.cs581.navigation.Navigation;
 import com.uic.cs581.utils.BasicCSVReader;
 import com.uic.cs581.utils.JsonUtility;
 import com.uic.cs581.utils.Results;
@@ -79,6 +80,7 @@ public class App {
             ResourceAllocation.assignCabsToResources();
 
             //run the navigation component
+            Navigation.navigate();
         }
 
         //calculate the required metrics

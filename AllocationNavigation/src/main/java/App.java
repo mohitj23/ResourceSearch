@@ -34,8 +34,8 @@ public class App {
         int cabSpeed = Integer.parseInt(args[1]);     //in kph
         // TODO String csvFileName = args[2];
         long runningTimeInMins = Long.parseLong(args[2]);
-        long systemEndTime = System.currentTimeMillis() + runningTimeInMins * 60 * 100;
-        int simTimeIncrementsInMillis = (int) Math.ceil((ZONE_DIAMETER_MILES / cabSpeed) * 60 * 100);
+        long systemEndTime = System.currentTimeMillis() + runningTimeInMins * 60 * 1000;
+        int simTimeIncrementsInMillis = (int) Math.ceil((ZONE_DIAMETER_MILES / cabSpeed) * 60 * 1000);
 
         log.debug("Default Timezone:" + TimeZone.getDefault().toString());
         TimeZone.setDefault(TimeZone.getTimeZone("America/New_York"));
@@ -58,7 +58,7 @@ public class App {
 
         //entire pool & current pool for resources is empty
         boolean resourcesLeft = true;
-
+        Results.SimulationStarted();
         while (resourcesLeft && System.currentTimeMillis() < systemEndTime) {
 
             //Simulation time increment, start iteration
@@ -82,10 +82,13 @@ public class App {
             //run the navigation component
             Navigation.navigate();
         }
+        Results.SimulationCompleted();
 
         //calculate the required metrics
         Results.avgSearchTimeOfAgents();
         Results.avgIdleTimeOfAgents();
+        Results.percentageExpiredRsources();
+        Results.percentageAssignedResources();
 
         //dump all the data into json file
         JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Expired_resources.json", ResourcePool.getExpiredPool());

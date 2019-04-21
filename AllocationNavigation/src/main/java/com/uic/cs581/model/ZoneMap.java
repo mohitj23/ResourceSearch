@@ -34,9 +34,6 @@ public class ZoneMap {
      */
     private static Map<String, Zone> readDataFromFile() {
         try {
-            log.debug("Working Directory = " +
-                    System.getProperty("user.dir"));
-
             return new ObjectMapper().readValue(
                     new File("./src/main/resources/manhattan_zones_lat_lon_3.json"),
                     new TypeReference<Map<String, Zone>>() {
@@ -54,24 +51,25 @@ public class ZoneMap {
 
     private static Map<String, Zone> updateScores(Map<String, Zone> zones, Map<String, Double> scores) {
         final int[] count = {0};
-        zones.entrySet().stream()
-                .filter(h3Index -> {
-                    if (scores.containsKey(h3Index)) {
-                        log.debug("h3Index found scoresMap - keep the record");
-                        return true;
-                    }
-                    log.debug("h3Index not present in scores");
-                    return false;
-                })
+        zones.keySet().stream()
+//TODO uncommetn with api                .filter(h3Index -> {
+//                    if (scores.containsKey(h3Index)) {
+//                        log.debug("h3Index found scoresMap - keep the record");
+//                        return true;
+//                    }
+//                    log.debug("h3Index not present in scores");
+//                    return false;
+//                })
                 .forEach(h3Index -> {
-                            zones.get(h3Index).setScore(scores.get(h3Index));
+//TODO zone score from api                            zones.get(h3Index).setScore(scores.get(h3Index));
+                            zones.get(h3Index).setScore(random.nextInt(500) * 1.0);
                             count[0]++;
                         }
                 );
 
         if (count[0] != zones.size()) {
             log.error("Size of ZoneMap updated is different from scoresMap");
-            System.exit(1); //TODO remove only after its verified that its ok to continue
+            //System.exit(1); //TODO remove only after its verified that its ok to continue
         }
 
         return zones;

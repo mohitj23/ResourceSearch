@@ -15,6 +15,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
+import java.util.Comparator;
 import java.util.List;
 
 import static com.uic.cs581.model.Resource.EXPIRATION_TIME_MILLIS;
@@ -30,7 +31,7 @@ public class BasicCSVReader {
 
     private static final String TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
-    private static final long REQUEST_TIME_DIFFERENCE = 600000;
+    private static final long REQUEST_TIME_DIFFERENCE = 600000; // 10 minutes in milli seconds
 
     public static long MIN_REQUEST_TIME = Long.MAX_VALUE;
 
@@ -77,6 +78,7 @@ public class BasicCSVReader {
                 log.debug("---------------\n\n");
                 resources.add(r);
             }
+            resources.sort(Comparator.comparing(Resource::getRequestTimeInMillis));
         }
     }
 }

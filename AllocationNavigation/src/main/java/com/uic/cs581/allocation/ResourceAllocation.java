@@ -60,9 +60,9 @@ public class ResourceAllocation {
                 cab.setTotalSearchTime(cab.getTotalSearchTime() + (cabDistanceToRes * SimulationClock.getSimIncrInMillis())); // search time = added by navigation & time to pickup the resource
 
                 //since the cab is assigned a resource remove it from the available list of cabs.
-                availableCabs.remove(cab.getId() - 1);  // Id is initialized from 1 and its an ArrayList.
+                availableCabs.remove(cab);  // Id is initialized from 1 and its an ArrayList.
 
-                tempRes.setExpirationTimeLeftInMillis(0);
+                tempRes.setExpirationTimeLeftInMillis(0L);
                 tempRes.setCabId(cab.getId());
             });
             if (!nearestCab.isPresent()) {

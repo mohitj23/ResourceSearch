@@ -50,7 +50,7 @@ public final class SimulationClock {
     }
 
     public static long getSimStartTime() {
-        return sc.getCurrentSimTime();
+        return sc.getStartTime();
     }
 
     private SimulationClock(long startTime, int incrementInMillis) {

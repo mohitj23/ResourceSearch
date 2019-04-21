@@ -18,10 +18,10 @@ public class Resource implements CommonInterface {
 //    private String dropOffLat;
 //    private String dropOffLong;
     private int cabId;
-    private long expirationTimeLeftInMillis;
+    private Long expirationTimeLeftInMillis;
     private long pickupSimTimeInMillis;     // based on the simulation clock
     private long dropOffSimTimeInMillis;    // based on the simulation clock
-    private long requestTimeInMillis;    // 10 minutes before pickup time
+    private Long requestTimeInMillis;    // 10 minutes before pickup time
     private long pickupTimeInMillis;        // provided in the data at runtime
     private long dropOffTimeInMillis;       // provided in the data at runtime
 

@@ -46,6 +46,7 @@ public class CabPool {
 
             // cab is available
             // both conditions are required.
+            //TODO iterate over assinged pool, if the resource has been dropped, put in cab pool
             if (cab.getResourceId() <= 0 || cab.getNextAvailableTime() <= SimulationClock.getSimCurrentTime()) {
                 availableCabs.add(cab);
             }

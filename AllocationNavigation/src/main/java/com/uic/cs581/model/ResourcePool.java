@@ -48,20 +48,23 @@ public class ResourcePool {
         //later use this iterator to add element form entire pool
         Iterator<Resource> currentPoolItr = currentPool.listIterator();
 
+        //TODO iterate over assinged pool, if the resource has been dropped, put in cab pool
+
         while (currentPoolItr.hasNext()) {
             Resource temp = currentPoolItr.next();
 
             // expiration time(mlt) is exhausted then remove and add to assigned pool
             // or a resource is assigned a cab
             // update expired time left attribute
-            if (temp.getCabId() > 0) {
+            if (temp.getCabId() > 0 || temp.getExpirationTimeLeftInMillis() <= 0) {
                 // expired pool should be different
                 currentPoolItr.remove();
-                assignedPool.add(temp);
-            }
-            if (temp.getExpirationTimeLeftInMillis() <= 0) {
-                currentPoolItr.remove();
-                expiredPool.add(temp);
+                if(temp.getCabId() > 0) {
+                    assignedPool.add(temp);
+                }
+                else{
+                    expiredPool.add(temp);
+                }
             }
         }
 
@@ -86,8 +89,8 @@ public class ResourcePool {
 
         }
 
-        //sort current pool based on MLT left
-        currentPool.sort((cab1, cab2) -> (int) (cab1.getExpirationTimeLeftInMillis() - cab2.getExpirationTimeLeftInMillis()));
+        //sort current pool based on MLT left - required in ascending order
+        currentPool.sort((cab1, cab2) -> cab2.getExpirationTimeLeftInMillis().compareTo(cab1.getExpirationTimeLeftInMillis()));
 
         return entirePoolIterator.hasNext();
 

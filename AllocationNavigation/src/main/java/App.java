@@ -51,7 +51,7 @@ public class App {
         long prevZoneScoreUpdateTime = SimulationClock.getSimCurrentTime();
         // Read zone data from JSON file and update with the zoneScore
         // todo: uncomment
-//        ZoneMap.updateZonesWithScores(new HashMap<>());
+        ZoneMap.updateZonesWithScores(new HashMap<>());
 
         //provide random locations to the cabs from the list of h3Indices
         CabPool.initialize(noOfCabs, cabSpeed);
@@ -59,7 +59,7 @@ public class App {
         //entire pool & current pool for resources is empty
         boolean resourcesLeft = true;
         Results.SimulationStarted();
-        while (resourcesLeft && System.currentTimeMillis() < systemEndTime) {
+        while (resourcesLeft /*&& System.currentTimeMillis() < systemEndTime*/) {
 
             //Simulation time increment, start iteration
             SimulationClock.incrementSimulationTime();

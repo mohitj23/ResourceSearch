@@ -35,7 +35,7 @@ public class ZoneMap {
     private static Map<String, Zone> readDataFromFile() {
         try {
             return new ObjectMapper().readValue(
-                    new File("./src/main/resources/manhattan_zones_lat_lon_3.json"),
+                    new File("./manhattan_zones_lat_lon_3.json"),
                     new TypeReference<Map<String, Zone>>() {
                     });
         } catch (IOException e) {

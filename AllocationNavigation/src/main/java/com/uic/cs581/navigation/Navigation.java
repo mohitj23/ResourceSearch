@@ -8,7 +8,7 @@ import java.util.*;
 @Slf4j
 public class Navigation {
 
-    private final static int k = 1;
+    private final static int k = 5;
 
     public static void main(String[] args)  {
 
@@ -23,14 +23,16 @@ public class Navigation {
     }
 
     public static void navigate()    {
-        for(Cab cab: CabPool.getAvailableCabs())    {
+        CabPool.getAvailableCabs().parallelStream().forEach(Navigation::navigateCab);
+        /*for(Cab cab: CabPool.getAvailableCabs())    {
             navigateCab(cab);
-        }
+        }*/
+        log.info("Navigation completed for current Sim time:"+new Date(SimulationClock.getSimCurrentTime())+",iteration:"+SimulationClock.getSimIterations());
     }
 
     private static void navigateCab(Cab cab) {
 
-        log.info("Navigating cab: "+cab.getId());
+        log.debug("Navigating cab: "+cab.getId());
 
         /*
             if future Path is empty
@@ -105,11 +107,11 @@ public class Navigation {
         Zone zone = ZoneMap.getZone(currZone);
         List<String> kRing1 = zone.kRingNeighbors.get(1);
 
-        if(!kRing1.contains(prevZone)) {
-            log.error("prevZone not in currZone's neighbors");
-            //throw new MissingResourceException("prevZone not in currZone's neighbors", "String", "prevZone");
-            return oneHop(currZone);
-        }
+//        if(!kRing1.contains(prevZone)) {
+//            log.error("prevZone not in currZone's neighbors");
+//            //throw new MissingResourceException("prevZone not in currZone's neighbors", "String", "prevZone");
+//            return oneHop(currZone);
+//        }
 
         //TODO: [-90,+90] neighbor selection
         return oneHop(currZone);

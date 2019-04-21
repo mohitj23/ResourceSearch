@@ -15,14 +15,13 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import static com.uic.cs581.model.Resource.EXPIRATION_TIME_MILLIS;
-
 @Slf4j
 public class BasicCSVReader {
-    private static final String CSV_FILE_PATH = "./src/main/resources/";
+    private static final String CSV_FILE_PATH = "./";
     private static int resourceCount = 1;
 
     private static H3Core h3;
@@ -31,17 +30,20 @@ public class BasicCSVReader {
 
     private static final String TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
-    private static final long REQUEST_TIME_DIFFERENCE = 600000; // 10 minutes in milli seconds
+//    private static final long REQUEST_TIME_DIFFERENCE = 0; //600000= 10 minutes in milli seconds
+
+//    public static final long EXPIRATION_TIME_MILLIS = 300000;     //600000= 10 minutes max life time of the resource
 
     public static long MIN_REQUEST_TIME = Long.MAX_VALUE;
 
-    public static void readResourcesFromTestData(String fileName) throws IOException, ParseException {
+    public static void readResourcesFromTestData(String fileName,long expirationTime, long requestTimeDifference) throws IOException, ParseException {
 
         log.debug("Working Directory = " +
                 System.getProperty("user.dir"));
 
         //get a reference to the final list and add the resources to this list.
-        List<Resource> resources = ResourcePool.getEntirePool();
+//        List<Resource> resources = ResourcePool.getEntirePool();
+        List<Resource> temp = new ArrayList<>();
         h3 = H3Core.newInstance();
         try (
                 Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH + fileName), StandardCharsets.UTF_8);
@@ -56,7 +58,7 @@ public class BasicCSVReader {
                 log.debug(csvRecord.toString());
 
                 long pickupTime = DateUtils.parseDate(csvRecord.get(0), TIME_FORMAT).getTime();
-                long requestTime = pickupTime - REQUEST_TIME_DIFFERENCE;
+                long requestTime = pickupTime - requestTimeDifference;
                 if (MIN_REQUEST_TIME > requestTime) {
                     MIN_REQUEST_TIME = requestTime;
                 }
@@ -67,7 +69,7 @@ public class BasicCSVReader {
 //                        .dropOffLong(csvRecord.get(9))
                         .dropOffTimeInMillis(DateUtils.parseDate(csvRecord.get(1), TIME_FORMAT).getTime())
                         .dropOffH3Index(csvRecord.get(3))
-                        .expirationTimeLeftInMillis(EXPIRATION_TIME_MILLIS)
+                        .expirationTimeLeftInMillis(expirationTime)
 //                        .pickUpLat(csvRecord.get(6))
 //                        .pickUpLong(csvRecord.get(5))
                         .pickUpH3Index(csvRecord.get(2))
@@ -76,9 +78,10 @@ public class BasicCSVReader {
 
                 log.debug(r.toString());
                 log.debug("---------------\n\n");
-                resources.add(r);
+                temp.add(r);
             }
-            resources.sort(Comparator.comparing(Resource::getRequestTimeInMillis));
+            temp.sort(Comparator.comparing(Resource::getRequestTimeInMillis));
+            ResourcePool.getEntirePool().addAll(temp);
         }
     }
 }

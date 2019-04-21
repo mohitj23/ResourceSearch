@@ -1,7 +1,11 @@
+
 import com.uber.h3core.H3Core;
 import com.uber.h3core.LengthUnit;
 import com.uic.cs581.allocation.ResourceAllocation;
-import com.uic.cs581.model.*;
+import com.uic.cs581.model.CabPool;
+import com.uic.cs581.model.ResourcePool;
+import com.uic.cs581.model.SimulationClock;
+import com.uic.cs581.model.ZoneMap;
 import com.uic.cs581.navigation.Navigation;
 import com.uic.cs581.utils.BasicCSVReader;
 import com.uic.cs581.utils.JsonUtility;
@@ -17,16 +21,16 @@ import java.util.TimeZone;
 @Slf4j
 public class App {
     private static final long ZONE_SCORE_UPDATE_INTERVAL = 30000;
-    private static final String FILE_PATH_FOR_JSON_WRITE = "./src/main/resources/";
+    private static final String FILE_PATH_FOR_JSON_WRITE = "./";
 
     public static void main(String[] args) throws IOException, ParseException {
 
         SendHttpRequest.getRequest();
 
-        final double ZONE_DIAMETER_MILES = H3Core.newInstance()
+        final double ZONE_DIAMETER_MILES = 2 * H3Core.newInstance()
                 .edgeLength(BasicCSVReader.RESOLUTION_LEVEL, LengthUnit.km); //Resolution 9 edge length in miles
 
-        if (args.length != 3) {
+        if (args.length != 5) {
             log.error("Please provide the required command line parameters");
             System.exit(1);
         }
@@ -34,15 +38,17 @@ public class App {
         int cabSpeed = Integer.parseInt(args[1]);     //in kph
         // TODO String csvFileName = args[2];
         long runningTimeInMins = Long.parseLong(args[2]);
-        long systemEndTime = System.currentTimeMillis() + runningTimeInMins * 60 * 1000;
-        int simTimeIncrementsInMillis = (int) Math.ceil((ZONE_DIAMETER_MILES / cabSpeed) * 60 * 1000);
+        long expirationTimeInMillis = Long.parseLong(args[3]);
+        long requestDifferenceTimeInMillis = Long.parseLong(args[4]);
+
+        int simTimeIncrementsInMillis = (int) Math.ceil((ZONE_DIAMETER_MILES / cabSpeed) * 60 * 60 * 1000);
 
         log.debug("Default Timezone:" + TimeZone.getDefault().toString());
         TimeZone.setDefault(TimeZone.getTimeZone("America/New_York"));
         log.debug("Default Timezone changed:" + TimeZone.getDefault().toString());
 
         // Read the test data csv, get the resource list from ResourcePool
-        BasicCSVReader.readResourcesFromTestData("preprocessed.csv");
+        BasicCSVReader.readResourcesFromTestData("preprocessed.csv", expirationTimeInMillis, requestDifferenceTimeInMillis);
 
         //Initialize the simulation time entity
         SimulationClock.initializeSimulationClock(BasicCSVReader.MIN_REQUEST_TIME, simTimeIncrementsInMillis);
@@ -59,7 +65,8 @@ public class App {
         //entire pool & current pool for resources is empty
         boolean resourcesLeft = true;
         Results.SimulationStarted();
-        while (resourcesLeft /*&& System.currentTimeMillis() < systemEndTime*/) {
+        long systemEndTime = System.currentTimeMillis() + runningTimeInMins * 60 * 1000;
+        while (resourcesLeft && System.currentTimeMillis() < systemEndTime) {
 
             //Simulation time increment, start iteration
             SimulationClock.incrementSimulationTime();
@@ -89,10 +96,12 @@ public class App {
         Results.avgIdleTimeOfAgents();
         Results.percentageExpiredRsources();
         Results.percentageAssignedResources();
+        Results.totalResourcesConsidered();
 
         //dump all the data into json file
         JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Expired_resources.json", ResourcePool.getExpiredPool());
         JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Assigned_resources.json", ResourcePool.getAssignedPool());
         JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Cab_pool.json", CabPool.getEntireCabPool());
+//        JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Resources_pool_left.json", ResourcePool.getEntirePool());
     }
 }

@@ -59,10 +59,9 @@ public class ResourcePool {
             if (temp.getCabId() > 0 || temp.getExpirationTimeLeftInMillis() <= 0) {
                 // expired pool should be different
                 currentPoolItr.remove();
-                if(temp.getCabId() > 0) {
+                if (temp.getCabId() > 0) {
                     assignedPool.add(temp);
-                }
-                else{
+                } else {
                     expiredPool.add(temp);
                 }
             }
@@ -92,7 +91,7 @@ public class ResourcePool {
         //sort current pool based on MLT left - required in ascending order
         currentPool.sort((cab1, cab2) -> cab2.getExpirationTimeLeftInMillis().compareTo(cab1.getExpirationTimeLeftInMillis()));
 
-        return entirePoolIterator.hasNext();
+        return entirePoolIterator.hasNext() && currentPool.size() > 0;
 
     }
 

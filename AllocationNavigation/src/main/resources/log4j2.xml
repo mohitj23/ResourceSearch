@@ -9,7 +9,7 @@
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
         <RollingFile name="rollingFile" fileName="${logPath}/${fileName}.log"
-                     filePattern="${logPath}/${fileName}_%d{yyyy-MM-dd_HH-mm}.log">
+                     filePattern="${logPath}/${fileName}_%d{yyyy-MM-dd_HH}.log">
             <PatternLayout
                     pattern="[%highlight{%-5level}] %d{DEFAULT} %c{1}.%M() - %msg%n%throwable{short.lineNumber}"/>
             <Policies>

@@ -25,5 +25,4 @@ public class Resource implements CommonInterface {
     private long pickupTimeInMillis;        // provided in the data at runtime
     private long dropOffTimeInMillis;       // provided in the data at runtime
 
-    public static final long EXPIRATION_TIME_MILLIS = 600000;     //max life time of the resource
 }

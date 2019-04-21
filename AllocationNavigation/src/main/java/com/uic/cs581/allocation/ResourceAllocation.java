@@ -56,7 +56,7 @@ public class ResourceAllocation {
                 cab.setNextAvailableTime(SimulationClock.getSimCurrentTime() + (totalHopsToCover * SimulationClock.getSimIncrInMillis()));
                 cab.setFuturePath(null);        //set future path to null in allocation, required for navigation module
                 cab.setResourceId(tempRes.getResourceId());
-                cab.setTotalIdleTime(cab.getTotalIdleTime());
+//                cab.setTotalIdleTime(cab.getTotalIdleTime());
                 cab.setTotalSearchTime(cab.getTotalSearchTime() + (cabDistanceToRes * SimulationClock.getSimIncrInMillis())); // search time = added by navigation & time to pickup the resource
 
                 //since the cab is assigned a resource remove it from the available list of cabs.

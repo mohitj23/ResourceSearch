@@ -3,6 +3,7 @@ import com.uber.h3core.LengthUnit;
 import com.uic.cs581.allocation.ResourceAllocation;
 import com.uic.cs581.model.*;
 import com.uic.cs581.utils.BasicCSVReader;
+import com.uic.cs581.utils.JsonUtility;
 import com.uic.cs581.utils.SendHttpRequest;
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,6 +15,7 @@ import java.util.TimeZone;
 @Slf4j
 public class App {
     private static final long ZONE_SCORE_UPDATE_INTERVAL = 30000;
+    private static final String FILE_PATH_FOR_JSON_WRITE = "./src/main/resources/";
 
     public static void main(String[] args) throws IOException, ParseException {
 
@@ -47,7 +49,7 @@ public class App {
         long prevZoneScoreUpdateTime = SimulationClock.getSimCurrentTime();
         // Read zone data from JSON file and update with the zoneScore
         // todo: uncomment
-        ZoneMap.updateZonesWithScores(new HashMap<>());
+//        ZoneMap.updateZonesWithScores(new HashMap<>());
 
         //provide random locations to the cabs from the list of h3Indices
         CabPool.initialize(noOfCabs, cabSpeed);
@@ -81,5 +83,8 @@ public class App {
         //calculate the required metrics
 
         //dump all the data into json file
+        JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Expired_resources.json", ResourcePool.getExpiredPool());
+        JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Assigned_resources.json", ResourcePool.getAssignedPool());
+        JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Cab_pool.json", CabPool.getEntireCabPool());
     }
 }

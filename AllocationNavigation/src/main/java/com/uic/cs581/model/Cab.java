@@ -8,7 +8,7 @@ import java.util.List;
 @ToString
 @Getter
 @Setter
-public class Cab {
+public class Cab implements CommonInterface {
 
     private int id;
     private int resourceId;

@@ -9,7 +9,7 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-public class Resource {
+public class Resource implements CommonInterface {
     private int resourceId;
     private String pickUpH3Index;           //provided by the Uber H3 Api
     private String dropOffH3Index;          //provided by the Uber H3 Api

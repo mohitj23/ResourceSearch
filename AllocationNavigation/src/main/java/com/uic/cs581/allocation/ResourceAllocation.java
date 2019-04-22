@@ -6,9 +6,8 @@ import com.uic.cs581.model.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class ResourceAllocation {
@@ -30,8 +29,19 @@ public class ResourceAllocation {
 
         while (currResourcePoolItr.hasNext()) {
             Resource tempRes = currResourcePoolItr.next();
-            nearestCab = Optional.empty();
-            availableCabsItr = availableCabs.listIterator();
+//            nearestCab = Optional.empty();
+//            availableCabsItr = availableCabs.listIterator();
+
+            nearestCab = availableCabs.parallelStream().min(Comparator.comparing(o -> Haversine.distance(o.getCurrentZone(), tempRes.getPickUpH3Index())));
+
+            nearestCab = nearestCab.filter(cab -> {
+                        double distanceToCover = Haversine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
+                        long timeToCover = (long) ((distanceToCover / cab.getSpeed()) * 60 * 60 * 1000.0);
+                        return tempRes.getExpirationTimeLeftInMillis() >= timeToCover;
+                    }
+            );
+
+            /*
 
             while (availableCabsItr.hasNext()) {
                 Cab tempCab = availableCabsItr.next();
@@ -46,7 +56,7 @@ public class ResourceAllocation {
                     minDistanceFromCabToRes = distanceToCover;
                     nearestCab = Optional.of(tempCab);
                 }
-            }
+            }*/
 
             final double cabDistanceToRes = minDistanceFromCabToRes;
             //remove nearest cab from cab pool, else it becomes available for other resources too
@@ -57,12 +67,12 @@ public class ResourceAllocation {
 
 //                double distanceToCover = Haversine.distance(tempRes.getPickUpH3Index(),tempRes.getDropOffH3Index());
 
-                cab.setNextAvailableTime(SimulationClock.getSimCurrentTime()+(long)((totalDistance/cab.getSpeed())*60*60*1000.0));
+                cab.setNextAvailableTime(SimulationClock.getSimCurrentTime() + (long) ((totalDistance / cab.getSpeed()) * 60 * 60 * 1000.0));
 //                cab.setNextAvailableTime(SimulationClock.getSimCurrentTime() + (totalHopsToCover * SimulationClock.getSimIncrInMillis()));
                 cab.setFuturePath(null);        //set future path to null in allocation, required for navigation module
                 cab.setResourceId(tempRes.getResourceId());
 //                cab.setTotalIdleTime(cab.getTotalIdleTime());
-                cab.setTotalTimeToResFromCurZone(cab.getTotalTimeToResFromCurZone() + (long)((cabDistanceToRes /cab.getSpeed())*60*60*1000.0));
+                cab.setTotalTimeToResFromCurZone(cab.getTotalTimeToResFromCurZone() + (long) ((cabDistanceToRes / cab.getSpeed()) * 60 * 60 * 1000.0));
 //                cab.setTotalSearchTime(cab.getTotalIdleTime() + cab.getTotalTimeToResFromCurZone()); // search time = added by navigation & time to pickup the resource
 
                 //since the cab is assigned a resource remove it from the available list of cabs.
@@ -97,28 +107,38 @@ public class ResourceAllocation {
         return distanceInHops;
     }
 }
+
 class Haversine {
     private static final int EARTH_RADIUS = 6371; // Approx Earth radius in KM
 
-    public static double distance(String start,
+    private static Map<String, Double> PREV_DIST = new HashMap<>();
+
+    public static Double distance(String start,
                                   String end) {
+        if (PREV_DIST.get(start + end) != null) {
+            return PREV_DIST.get(start + end);
+        }
+        if (PREV_DIST.get(end + start) != null) {
+            return PREV_DIST.get(end + start);
+        }
 
-        double startLat=ZoneMap.getZone(start).getLat();
-        double startLong=ZoneMap.getZone(start).getLong1();
+        double startLat = ZoneMap.getZone(start).getLat();
+        double startLong = ZoneMap.getZone(start).getLong1();
 
-        double endLat=ZoneMap.getZone(end).getLat();
-        double endLong=ZoneMap.getZone(end).getLong1();
+        double endLat = ZoneMap.getZone(end).getLat();
+        double endLong = ZoneMap.getZone(end).getLong1();
 
-        double dLat  = Math.toRadians((endLat - startLat));
+        double dLat = Math.toRadians((endLat - startLat));
         double dLong = Math.toRadians((endLong - startLong));
 
         startLat = Math.toRadians(startLat);
-        endLat   = Math.toRadians(endLat);
+        endLat = Math.toRadians(endLat);
 
         double a = haversin(dLat) + Math.cos(startLat) * Math.cos(endLat) * haversin(dLong);
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-
-        return EARTH_RADIUS * c; // <-- d
+        double result = EARTH_RADIUS * c;
+        PREV_DIST.put(start + end, result);
+        return result; // <-- d
     }
 
     private static double haversin(double val) {

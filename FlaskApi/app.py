@@ -10,11 +10,12 @@ import math
 import pytz
 from sklearn.preprocessing import PolynomialFeatures
 
+
 def get_daytype(now):
     if now < 5:
-        return 0,1
+        return 0, 1
     else:
-        return 1,0
+        return 1, 0
 
 
 def get_season(now):
@@ -26,6 +27,7 @@ def get_season(now):
     now = now.replace(year=Y)
     return next(season for season, (start, end) in seasons
                 if start <= now <= end)
+
 
 def get_timeslot(now):
     start_time = '00:00'
@@ -54,13 +56,15 @@ def get_timeslot(now):
         time = datetime.datetime.strptime(convertTime, '%H:%M').time()
     return hours[time]
 
+
 @app.route('/', methods=['GET'])
 def get():
-    timezone = pytz.timezone("America/New_York")
     date_time_str = int(request.args.get('times'))/1000
-    # date_time_obj = datetime.datetime.strptime(date_time_str.decode('utf-8'), '%Y-%m-%d %H:%M:%S')
     date_time_obj = datetime.datetime.fromtimestamp(int(date_time_str))
-    date_time_obj = timezone.localize(date_time_obj)
+    tz_src = pytz.timezone("America/Chicago")
+    tz_dest = pytz.timezone("America/New_York")
+    d_aware = tz_src.localize(date_time_obj)
+    date_time_obj = d_aware.astimezone(tz_dest)
     fileObject = open('ml2.sav', 'rb')
     model = pickle.load(fileObject)
     df_header = pandas.read_csv('header.csv')
@@ -84,12 +88,9 @@ def get():
         timeslot = get_timeslot(t)
         weekend, weekday = get_daytype(date_time_obj.weekday())
         seasons_dict = {}
-        seasons_dict['season_winter'] = [1]
-        # for s in seasons:
-        #     if s == season:
-        #         seasons_dict['season_'+s] = [1]
-        #     else:
-        #         seasons_dict['season_'+s] = [0]
+        for s in seasons:
+            if s == season:
+                seasons_dict['season_'+s] = [1]
 
         weekend_dict = {'weekend': [weekend], 'weekday': [weekday]}
 
@@ -138,6 +139,7 @@ def get():
                 cumm_m2_scores[zone] = abs(0 + scores[zone])
 
     return jsonify(cumm_m2_scores)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -51,6 +51,9 @@ public class ZoneMap {
 
     private static void updateScores(Map<String, Zone> zones, Map<String, Double> scores, boolean randomScores) {
 //        final int[] count = {0};
+        if(scores.size()<5){
+            log.info("Zone scores r update");
+        }
         zones.keySet().parallelStream()
 //                .filter(h3Index -> {
 //                    if (scores.containsKey(h3Index)) {
@@ -61,7 +64,8 @@ public class ZoneMap {
 //                    return false;
 //                })
                 .forEach(h3Index -> {
-                            if (randomScores) {
+                            if (randomScores || scores.size()<5) {
+
                                 zones.get(h3Index).setScore(random.nextInt(100) * 1.0);
                             } else {
                                 zones.get(h3Index).setScore(scores.getOrDefault(h3Index, 0.0));

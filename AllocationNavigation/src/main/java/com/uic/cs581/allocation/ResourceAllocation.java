@@ -37,6 +37,7 @@ public class ResourceAllocation {
             nearestCab = nearestCab.filter(cab -> {
                         double distanceToCover = Haversine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
                         long timeToCover = (long) ((distanceToCover / cab.getSpeed()) * 60 * 60 * 1000.0);
+//                        log.info("For min cab distanceToCover:"+distanceToCover+",timeToCover:"+timeToCover+",exp:"+tempRes.getExpirationTimeLeftInMillis());
                         return tempRes.getExpirationTimeLeftInMillis() >= timeToCover;
                     }
             );
@@ -58,12 +59,14 @@ public class ResourceAllocation {
                 }
             }*/
 
-            final double cabDistanceToRes = minDistanceFromCabToRes;
+//            final double cabDistanceToRes = minDistanceFromCabToRes;
             //remove nearest cab from cab pool, else it becomes available for other resources too
             nearestCab.ifPresent(cab -> {
                 // calculate next available time for this cab
                 // total distance is from current zone to the resource zone and from there to the destination zone
-                double totalDistance = cabDistanceToRes + Haversine.distance(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
+                final double cabDistanceToRes=Haversine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
+                double totalDistance =  cabDistanceToRes+
+                        Haversine.distance(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
 
 //                double distanceToCover = Haversine.distance(tempRes.getPickUpH3Index(),tempRes.getDropOffH3Index());
 

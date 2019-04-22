@@ -54,7 +54,7 @@ public class Results {
 
     public static void totalResourcesConsidered() {
         log.info("Total resources not arrived yet: " + ResourcePool.getEntirePool().size());
-        log.info("Total resources in the csv:" + (ResourcePool.getEntirePool().size() + ResourcePool.getAssignedPool().size() + ResourcePool.getExpiredPool().size()));
+        log.info("Total resources in the csv:" + (ResourcePool.getEntirePool().size() + ResourcePool.getAssignedPool().size() + ResourcePool.getExpiredPool().size() + ResourcePool.getCurrentPool().size()));
     }
 
     public static void simulationStarted() {

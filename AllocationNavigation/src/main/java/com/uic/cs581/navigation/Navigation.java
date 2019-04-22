@@ -137,7 +137,7 @@ public class Navigation {
 
             //TODO: remove below 2 lines.......placed because scores are null at the time of coding
             //or replace a default value, current default value is the array-index
-            if(zoneScores[i]==null)
+            if(zoneScores[i]== null || zoneScores[i] ==0.0)
                 zoneScores[i]=(double)i;
         }
         log.debug(Arrays.toString(zoneScores));

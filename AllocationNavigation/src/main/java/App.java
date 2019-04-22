@@ -15,12 +15,10 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.HashMap;
 import java.util.TimeZone;
 
 @Slf4j
 public class App {
-    private static final long ZONE_SCORE_UPDATE_INTERVAL = 30000;
     private static final String FILE_PATH_FOR_JSON_WRITE = "./";
 
     public static void main(String[] args) throws IOException, ParseException {
@@ -30,7 +28,7 @@ public class App {
         final double ZONE_DIAMETER_MILES = 2 * H3Core.newInstance()
                 .edgeLength(BasicCSVReader.RESOLUTION_LEVEL, LengthUnit.km); //Resolution 9 edge length in miles
 
-        if (args.length != 7) {
+        if (args.length != 9) {
             log.error("Please provide the required command line parameters");
             System.exit(1);
         }
@@ -42,6 +40,8 @@ public class App {
         long requestDifferenceTimeInMillis = Long.parseLong(args[4]);
         int noOfHopsPreCalculate = Integer.parseInt(args[5]);
         boolean readJsonScores = Boolean.parseBoolean(args[6]);
+        boolean dataExhaustive = Boolean.parseBoolean(args[7]);
+        boolean randomScores = Boolean.parseBoolean(args[8]);
 
         int simTimeIncrementsInMillis = (int) Math.ceil((ZONE_DIAMETER_MILES / cabSpeed) * 60 * 60 * 1000);
 
@@ -60,26 +60,26 @@ public class App {
 
         // Read zone data from JSON file and update with the zoneScore
         // todo: uncomment
-        ZoneMap.updateZonesWithScores(SendHttpRequest.getRequest(SimulationClock.getSimCurrentTime(), readJsonScores));
+        ZoneMap.updateZonesWithScores(SendHttpRequest.getRequest(SimulationClock.getSimCurrentTime(), readJsonScores), randomScores);
         int prevUpdateOnIteration = SimulationClock.getSimIterations();
         //provide random locations to the cabs from the list of h3Indices
         CabPool.initialize(noOfCabs, cabSpeed);
 
         //entire pool & current pool for resources is empty
         boolean resourcesLeft = true;
-        Results.SimulationStarted();
+        Results.simulationStarted();
         long systemEndTime = System.currentTimeMillis() + runningTimeInMins * 60 * 1000;
-        while (resourcesLeft && System.currentTimeMillis() < systemEndTime) {
+        while (resourcesLeft && (dataExhaustive || System.currentTimeMillis() < systemEndTime)) {
 
             //Simulation time increment, start iteration
             SimulationClock.incrementSimulationTime();
 
             //Zone score update
-            if ((SimulationClock.getSimIterations() - prevUpdateOnIteration) > 5 &&
+            if (!randomScores && (SimulationClock.getSimIterations() - prevUpdateOnIteration) > 5 &&
                     ZoneMap.checkIfNewZoneScoreIsRequried(SimulationClock.getSimCurrentTime())) {
                 //hit python api and update the score
                 //1215,1230,1 scenario handled.
-                ZoneMap.updateZonesWithScores(SendHttpRequest.getRequest(SimulationClock.getSimCurrentTime(), readJsonScores));
+                ZoneMap.updateZonesWithScores(SendHttpRequest.getRequest(SimulationClock.getSimCurrentTime(), readJsonScores), randomScores);
                 prevUpdateOnIteration = SimulationClock.getSimIterations();
             }
 
@@ -94,14 +94,16 @@ public class App {
 
             //run the navigation component
             Navigation.navigate(noOfHopsPreCalculate);
+            Results.runTimeTillNow();
         }
-        Results.SimulationCompleted();
+        Results.simulationCompleted();
 
         //calculate the required metrics
         Results.avgSearchTimeOfAgents();
         Results.avgIdleTimeOfAgents();
         Results.percentageExpiredRsources();
         Results.percentageAssignedResources();
+        Results.currentPoolResources();
         Results.totalResourcesConsidered();
 
         //dump all the data into json file

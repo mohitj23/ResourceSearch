@@ -46,16 +46,23 @@ public class Results {
                 ((ResourcePool.getAssignedPool().size() * 100.0) / (ResourcePool.getExpiredPool().size() + ResourcePool.getAssignedPool().size())));
     }
 
+    public static void currentPoolResources() {
+        log.info("Current Resource count: " + ResourcePool.getCurrentPool().size());
+//        log.info("% Assigned Resources:" +
+//                ((ResourcePool.getAssignedPool().size() * 100.0) / (ResourcePool.getExpiredPool().size() + ResourcePool.getAssignedPool().size())));
+    }
+
     public static void totalResourcesConsidered() {
+        log.info("Total resources not arrived yet: " + ResourcePool.getEntirePool().size());
         log.info("Total resources in the csv:" + (ResourcePool.getEntirePool().size() + ResourcePool.getAssignedPool().size() + ResourcePool.getExpiredPool().size()));
     }
 
-    public static void SimulationStarted() {
+    public static void simulationStarted() {
         SYSTEM_START_TIME = System.currentTimeMillis();
         log.info("System started at: " + new Date(SYSTEM_START_TIME));
     }
 
-    public static void SimulationCompleted() {
+    public static void simulationCompleted() {
         SYSTEM_END_TIME = System.currentTimeMillis();
         log.info("System end time: " + new Date(SYSTEM_END_TIME));
 //        log.info("Simulated for  : " + (SimulationClock.getSimCurrentTime() - SimulationClock.getSimStartTime()) + " ms");
@@ -66,5 +73,9 @@ public class Results {
         log.info("System ran for : " + (SYSTEM_END_TIME - SYSTEM_START_TIME) / 1000.0 + " s");
         log.info("System ran for : " + (SYSTEM_END_TIME - SYSTEM_START_TIME) / (1000.0 * 60) + " mins");
 
+    }
+
+    public static void runTimeTillNow() {
+        log.info("Running for: " + (System.currentTimeMillis() - SYSTEM_START_TIME) / (1000.0 * 60)+" mins");
     }
 }

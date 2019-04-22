@@ -45,11 +45,11 @@ public class ZoneMap {
         }
     }
 
-    public static void updateZonesWithScores(Map<String, Double> zoneScores) {
-        updateScores(getInstance(), zoneScores);
+    public static void updateZonesWithScores(Map<String, Double> zoneScores, boolean randomScores) {
+        updateScores(getInstance(), zoneScores, randomScores);
     }
 
-    private static void updateScores(Map<String, Zone> zones, Map<String, Double> scores) {
+    private static void updateScores(Map<String, Zone> zones, Map<String, Double> scores, boolean randomScores) {
 //        final int[] count = {0};
         zones.keySet().parallelStream()
 //                .filter(h3Index -> {
@@ -61,8 +61,12 @@ public class ZoneMap {
 //                    return false;
 //                })
                 .forEach(h3Index -> {
-                            zones.get(h3Index).setScore(scores.getOrDefault(h3Index, 0.0));
-//                            zones.get(h3Index).setScore(random.nextInt(500) * 1.0);
+                            if (randomScores) {
+                                zones.get(h3Index).setScore(random.nextInt(100) * 1.0);
+                            } else {
+                                zones.get(h3Index).setScore(scores.getOrDefault(h3Index, 0.0));
+                            }
+
 //                            count[0]++;
                         }
                 );
@@ -71,7 +75,7 @@ public class ZoneMap {
 //            log.error("Size of ZoneMap updated is different from scoresMap");
 //            //System.exit(1); //TODO remove only after its verified that its ok to continue
 //        }
-            log.info("Zone scores updated");
+        log.info("Zone scores updated");
 //        return zones;
     }
 

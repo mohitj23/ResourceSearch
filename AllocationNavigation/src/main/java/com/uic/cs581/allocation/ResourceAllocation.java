@@ -25,7 +25,7 @@ public class ResourceAllocation {
         ListIterator<Resource> currResourcePoolItr = currentResourcePool.listIterator();
         ListIterator<Cab> availableCabsItr;
         Optional<Cab> nearestCab;
-        int minDistanceFromCabToRes = Integer.MAX_VALUE;
+        double minDistanceFromCabToRes = Double.MAX_VALUE;
 
 
         while (currResourcePoolItr.hasNext()) {
@@ -38,26 +38,31 @@ public class ResourceAllocation {
                 //Cab's distance from currentZone to the zone of resource and time taken to reach is less than MLT of resource
 
                 // hit h3 Api for each resource and each cab
-                int distanceInHops = getDistanceFromH3(tempCab.getCurrentZone(), tempRes.getPickUpH3Index());
+                double distanceToCover = Haversine.distance(tempCab.getCurrentZone(), tempRes.getPickUpH3Index());
 
                 // shortest distance is based on the hops. MLT/simulation_increments = hops possible
-                if ((tempRes.getExpirationTimeLeftInMillis() / SimulationClock.getSimIncrInMillis()) >= distanceInHops && distanceInHops < minDistanceFromCabToRes) {
-                    minDistanceFromCabToRes = distanceInHops;
+                if ((tempRes.getExpirationTimeLeftInMillis() / SimulationClock.getSimIncrInMillis()) >= (long)((distanceToCover/tempCab.getSpeed())*60*60*1000.0)
+                        && distanceToCover < minDistanceFromCabToRes) {
+                    minDistanceFromCabToRes = distanceToCover;
                     nearestCab = Optional.of(tempCab);
                 }
             }
 
-            final int cabDistanceToRes = minDistanceFromCabToRes;
+            final double cabDistanceToRes = minDistanceFromCabToRes;
             //remove nearest cab from cab pool, else it becomes available for other resources too
             nearestCab.ifPresent(cab -> {
                 // calculate next available time for this cab
                 // total distance is from current zone to the resource zone and from there to the destination zone
-                int totalHopsToCover = cabDistanceToRes + getDistanceFromH3(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
-                cab.setNextAvailableTime(SimulationClock.getSimCurrentTime() + (totalHopsToCover * SimulationClock.getSimIncrInMillis()));
+                double totalDistance = cabDistanceToRes + Haversine.distance(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
+
+//                double distanceToCover = Haversine.distance(tempRes.getPickUpH3Index(),tempRes.getDropOffH3Index());
+
+                cab.setNextAvailableTime(SimulationClock.getSimCurrentTime()+(long)((totalDistance/cab.getSpeed())*60*60*1000.0));
+//                cab.setNextAvailableTime(SimulationClock.getSimCurrentTime() + (totalHopsToCover * SimulationClock.getSimIncrInMillis()));
                 cab.setFuturePath(null);        //set future path to null in allocation, required for navigation module
                 cab.setResourceId(tempRes.getResourceId());
 //                cab.setTotalIdleTime(cab.getTotalIdleTime());
-                cab.setTotalTimeToResFromCurZone(cab.getTotalTimeToResFromCurZone() + (cabDistanceToRes * SimulationClock.getSimIncrInMillis()));
+                cab.setTotalTimeToResFromCurZone(cab.getTotalTimeToResFromCurZone() + (long)((cabDistanceToRes /cab.getSpeed())*60*60*1000.0));
 //                cab.setTotalSearchTime(cab.getTotalIdleTime() + cab.getTotalTimeToResFromCurZone()); // search time = added by navigation & time to pickup the resource
 
                 //since the cab is assigned a resource remove it from the available list of cabs.
@@ -90,5 +95,33 @@ public class ResourceAllocation {
             log.error("H3 Distance cannot be calculated between the indexes:" + zone1 + "," + zone2);
         }
         return distanceInHops;
+    }
+}
+class Haversine {
+    private static final int EARTH_RADIUS = 6371; // Approx Earth radius in KM
+
+    public static double distance(String start,
+                                  String end) {
+
+        double startLat=ZoneMap.getZone(start).getLat();
+        double startLong=ZoneMap.getZone(start).getLong1();
+
+        double endLat=ZoneMap.getZone(end).getLat();
+        double endLong=ZoneMap.getZone(end).getLong1();
+
+        double dLat  = Math.toRadians((endLat - startLat));
+        double dLong = Math.toRadians((endLong - startLong));
+
+        startLat = Math.toRadians(startLat);
+        endLat   = Math.toRadians(endLat);
+
+        double a = haversin(dLat) + Math.cos(startLat) * Math.cos(endLat) * haversin(dLong);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+        return EARTH_RADIUS * c; // <-- d
+    }
+
+    private static double haversin(double val) {
+        return Math.pow(Math.sin(val / 2), 2);
     }
 }

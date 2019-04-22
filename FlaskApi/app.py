@@ -8,6 +8,7 @@ import json
 import csv
 import math
 import pytz
+import os, time
 from sklearn.preprocessing import PolynomialFeatures
 
 
@@ -61,10 +62,10 @@ def get_timeslot(now):
 def get():
     date_time_str = int(request.args.get('times'))/1000
     date_time_obj = datetime.datetime.fromtimestamp(int(date_time_str))
-    tz_src = pytz.timezone("America/Chicago")
-    tz_dest = pytz.timezone("America/New_York")
-    d_aware = tz_src.localize(date_time_obj)
-    date_time_obj = d_aware.astimezone(tz_dest)
+    # tz_src = pytz.timezone("America/Chicago")
+    # tz_dest = pytz.timezone("America/New_York")
+    # d_aware = tz_src.localize(date_time_obj)
+    # date_time_obj = d_aware.astimezone(tz_dest)
     fileObject = open('ml2.sav', 'rb')
     model = pickle.load(fileObject)
     df_header = pandas.read_csv('header.csv')
@@ -98,6 +99,7 @@ def get():
         h3_Content.update(weekend_dict)
         h3_Content.update(seasons_dict)
         h3_Content.update(timeslot_dict)
+
         df = pandas.DataFrame.from_dict(h3_Content)
         df_formator = df_header
 
@@ -106,14 +108,14 @@ def get():
         del df
 
         mean_S = 0
-        polynomial_features = PolynomialFeatures(degree=2)
+        # polynomial_features = PolynomialFeatures(degree=2)
         scores = {}
         for zone in h3_Contents.keys():
             if zone in zones_h3_Contents:
                 df3 = df_formator
                 df3['pickup-zone_'+zone] = 1
-                x_poly = polynomial_features.fit_transform([df3.iloc[0]])
-                time_p = math.ceil(model.predict(x_poly)[0])
+                # x_poly = polynomial_features.fit_transform([df3.iloc[0]])
+                time_p = math.ceil(model.predict(df3.values)[0])
                 mean_S += time_p
                 scores[zone] = time_p
                 df3['pickup-zone_'+zone] = 0
@@ -124,14 +126,14 @@ def get():
         mean_S = mean_S/len(scores)
         fileObject = open('ml1.sav', 'rb')
         model2 = pickle.load(fileObject)
-        polynomial_features_model2 = PolynomialFeatures(degree=2)
+        # polynomial_features_model2 = PolynomialFeatures(degree=2)
         cumm_m2_scores = {}
         for zone in h3_Contents.keys():
             if zone in zones_h3_Contents:
                 df3 = df_formator
                 df3['pickup-zone_' + zone] = 1
-                x_poly = polynomial_features_model2.fit_transform([df3.iloc[0]])
-                count_p = math.ceil(model2.predict(x_poly)[0])
+                # x_poly = polynomial_features_model2.fit_transform([df3.iloc[0]])
+                count_p = math.ceil(model2.predict(df3.values)[0])
                 cumm_m2_scores[zone] = abs(int(count_p/2) + int(scores[zone]/mean_S))
                 df3['pickup-zone_' + zone] = 0
                 del df3
@@ -142,4 +144,6 @@ def get():
 
 
 if __name__ == '__main__':
+    os.environ['TZ'] = 'America/New_York'
+    time.tzset()
     app.run(debug=True)

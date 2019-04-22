@@ -7,6 +7,7 @@ app = Flask(__name__)
 import json
 import csv
 import math
+import pytz
 from sklearn.preprocessing import PolynomialFeatures
 
 def get_daytype(now):
@@ -55,13 +56,14 @@ def get_timeslot(now):
 
 @app.route('/', methods=['GET'])
 def get():
-    date_time_str = request.args.get('times')
-    date_time_obj = datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S')
+    timezone = pytz.timezone("America/New_York")
+    date_time_str = int(request.args.get('times'))/1000
+    # date_time_obj = datetime.datetime.strptime(date_time_str.decode('utf-8'), '%Y-%m-%d %H:%M:%S')
+    date_time_obj = datetime.datetime.fromtimestamp(int(date_time_str))
+    date_time_obj = timezone.localize(date_time_obj)
     fileObject = open('ml2.sav', 'rb')
     model = pickle.load(fileObject)
-
     df_header = pandas.read_csv('header.csv')
-
     h3_Contents = {}
     zones_h3_Contents = {}
     with open('zones.csv', 'r') as f:
@@ -102,6 +104,7 @@ def get():
             df_formator[k] = df[k]
         del df
 
+        mean_S = 0
         polynomial_features = PolynomialFeatures(degree=2)
         scores = {}
         for zone in h3_Contents.keys():
@@ -110,12 +113,14 @@ def get():
                 df3['pickup-zone_'+zone] = 1
                 x_poly = polynomial_features.fit_transform([df3.iloc[0]])
                 time_p = math.ceil(model.predict(x_poly)[0])
-                scores[zone] = int(time_p/600)
+                mean_S += time_p
+                scores[zone] = time_p
                 df3['pickup-zone_'+zone] = 0
                 del df3
             else:
                 scores[zone] = 0
 
+        mean_S = mean_S/len(scores)
         fileObject = open('ml1.sav', 'rb')
         model2 = pickle.load(fileObject)
         polynomial_features_model2 = PolynomialFeatures(degree=2)
@@ -126,11 +131,11 @@ def get():
                 df3['pickup-zone_' + zone] = 1
                 x_poly = polynomial_features_model2.fit_transform([df3.iloc[0]])
                 count_p = math.ceil(model2.predict(x_poly)[0])
-                cumm_m2_scores[zone] = int(count_p/2) + scores[zone]
+                cumm_m2_scores[zone] = abs(int(count_p/2) + int(scores[zone]/mean_S))
                 df3['pickup-zone_' + zone] = 0
                 del df3
             else:
-                cumm_m2_scores[zone] = 0 + scores[zone]
+                cumm_m2_scores[zone] = abs(0 + scores[zone])
 
     return jsonify(cumm_m2_scores)
 

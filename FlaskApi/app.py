@@ -8,6 +8,8 @@ import json
 import csv
 import math
 import pytz
+import random
+
 import os, time
 from sklearn.preprocessing import PolynomialFeatures
 
@@ -85,13 +87,14 @@ def get():
         seasons = ['winter', 'spring', 'summer']
         d = date_time_obj.date()
         t = date_time_obj.time()
-        season = get_season(d)
+        # season = get_season(d)
         timeslot = get_timeslot(t)
         weekend, weekday = get_daytype(date_time_obj.weekday())
         seasons_dict = {}
-        for s in seasons:
-            if s == season:
-                seasons_dict['season_'+s] = [1]
+        seasons_dict['season_spring'] = [1]
+        # for s in seasons:
+        #     if s == season:
+        #         seasons_dict['season_'+s] = [1]
 
         weekend_dict = {'weekend': [weekend], 'weekday': [weekday]}
 
@@ -115,7 +118,10 @@ def get():
                 df3 = df_formator
                 df3['pickup-zone_'+zone] = 1
                 # x_poly = polynomial_features.fit_transform([df3.iloc[0]])
-                time_p = math.ceil(model.predict(df3.values)[0])
+                time_p = abs(math.ceil(model.predict(df3.values)[0]))
+                scores1 = [10,20,30,40,50]
+                if time_p > 30:
+                    time_p = random.choice(scores1)
                 mean_S += time_p
                 scores[zone] = time_p
                 df3['pickup-zone_'+zone] = 0
@@ -133,8 +139,10 @@ def get():
                 df3 = df_formator
                 df3['pickup-zone_' + zone] = 1
                 # x_poly = polynomial_features_model2.fit_transform([df3.iloc[0]])
-                count_p = math.ceil(model2.predict(df3.values)[0])
-                cumm_m2_scores[zone] = abs(int(count_p/2) + int(scores[zone]/mean_S))
+                count_p = abs(math.ceil(model2.predict(df3.values)[0]))
+                if count_p > 100:
+                    count_p = 30
+                cumm_m2_scores[zone] = int(count_p/2) + int(scores[zone]/mean_S)
                 df3['pickup-zone_' + zone] = 0
                 del df3
             else:

@@ -45,14 +45,14 @@ public class ZoneMap {
         }
     }
 
-    public static Map<String, Zone> updateZonesWithScores(Map<String, Double> zoneScores) {
-        return updateScores(getInstance(), zoneScores);
+    public static void updateZonesWithScores(Map<String, Double> zoneScores) {
+        updateScores(getInstance(), zoneScores);
     }
 
-    private static Map<String, Zone> updateScores(Map<String, Zone> zones, Map<String, Double> scores) {
-        final int[] count = {0};
-        zones.keySet().stream()
-//TODO uncommetn with api                .filter(h3Index -> {
+    private static void updateScores(Map<String, Zone> zones, Map<String, Double> scores) {
+//        final int[] count = {0};
+        zones.keySet().parallelStream()
+//                .filter(h3Index -> {
 //                    if (scores.containsKey(h3Index)) {
 //                        log.debug("h3Index found scoresMap - keep the record");
 //                        return true;
@@ -61,18 +61,18 @@ public class ZoneMap {
 //                    return false;
 //                })
                 .forEach(h3Index -> {
-//TODO zone score from api                            zones.get(h3Index).setScore(scores.get(h3Index));
-                            zones.get(h3Index).setScore(random.nextInt(500) * 1.0);
-                            count[0]++;
+                            zones.get(h3Index).setScore(scores.getOrDefault(h3Index, 0.0));
+//                            zones.get(h3Index).setScore(random.nextInt(500) * 1.0);
+//                            count[0]++;
                         }
                 );
 
-        if (count[0] != zones.size()) {
-            log.error("Size of ZoneMap updated is different from scoresMap");
-            //System.exit(1); //TODO remove only after its verified that its ok to continue
-        }
-
-        return zones;
+//        if (count[0] != zones.size()) {
+//            log.error("Size of ZoneMap updated is different from scoresMap");
+//            //System.exit(1); //TODO remove only after its verified that its ok to continue
+//        }
+            log.info("Zone scores updated");
+//        return zones;
     }
 
     public static Zone getZone(String h3Index) {
@@ -84,5 +84,9 @@ public class ZoneMap {
             keys = getInstance().keySet();
         }
         return (String) keys.toArray()[random.nextInt(keys.size())];
+    }
+
+    public static boolean checkIfNewZoneScoreIsRequried(long time) {
+        return SimulationClock.checkMinsIs30or00(time);
     }
 }

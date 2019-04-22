@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
@@ -43,6 +45,12 @@ public final class SimulationClock {
 
     public static long getSimCurrentTime() {
         return sc.getCurrentSimTime();
+    }
+
+    public static boolean checkMinsIs30or00(long millis) {
+        DateFormat targetFormat = new SimpleDateFormat("mm");
+        int min = Integer.parseInt(targetFormat.format(millis));
+        return min == 0 || min == 30;
     }
 
     public static int getSimIncrInMillis() {

@@ -25,12 +25,12 @@ public class App {
 
     public static void main(String[] args) throws IOException, ParseException {
 
-        SendHttpRequest.getRequest();
+//        SendHttpRequest.getRequest();
 
         final double ZONE_DIAMETER_MILES = 2 * H3Core.newInstance()
                 .edgeLength(BasicCSVReader.RESOLUTION_LEVEL, LengthUnit.km); //Resolution 9 edge length in miles
 
-        if (args.length != 6) {
+        if (args.length != 7) {
             log.error("Please provide the required command line parameters");
             System.exit(1);
         }
@@ -40,7 +40,8 @@ public class App {
         long runningTimeInMins = Long.parseLong(args[2]);
         long expirationTimeInMillis = Long.parseLong(args[3]);
         long requestDifferenceTimeInMillis = Long.parseLong(args[4]);
-        int noOfHopsPreCalculate=Integer.parseInt(args[5]);
+        int noOfHopsPreCalculate = Integer.parseInt(args[5]);
+        boolean readJsonScores = Boolean.parseBoolean(args[6]);
 
         int simTimeIncrementsInMillis = (int) Math.ceil((ZONE_DIAMETER_MILES / cabSpeed) * 60 * 60 * 1000);
 
@@ -55,11 +56,12 @@ public class App {
         SimulationClock.initializeSimulationClock(BasicCSVReader.MIN_REQUEST_TIME, simTimeIncrementsInMillis);
 
         //Hit Python App and get the zone score map
-        long prevZoneScoreUpdateTime = SimulationClock.getSimCurrentTime();
+//        long prevZoneScoreUpdateTime = SimulationClock.getSimCurrentTime();
+
         // Read zone data from JSON file and update with the zoneScore
         // todo: uncomment
-        ZoneMap.updateZonesWithScores(new HashMap<>());
-
+        ZoneMap.updateZonesWithScores(SendHttpRequest.getRequest(SimulationClock.getSimCurrentTime(), readJsonScores));
+        int prevUpdateOnIteration = SimulationClock.getSimIterations();
         //provide random locations to the cabs from the list of h3Indices
         CabPool.initialize(noOfCabs, cabSpeed);
 
@@ -73,9 +75,12 @@ public class App {
             SimulationClock.incrementSimulationTime();
 
             //Zone score update
-            if (SimulationClock.getSimCurrentTime() - prevZoneScoreUpdateTime >= ZONE_SCORE_UPDATE_INTERVAL) {
+            if ((SimulationClock.getSimIterations() - prevUpdateOnIteration) > 5 &&
+                    ZoneMap.checkIfNewZoneScoreIsRequried(SimulationClock.getSimCurrentTime())) {
                 //hit python api and update the score
-                //TODO 12,1230,1 scenario to be handled.
+                //1215,1230,1 scenario handled.
+                ZoneMap.updateZonesWithScores(SendHttpRequest.getRequest(SimulationClock.getSimCurrentTime(), readJsonScores));
+                prevUpdateOnIteration = SimulationClock.getSimIterations();
             }
 
             //revisit all Cab to check its availability from Cab pool

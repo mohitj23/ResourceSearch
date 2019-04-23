@@ -3,8 +3,12 @@ package com.uic.cs581.allocation;
 import com.uber.h3core.H3Core;
 import com.uber.h3core.exceptions.DistanceUndefinedException;
 import com.uic.cs581.model.*;
+import com.uic.cs581.utils.Havershine;
 import lombok.extern.slf4j.Slf4j;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -32,10 +36,10 @@ public class ResourceAllocation {
 //            nearestCab = Optional.empty();
 //            availableCabsItr = availableCabs.listIterator();
 
-            nearestCab = availableCabs.parallelStream().min(Comparator.comparing(o -> Haversine.distance(o.getCurrentZone(), tempRes.getPickUpH3Index())));
+            nearestCab = availableCabs.parallelStream().min(Comparator.comparing(o -> Havershine.distance(o.getCurrentZone(), tempRes.getPickUpH3Index())));
 
             nearestCab = nearestCab.filter(cab -> {
-                        double distanceToCover = Haversine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
+                        double distanceToCover = Havershine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
                         long timeToCover = (long) ((distanceToCover / cab.getSpeed()) * 60 * 60 * 1000.0);
 //                        log.info("For min cab distanceToCover:"+distanceToCover+",timeToCover:"+timeToCover+",exp:"+tempRes.getExpirationTimeLeftInMillis());
                         return tempRes.getExpirationTimeLeftInMillis() >= timeToCover;
@@ -64,9 +68,9 @@ public class ResourceAllocation {
             nearestCab.ifPresent(cab -> {
                 // calculate next available time for this cab
                 // total distance is from current zone to the resource zone and from there to the destination zone
-                final double cabDistanceToRes=Haversine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
-                double totalDistance =  cabDistanceToRes+
-                        Haversine.distance(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
+                final double cabDistanceToRes = Havershine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
+                double totalDistance = cabDistanceToRes +
+                        Havershine.distance(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
 
 //                double distanceToCover = Haversine.distance(tempRes.getPickUpH3Index(),tempRes.getDropOffH3Index());
 
@@ -111,40 +115,4 @@ public class ResourceAllocation {
     }
 }
 
-class Haversine {
-    private static final int EARTH_RADIUS = 6371; // Approx Earth radius in KM
 
-    private static Map<String, Double> PREV_DIST = new HashMap<>();
-
-    public static Double distance(String start,
-                                  String end) {
-        if (PREV_DIST.get(start + end) != null) {
-            return PREV_DIST.get(start + end);
-        }
-        if (PREV_DIST.get(end + start) != null) {
-            return PREV_DIST.get(end + start);
-        }
-
-        double startLat = ZoneMap.getZone(start).getLat();
-        double startLong = ZoneMap.getZone(start).getLong1();
-
-        double endLat = ZoneMap.getZone(end).getLat();
-        double endLong = ZoneMap.getZone(end).getLong1();
-
-        double dLat = Math.toRadians((endLat - startLat));
-        double dLong = Math.toRadians((endLong - startLong));
-
-        startLat = Math.toRadians(startLat);
-        endLat = Math.toRadians(endLat);
-
-        double a = haversin(dLat) + Math.cos(startLat) * Math.cos(endLat) * haversin(dLong);
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        double result = Math.abs(EARTH_RADIUS * c);
-        PREV_DIST.put(start + end, result);
-        return result; // <-- d
-    }
-
-    private static double haversin(double val) {
-        return Math.pow(Math.sin(val / 2), 2);
-    }
-}

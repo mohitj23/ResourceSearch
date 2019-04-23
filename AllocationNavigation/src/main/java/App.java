@@ -7,10 +7,7 @@ import com.uic.cs581.model.ResourcePool;
 import com.uic.cs581.model.SimulationClock;
 import com.uic.cs581.model.ZoneMap;
 import com.uic.cs581.navigation.Navigation;
-import com.uic.cs581.utils.BasicCSVReader;
-import com.uic.cs581.utils.JsonUtility;
-import com.uic.cs581.utils.Results;
-import com.uic.cs581.utils.SendHttpRequest;
+import com.uic.cs581.utils.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -51,6 +48,9 @@ public class App {
 
         // Read the test data csv, get the resource list from ResourcePool
         BasicCSVReader.readResourcesFromTestData("preprocessed.csv", expirationTimeInMillis, requestDifferenceTimeInMillis);
+
+        Havershine.loadDistance();
+
 
         //Initialize the simulation time entity
         SimulationClock.initializeSimulationClock(BasicCSVReader.MIN_REQUEST_TIME, simTimeIncrementsInMillis);

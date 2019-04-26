@@ -41,7 +41,7 @@ public class ResourceAllocation {
             nearestCab = nearestCab.filter(cab -> {
                         double distanceToCover = Havershine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
                         long timeToCover = (long) ((distanceToCover / cab.getSpeed()) * 60 * 60 * 1000.0);
-//                        log.info("For min cab distanceToCover:"+distanceToCover+",timeToCover:"+timeToCover+",exp:"+tempRes.getExpirationTimeLeftInMillis());
+log.info("For min cab"+cab.getId()+ " distanceToCover:"+distanceToCover+",timeToCover:"+timeToCover+",exp:"+tempRes.getExpirationTimeLeftInMillis());
                         return tempRes.getExpirationTimeLeftInMillis() >= timeToCover;
                     }
             );
@@ -71,6 +71,8 @@ public class ResourceAllocation {
                 final double cabDistanceToRes = Havershine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
                 double totalDistance = cabDistanceToRes +
                         Havershine.distance(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
+log.info("For min cab"+cab.getId() +" cabDistanceToRes:"+cabDistanceToRes+",totalDistance:"+totalDistance+",exp:"+tempRes.getExpirationTimeLeftInMillis());
+
 
 //                double distanceToCover = Haversine.distance(tempRes.getPickUpH3Index(),tempRes.getDropOffH3Index());
 

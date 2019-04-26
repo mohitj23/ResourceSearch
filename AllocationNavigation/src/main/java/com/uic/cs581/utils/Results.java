@@ -17,8 +17,8 @@ public class Results {
 
     public static void avgSearchTimeOfAgents() {
         double avgSearchTime = CabPool.getEntireCabPool()
-                .parallelStream()
-                .peek(cab -> cab.setTotalSearchTime(cab.getTotalIdleTime() + cab.getTotalTimeToResFromCurZone()))
+                .stream()
+                .peek(cab -> cab.setTotalSearchTime((cab.getTotalIdleTime() + cab.getTotalTimeToResFromCurZone())/(cab.getSearchPaths().size()+1)))
                 .collect(Collectors.averagingDouble(Cab::getTotalSearchTime));
 //                .reduce(0.0, (subtotal, element) -> subtotal + element.getTotalSearchTime(), Double::sum);
         log.info("Average Search Time:\t " + avgSearchTime / 1000.0 + " s");
@@ -27,7 +27,8 @@ public class Results {
 
     public static void avgIdleTimeOfAgents() {
         double avgIdleTime = CabPool.getEntireCabPool()
-                .parallelStream()
+                .stream()
+                .peek(cab->cab.setTotalIdleTime(cab.getTotalIdleTime()/(cab.getSearchPaths().size()+1)))
                 .collect(Collectors.averagingDouble(Cab::getTotalIdleTime));
 //                .reduce(0.0, (subtotal, element) -> subtotal + element.getTotalIdleTime(), Double::sum) / CabPool.getEntireCabPool().size();
         log.info("Average Idle Time:\t " + avgIdleTime / 1000.0 + " s");

@@ -42,7 +42,8 @@ public class CabPool {
     public static void findAvailableCabs() {
 //        ListIterator<Cab> entireCabsItr = entireCabPool.listIterator();
         availableCabs = entireCabPool.parallelStream()
-                .filter(cab -> cab.getResourceId() <= 0 || cab.getNextAvailableTime() <= SimulationClock.getSimCurrentTime())
+                .filter(cab -> cab.getNextAvailableTime() <= SimulationClock.getSimCurrentTime())
+                .peek(cab->cab.setResourceId(0))
                 .collect(Collectors.toCollection(ArrayList::new));
 
 

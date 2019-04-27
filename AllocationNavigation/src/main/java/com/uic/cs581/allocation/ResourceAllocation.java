@@ -41,7 +41,7 @@ public class ResourceAllocation {
             nearestCab = nearestCab.filter(cab -> {
                         double distanceToCover = Havershine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
                         long timeToCover = (long) ((distanceToCover / cab.getSpeed()) * 60 * 60 * 1000.0);
-log.info("For min cab"+cab.getId()+ " distanceToCover:"+distanceToCover+",timeToCover:"+timeToCover+",exp:"+tempRes.getExpirationTimeLeftInMillis());
+log.debug("For min cab"+cab.getId()+ " distanceToCover:"+distanceToCover+",timeToCover:"+timeToCover+",exp:"+tempRes.getExpirationTimeLeftInMillis());
                         return tempRes.getExpirationTimeLeftInMillis() >= timeToCover;
                     }
             );
@@ -62,6 +62,7 @@ log.info("For min cab"+cab.getId()+ " distanceToCover:"+distanceToCover+",timeTo
                     nearestCab = Optional.of(tempCab);
                 }
             }*/
+            tempRes.setExpirationTimeLeftInMillis(tempRes.getExpirationTimeLeftInMillis() - SimulationClock.getSimIncrInMillis());
 
 //            final double cabDistanceToRes = minDistanceFromCabToRes;
             //remove nearest cab from cab pool, else it becomes available for other resources too
@@ -69,9 +70,10 @@ log.info("For min cab"+cab.getId()+ " distanceToCover:"+distanceToCover+",timeTo
                 // calculate next available time for this cab
                 // total distance is from current zone to the resource zone and from there to the destination zone
                 final double cabDistanceToRes = Havershine.distance(cab.getCurrentZone(), tempRes.getPickUpH3Index());
-                double totalDistance = cabDistanceToRes +
+                double cabDistanceFromPickupToDropOff=
                         Havershine.distance(tempRes.getPickUpH3Index(), tempRes.getDropOffH3Index());
-log.info("For min cab"+cab.getId() +" cabDistanceToRes:"+cabDistanceToRes+",totalDistance:"+totalDistance+",exp:"+tempRes.getExpirationTimeLeftInMillis());
+                double totalDistance = cabDistanceToRes + cabDistanceFromPickupToDropOff;
+log.debug("For min cab"+cab.getId() +" cabDistanceToRes:"+cabDistanceToRes+",totalDistance:"+totalDistance+",exp:"+tempRes.getExpirationTimeLeftInMillis());
 
 
 //                double distanceToCover = Haversine.distance(tempRes.getPickUpH3Index(),tempRes.getDropOffH3Index());
@@ -80,9 +82,12 @@ log.info("For min cab"+cab.getId() +" cabDistanceToRes:"+cabDistanceToRes+",tota
 //                cab.setNextAvailableTime(SimulationClock.getSimCurrentTime() + (totalHopsToCover * SimulationClock.getSimIncrInMillis()));
                 cab.setFuturePath(null);        //set future path to null in allocation, required for navigation module
                 cab.setResourceId(tempRes.getResourceId());
+                cab.setResourcesPickedUp(cab.getResourcesPickedUp()+1);
 //                cab.setTotalIdleTime(cab.getTotalIdleTime());
-                cab.setTotalTimeToResFromCurZone(cab.getTotalTimeToResFromCurZone() + (long) ((cabDistanceToRes / cab.getSpeed()) * 60 * 60 * 1000.0));
+                cab.setTotalTimeToDropOff(cab.getTotalTimeToDropOff()+Math.round((cabDistanceFromPickupToDropOff / cab.getSpeed()) * 60 * 60 * 1000.0));
+                cab.setTotalTimeToResFromCurZone(cab.getTotalTimeToResFromCurZone() + Math.round((cabDistanceToRes / cab.getSpeed()) * 60 * 60 * 1000.0));
 //                cab.setTotalSearchTime(cab.getTotalIdleTime() + cab.getTotalTimeToResFromCurZone()); // search time = added by navigation & time to pickup the resource
+
 
                 //since the cab is assigned a resource remove it from the available list of cabs.
                 availableCabs.remove(cab);  // Id is initialized from 1 and its an ArrayList.
@@ -90,10 +95,9 @@ log.info("For min cab"+cab.getId() +" cabDistanceToRes:"+cabDistanceToRes+",tota
                 tempRes.setExpirationTimeLeftInMillis(0L);
                 tempRes.setCabId(cab.getId());
             });
-            if (!nearestCab.isPresent()) {
-                //reduce resource's expiration time
-                tempRes.setExpirationTimeLeftInMillis(tempRes.getExpirationTimeLeftInMillis() - SimulationClock.getSimIncrInMillis());
-            }
+//            if (!nearestCab.isPresent()) {
+//                //reduce resource's expiration time
+//            }
         }
 
         // find the shortest distance for the current resource

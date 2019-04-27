@@ -18,8 +18,8 @@ public class Results {
     public static void avgSearchTimeOfAgents() {
         double avgSearchTime = CabPool.getEntireCabPool()
                 .stream()
-                .peek(cab -> cab.setTotalSearchTime((cab.getTotalIdleTime() + cab.getTotalTimeToResFromCurZone())/(cab.getSearchPaths().size()+1)))
-                .collect(Collectors.averagingDouble(Cab::getTotalSearchTime));
+                .peek(cab -> cab.setTotalSearchTime((cab.getTotalIdleTime()+cab.getTotalTimeToResFromCurZone())/(cab.getResourcesPickedUp()==0?1:cab.getResourcesPickedUp())))
+                .collect(Collectors.averagingLong(Cab::getTotalSearchTime));
 //                .reduce(0.0, (subtotal, element) -> subtotal + element.getTotalSearchTime(), Double::sum);
         log.info("Average Search Time:\t " + avgSearchTime / 1000.0 + " s");
         log.info("Average Search Time:\t " + (avgSearchTime / (1000.0 * 60)) + " mins");
@@ -28,11 +28,22 @@ public class Results {
     public static void avgIdleTimeOfAgents() {
         double avgIdleTime = CabPool.getEntireCabPool()
                 .stream()
-                .peek(cab->cab.setTotalIdleTime(cab.getTotalIdleTime()/(cab.getSearchPaths().size()+1)))
-                .collect(Collectors.averagingDouble(Cab::getTotalIdleTime));
+                .peek(cab->cab.setTotalIdleTime(cab.getTotalIdleTime()/(cab.getResourcesPickedUp()==0?1:cab.getResourcesPickedUp())))
+                .collect(Collectors.averagingLong(Cab::getTotalIdleTime));
 //                .reduce(0.0, (subtotal, element) -> subtotal + element.getTotalIdleTime(), Double::sum) / CabPool.getEntireCabPool().size();
         log.info("Average Idle Time:\t " + avgIdleTime / 1000.0 + " s");
         log.info("Average Idle Time:\t " + (avgIdleTime / (1000.0 * 60)) + " mins");
+
+        double avgResourcesPuckedUpPerCab = CabPool.getEntireCabPool()
+                .stream().collect(Collectors.averagingInt(Cab::getResourcesPickedUp));
+        log.info("Average resources picked up per cab:"+avgResourcesPuckedUpPerCab);
+
+        double avgResourcesDropOffTime = CabPool.getEntireCabPool()
+                .stream()
+                .peek(cab->cab.setTotalTimeToDropOff(cab.getTotalTimeToDropOff()/(cab.getResourcesPickedUp()==0?1:cab.getResourcesPickedUp())))
+                .collect(Collectors.averagingLong(Cab::getTotalTimeToDropOff));
+        log.info("Average resources drop off time per cab:"+avgResourcesDropOffTime/1000.0+" s");
+        log.info("Average resources drop off time per cab:"+(avgResourcesDropOffTime/(1000.0*60))+" mins");
     }
 
     public static void percentageExpiredRsources() {

@@ -110,29 +110,48 @@ def get():
             df_formator[k] = df[k]
         del df
 
-        mean_S = 0
-        # polynomial_features = PolynomialFeatures(degree=2)
-        scores = {}
-        for zone in h3_Contents.keys():
-            if zone in zones_h3_Contents:
-                df3 = df_formator
-                df3['pickup-zone_'+zone] = 1
-                # x_poly = polynomial_features.fit_transform([df3.iloc[0]])
-                time_p = abs(math.ceil(model.predict(df3.values)[0]))
-                scores1 = [10,20,30,40,50]
-                if time_p > 30:
-                    time_p = random.choice(scores1)
-                mean_S += time_p
-                scores[zone] = time_p
-                df3['pickup-zone_'+zone] = 0
-                del df3
-            else:
-                scores[zone] = 0
+        # mean_S = 0
+        # # polynomial_features = PolynomialFeatures(degree=2)
+        # scores = {}
+        # for zone in h3_Contents.keys():
+        #     if zone in zones_h3_Contents:
+        #         df3 = df_formator
+        #         df3['pickup-zone_'+zone] = 1
+        #         # x_poly = polynomial_features.fit_transform([df3.iloc[0]])
+        #         time_p = abs(math.ceil(model.predict(df3.values)[0]))
+        #         scores1 = [10,20,30,40,50]
+        #         if time_p > 30:
+        #             time_p = random.choice(scores1)
+        #         mean_S += time_p
+        #         scores[zone] = time_p
+        #         df3['pickup-zone_'+zone] = 0
+        #         del df3
+        #     else:
+        #         scores[zone] = 0
 
-        mean_S = mean_S/len(scores)
+        # mean_S = mean_S/len(scores)
+        # fileObject = open('ml1.sav', 'rb')
+        # model2 = pickle.load(fileObject)
+        # # polynomial_features_model2 = PolynomialFeatures(degree=2)
+        # cumm_m2_scores = {}
+        # for zone in h3_Contents.keys():
+        #     if zone in zones_h3_Contents:
+        #         df3 = df_formator
+        #         df3['pickup-zone_' + zone] = 1
+        #         # x_poly = polynomial_features_model2.fit_transform([df3.iloc[0]])
+        #         count_p = abs(math.ceil(model2.predict(df3.values)[0]))
+        #         if count_p > 100:
+        #             count_p = 30
+        #         cumm_m2_scores[zone] = int(count_p/2) + int(scores[zone]/mean_S)
+        #         df3['pickup-zone_' + zone] = 0
+        #         del df3
+        #     else:
+        #         cumm_m2_scores[zone] = abs(0 + scores[zone])
+
+
         fileObject = open('ml1.sav', 'rb')
         model2 = pickle.load(fileObject)
-        # polynomial_features_model2 = PolynomialFeatures(degree=2)
+        # # polynomial_features_model2 = PolynomialFeatures(degree=2)
         cumm_m2_scores = {}
         for zone in h3_Contents.keys():
             if zone in zones_h3_Contents:
@@ -142,11 +161,11 @@ def get():
                 count_p = abs(math.ceil(model2.predict(df3.values)[0]))
                 if count_p > 100:
                     count_p = 30
-                cumm_m2_scores[zone] = int(count_p/2) + int(scores[zone]/mean_S)
+                cumm_m2_scores[zone] = int(count_p/2)
                 df3['pickup-zone_' + zone] = 0
                 del df3
             else:
-                cumm_m2_scores[zone] = abs(0 + scores[zone])
+                cumm_m2_scores[zone] = 0
 
     return jsonify(cumm_m2_scores)
 

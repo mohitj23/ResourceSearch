@@ -1,6 +1,9 @@
 package com.uic.cs581.model;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -24,5 +27,4 @@ public class Cab implements CommonInterface {
     //    private String targetZone;
     private int speed;
 
-//    private static final Double SPEED = 40.0;
 }

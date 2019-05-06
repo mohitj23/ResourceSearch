@@ -36,13 +36,13 @@ public class BasicCSVReader {
 
     public static long MIN_REQUEST_TIME = Long.MAX_VALUE;
 
-    public static void readResourcesFromTestData(String fileName,long expirationTime, long requestTimeDifference) throws IOException, ParseException {
+    public static void readResourcesFromTestData(String fileName, long expirationTime, long requestTimeDifference) throws IOException, ParseException {
 
         log.debug("Working Directory = " +
                 System.getProperty("user.dir"));
 
         //get a reference to the final list and add the resources to this list.
-//        List<Resource> resources = ResourcePool.getEntirePool();
+
         List<Resource> temp = new ArrayList<>();
         h3 = H3Core.newInstance();
         try (

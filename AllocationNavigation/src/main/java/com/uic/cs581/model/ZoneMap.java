@@ -50,44 +50,28 @@ public class ZoneMap {
     }
 
     private static void updateScores(Map<String, Zone> zones, Map<String, Double> scores, boolean randomScores) {
-//        final int[] count = {0};
-        if(scores.size()<5){
+        if (scores.size() < 5) {
             log.info("Zone scores r update");
         }
         zones.keySet().parallelStream()
-//                .filter(h3Index -> {
-//                    if (scores.containsKey(h3Index)) {
-//                        log.debug("h3Index found scoresMap - keep the record");
-//                        return true;
-//                    }
-//                    log.debug("h3Index not present in scores");
-//                    return false;
-//                })
                 .forEach(h3Index -> {
-                            if (randomScores || scores.size()<5) {
-
+                            if (randomScores || scores.size() < 5) {
                                 zones.get(h3Index).setScore(random.nextInt(100) * 1.0);
                             } else {
                                 zones.get(h3Index).setScore(scores.getOrDefault(h3Index, 0.0));
                             }
 
-//                            count[0]++;
                         }
                 );
 
-//        if (count[0] != zones.size()) {
-//            log.error("Size of ZoneMap updated is different from scoresMap");
-//            //System.exit(1); //TODO remove only after its verified that its ok to continue
-//        }
         log.info("Zone scores updated");
-//        return zones;
     }
 
     public static Zone getZone(String h3Index) {
         return getInstance().get(h3Index);
     }
 
-    public static String getRandomZoneIndex() {
+    static String getRandomZoneIndex() {
         if (keys == null) {
             keys = getInstance().keySet();
         }

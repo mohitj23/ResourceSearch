@@ -1,4 +1,3 @@
-
 import com.uber.h3core.H3Core;
 import com.uber.h3core.LengthUnit;
 import com.uic.cs581.allocation.ResourceAllocation;
@@ -20,8 +19,6 @@ public class App {
 
     public static void main(String[] args) throws IOException, ParseException {
 
-//        SendHttpRequest.getRequest();
-
         final double ZONE_DIAMETER_MILES = 2 * H3Core.newInstance()
                 .edgeLength(BasicCSVReader.RESOLUTION_LEVEL, LengthUnit.km); //Resolution 9 edge length in miles
 
@@ -31,7 +28,6 @@ public class App {
         }
         int noOfCabs = Integer.parseInt(args[0]);
         int cabSpeed = Integer.parseInt(args[1]);     //in kph
-        // TODO String csvFileName = args[2];
         long runningTimeInMins = Long.parseLong(args[2]);
         long expirationTimeInMillis = Long.parseLong(args[3]);
         long requestDifferenceTimeInMillis = Long.parseLong(args[4]);
@@ -56,10 +52,7 @@ public class App {
         SimulationClock.initializeSimulationClock(BasicCSVReader.MIN_REQUEST_TIME, simTimeIncrementsInMillis);
 
         //Hit Python App and get the zone score map
-//        long prevZoneScoreUpdateTime = SimulationClock.getSimCurrentTime();
-
         // Read zone data from JSON file and update with the zoneScore
-        // todo: uncomment
         ZoneMap.updateZonesWithScores(SendHttpRequest.getRequest(SimulationClock.getSimCurrentTime(), readJsonScores), randomScores);
         int prevUpdateOnIteration = SimulationClock.getSimIterations();
         //provide random locations to the cabs from the list of h3Indices
@@ -110,6 +103,5 @@ public class App {
         JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Expired_resources.json", ResourcePool.getExpiredPool());
         JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Assigned_resources.json", ResourcePool.getAssignedPool());
         JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Cab_pool.json", CabPool.getEntireCabPool());
-//        JsonUtility.writeToFile(FILE_PATH_FOR_JSON_WRITE + "Resources_pool_left.json", ResourcePool.getEntirePool());
     }
 }

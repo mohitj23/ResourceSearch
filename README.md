@@ -1,21 +1,8 @@
 # ResourceSearch
 
-### Authors
-- Amrish Jhaveri
-- Akshun Jhingan
-- Mohitkumar Paritosh Ghia
-- Chinmay Gangal
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-What things you need to install the software and how to install them
 
-```
-Give examples
 ```
 python 3.7
 pip 19.0.3
@@ -23,23 +10,18 @@ Flask
 pandas
 scikit-learn
 numpy
+Apache Maven 3
+```
 
 
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-pyton 3.7 Install as you would normally install a contributed python module using this link https://realpython.com/installing-python/
+Install pyton 3.7  as you would normally install a contributed python module using this link https://realpython.com/installing-python/
 
 pip 19.0.3 considering to upgrade pip by using this command on your terminal python -m pip install --upgrade pip
 
-flask to install use the command pip install flask. The version we used is 1.0.2 follow tutorial http://flask.pocoo.org/docs/1.0/tutorial/factory/ if needed. When system is running it shows this as output 
+Flask to install use the command pip install flask. The version we used is 1.0.2 follow tutorial http://flask.pocoo.org/docs/1.0/tutorial/factory/ if needed. When system is running it shows this as output 
 
 * Serving Flask app "flaskr"
 * Environment: development
@@ -55,36 +37,49 @@ pandas to install use the command pip install pandas. The version we used is 0.2
 
 scikit-learn to install use the command pip install pandas. The version we used is 0.20.1
 
+### Setup the Environment
 
-And repeat
+First, we need to build the jar from the source code.
+Assuming Apache Maven 3 with Java 8 is installed on the system, open the AllocationNavigation folder and run the following command from the terminal:
+ 
+ `mvn clean package`
 
-```
-until finished
-```
+Now we need to transfer this jar to AWS EC2 instance either using WinSCP (for Windows) or scp from Ubuntu / OS X.
+We also need to copy the required resource files to the same location. The files required are:
 
-End with an example of getting some data out of the system or using it for a little demo
+- havershine.json : Contains precomputed distance between all H3 zones inside Manhattan. This speeds up the simulation considerably.
+- manhattan_zones_lat_lon_3.json: The Zone information required in the form of a map (key, value pairs).
+- preprocessed.csv: The preprocessed CSV which we will provide to the simulation.
 
+### Run the JAR
 
-## Deployment
+To execute the JAR, we run the following command:
 
-Add additional notes about how to deploy this on a live system
+`nohup java -Xmx40G -jar resource-search-1.0-SNAPSHOT-jar-with-dependencies.jar 1000 25 5 600000 0 5 false false false &`
+
+- nohup - since we want our process to be detached from the current shell session
+- -Xmx40G - We make 40 GB of RAM available for the JVM to execute this jar.
+
+We provide 9 commandline arguments:
+
+1. Number of cabs to consider.
+2. Speed of the cab in kph (kilometer per hour)
+3. Number minutes to run the simulation
+4. The expiration time for each resource in minutes
+5. Number of minutes before the pickup time, which would be the request time.
+6. The value of k, used for navigation. We calculate k hops in advance but navigate only 1 hop i.e. 1 zone in each simulation iteration for navigation.
+7. Boolean flag for reading zone score from the file. Used while doing dry runs. It should be set to false.
+8. Boolean flag to consider all the records of the CSV. If set to true the parameter 3 is no longer considered.
+9. Boolean flag to generate random scores for the zone. Used while doing dry runs. It should be set to false.
+
 
 ## Built With
 
 * [Flask](http://flask.pocoo.org/docs/1.0/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+### Authors
+- [Amrish Jhaveri](https://github.com/AmrishJhaveri)
+- [Akshun Jhingan](https://github.com/AkshunJhingan)
+- [Mohitkumar Paritosh Ghia](https://github.com/mohitj23/)
+- [Chinmay Gangal](https://github.com/chinmay2312)
